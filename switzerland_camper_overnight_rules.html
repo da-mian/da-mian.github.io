@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Switzerland Camper Overnight Rules</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    html, body { height: 100%; margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    #app { display: grid; grid-template-columns: 1fr 360px; height: 100%; }
+    #map { width: 100%; height: 100%; }
+    #panel { border-left: 1px solid #eee; padding: 12px 14px; overflow: auto; }
+    .canton-name { font-size: 18px; font-weight: 700; margin: 4px 0 8px; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+    .ok { background: #e6f6ea; color: #0a7a33; }
+    .warn { background: #fff2e0; color: #a65d00; }
+    .no  { background: #ffe6e6; color: #a10000; }
+    .hint { font-size: 12px; color: #555; }
+    .legend { margin-top: 10px; font-size: 12px; color:#444; }
+    .loc-btn, .test-btn { margin-top:8px; padding:8px 10px; border:1px solid #ddd; border-radius:8px; cursor:pointer; background:#fafafa; }
+    @media (max-width: 900px) { #app { grid-template-columns: 1fr; grid-template-rows: 60% 40%; } #panel { border-left: none; border-top:1px solid #eee; } }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div id="map"></div>
+    <aside id="panel">
+      <div class="canton-name">Loading…</div>
+      <div id="overnight" class="badge warn">Overnight (in‑vehicle): …</div>
+      <div id="rules" style="margin-top:10px; line-height:1.4"></div>
+      <div class="legend">Legend: <span class="badge ok">Often tolerated (1 night in vehicle)</span> <span class="badge warn">Restricted/Local rules</span> <span class="badge no">Prohibited</span></div>
+      <div class="hint" style="margin-top:8px">Focus: <strong>sleeping inside the Wohnmobil with zero camping behaviour</strong>. Obey signage, local by‑laws, protected areas, and parking time limits. Text is indicative; verify locally.</div>
+      <div style="margin-top:16px; font-size:12px; color:#666; display:flex; gap:8px; flex-wrap:wrap;">
+        <button class="loc-btn" id="locateBtn">Locate me</button>
+        <button class="test-btn" id="testBtn">Run self‑tests</button>
+      </div>
+    </aside>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+  <script>
+  (function(){
+    if (window.__CH_OVERNIGHT_APP_INIT__) { console.warn('App already initialized; skipping duplicate init'); return; }
+    window.__CH_OVERNIGHT_APP_INIT__ = true;
+    'use strict';
+
+    // ====== DATA: One-night IN‑VEHICLE only (no camping behaviour) ======
+    function tagOk(text){ return { oneNight:'ok', text }; }
+    function tagWarn(text){ return { oneNight:'warn', text }; }
+    function tagNo(text){ return { oneNight:'no', text }; }
+
+    const RULES = {
+      AG: tagOk('Aargau: Often tolerated on public parking for one night if no prohibition is posted. No setup.'),
+      AI: tagOk('Appenzell Innerrhoden: One night tolerated away from settlements/protected zones if no sign forbids.'),
+      AR: tagOk('Appenzell Ausserrhoden: Often tolerated; communes may restrict.'),
+      BE: tagWarn('Bern: Mixed—rural areas may tolerate one night; many communes regulate. Check signage.'),
+      BL: tagWarn('Basel‑Landschaft: Urbanised; many communes regulate/forbid. Check signage.'),
+      BS: tagNo('Basel‑Stadt: City canton—generally prohibited without explicit permission.'),
+      FR: tagWarn('Fribourg: Varies by commune; may be tolerated where not posted.'),
+      GE: tagNo('Genève: Generally prohibited without authorization/permit.'),
+      GL: tagOk('Glarus: Often tolerated outside protected zones; avoid settlements.'),
+      GR: tagOk('Graubünden: Often tolerated outside protected areas/above treeline; commune rules apply.'),
+      JU: tagWarn('Jura: Varies; may be tolerated where not posted. Check local by‑laws.'),
+      LU: tagOk('Luzern: Often tolerated in rural public parking where no prohibition is posted.'),
+      NE: tagWarn('Neuchâtel: Varies by commune; check signage and parking limits.'),
+      NW: tagWarn('Nidwalden: Mixed; some communes restrict. Verify locally.'),
+      OW: tagOk('Obwalden: One overnight stay permitted if no public/private interests harmed (no setup).'),
+      SG: tagOk('St. Gallen: Often tolerated where not posted. Avoid protected areas.'),
+      SH: tagOk('Schaffhausen: Often tolerated in non‑urban areas if no sign forbids.'),
+      SO: tagWarn('Solothurn: Mixed; many communes regulate. Check signage.'),
+      SZ: tagWarn('Schwyz: Communal rules/permissions often required; may be tolerated where not posted.'),
+      TG: tagOk('Thurgau: Often tolerated outside towns if not posted otherwise.'),
+      TI: tagWarn('Ticino: Frequently restricted near lakes/tourist areas; some communes tolerate. Check signage.'),
+      UR: tagOk('Uri: Often tolerated outside protected zones and where not locally prohibited.'),
+      VD: tagWarn('Vaud: Frequently regulated; some communes tolerate one night without setup.'),
+      VS: tagOk('Valais: Often tolerated above treeline/outside protected areas; commune rules apply.'),
+      ZG: tagWarn('Zug: Small/urbanised; often regulated. Check signage.'),
+      ZH: tagWarn('Zürich: Many municipalities restrict; rural spots sometimes tolerated if not posted.')
+    };
+
+    function baseRule(){
+      return tagWarn('Many Swiss cantons tolerate ONE night inside the vehicle if there is no prohibition sign and no camping behaviour. Local rules and protected areas can override.');
+    }
+
+    // Fallback mapper: canton name -> ISO code (normalize diacritics, punctuation, spaces)
+    const NAME_TO_CODE = (function(){
+      const m = new Map();
+      const add = (name, code) => m.set(norm(name), code);
+      // German/French/Italian/English variants
+      add('Aargau','AG');
+      add('Appenzell Innerrhoden','AI'); add('AI','AI');
+      add('Appenzell Ausserrhoden','AR'); add('AR','AR');
+      add('Bern','BE'); add('Berne','BE');
+      add('Basel-Landschaft','BL'); add('Basel Landschaft','BL'); add('Baselland','BL');
+      add('Basel-Stadt','BS'); add('Basel Stadt','BS');
+      add('Fribourg','FR'); add('Freiburg','FR');
+      add('Genève','GE'); add('Geneve','GE'); add('Genf','GE'); add('Geneva','GE');
+      add('Glarus','GL');
+      add('Graubünden','GR'); add('Graubunden','GR'); add('Grisons','GR');
+      add('Jura','JU');
+      add('Luzern','LU'); add('Lucerne','LU');
+      add('Neuchâtel','NE'); add('Neuchatel','NE');
+      add('Nidwalden','NW');
+      add('Obwalden','OW');
+      add('St. Gallen','SG'); add('Sankt Gallen','SG'); add('Saint Gallen','SG');
+      add('Schaffhausen','SH');
+      add('Solothurn','SO');
+      add('Schwyz','SZ');
+      add('Thurgau','TG');
+      add('Ticino','TI'); add('Tessin','TI');
+      add('Uri','UR');
+      add('Vaud','VD');
+      add('Valais','VS'); add('Wallis','VS');
+      add('Zug','ZG');
+      add('Zürich','ZH'); add('Zurich','ZH');
+      return m;
+    })();
+
+    function norm(s){
+      return String(s||'')
+        .normalize('NFD')
+        .replace(/[\p{Diacritic}]/gu,'')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g,'')
+        .trim();
+    }
+
+    // ====== UI Refs ======
+    const panelName = document.querySelector('.canton-name');
+    const overnightBadgeEl = document.getElementById('overnight');
+    const rulesEl = document.getElementById('rules');
+
+    // ====== Map ======
+    const map = L.map('map').setView([46.8, 8.2], 8);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+
+    let cantonsLayer, userMarker, currentLayer;
+    const CANTON_GEOJSON = 'https://data.opendatasoft.com/api/explore/v2.1/catalog/datasets/georef-switzerland-kanton%40public/exports/geojson?lang=en&timezone=UTC&epsg=4326&include_links=false';
+
+    loadCantons();
+
+    async function loadCantons(){
+      try {
+        const res = await fetch(CANTON_GEOJSON, { mode: 'cors' });
+        const geo = await res.json();
+        const feats = Array.isArray(geo.features) ? geo.features : [];
+        if (!feats.length) throw new Error('Empty canton dataset');
+        feats.forEach(f => {
+          const p = f.properties || {}; f.properties = p;
+          // Try dataset abbreviation; else map from name
+          const rawAbbr = p.kan_abk || p.abbr || p.kan || p.code || '';
+          let code = String(rawAbbr).toUpperCase();
+          if (!code || !RULES[code]) {
+            const nameGuess = NAME_TO_CODE.get(norm(p.kan_name || p.name || p.kanton || ''));
+            if (nameGuess) code = nameGuess;
+          }
+          p._code = code;
+          p._name = p.kan_name || p.name || p.kanton || 'Unknown';
+        });
+
+        cantonsLayer = L.geoJSON({ type:'FeatureCollection', features: feats }, {
+          style: () => ({ color:'#555', weight:1, fillOpacity:0.07, fillColor:'#3A5BFF' }),
+          onEachFeature: (feature, layer) => {
+            const code = feature.properties._code || '?';
+            const name = feature.properties._name;
+            layer.bindTooltip(`${name} (${code})`, { sticky:true });
+            layer.on('click', () => selectCanton(feature, layer));
+          }
+        }).addTo(map);
+
+        const b = cantonsLayer.getBounds();
+        if (b && b.isValid && b.isValid()) map.fitBounds(b, { padding: [20, 20] });
+        else map.setView([46.8, 8.2], 8);
+
+        updatePanel(null);
+      } catch (e) {
+        console.warn('Failed to load cantons:', e);
+        L.polygon([[47.8,5.9],[47.8,10.6],[45.7,10.6],[45.7,5.9]], { color:'#888', weight:1, dashArray:'4 4' }).addTo(map);
+        map.setView([46.8,8.2], 7);
+        updatePanel(null);
+      }
+    }
+
+    function selectCanton(feature, layer){
+      if (currentLayer) try { currentLayer.setStyle({ fillOpacity:0.07 }); } catch(_){ }
+      currentLayer = layer; try { layer.setStyle({ fillOpacity:0.25 }); } catch(_){ }
+      updatePanel(feature.properties);
+    }
+
+    function updatePanel(props){
+      const name = props?._name || 'Switzerland';
+      const code = props?._code || null;
+      panelName.textContent = code ? `${name} (${code})` : name;
+      const rule = code && RULES[code] ? RULES[code] : baseRule();
+      const cls = rule.oneNight === 'ok' ? 'ok' : rule.oneNight === 'no' ? 'no' : 'warn';
+      const txt = rule.oneNight === 'ok' ? 'Overnight (in‑vehicle): Allowed / often tolerated' :
+                  rule.oneNight === 'no' ? 'Overnight (in‑vehicle): Prohibited' :
+                  'Overnight (in‑vehicle): Restricted / local rules';
+      overnightBadgeEl.className = `badge ${cls}`;
+      overnightBadgeEl.textContent = txt;
+      rulesEl.innerHTML = `${rule.text}<div class="hint" style="margin-top:8px">Nationwide exclusions: Swiss National Park, federal game reserves, wildlife rest zones (in season), nature reserves, and any posted access/overnight bans. Respect parking time limits.</div>`;
+    }
+
+    // ====== Geolocation + Canton detection ======
+    document.getElementById('locateBtn').addEventListener('click', locateMe);
+    locateMe();
+
+    function locateMe(){
+      if (!navigator.geolocation) { alert('Geolocation not supported.'); return; }
+      navigator.geolocation.getCurrentPosition(pos => {
+        const lat = pos.coords.latitude, lon = pos.coords.longitude;
+        const ll = [lat, lon];
+        if (!userMarker) userMarker = L.marker(ll, { title:'You are here' }).addTo(map);
+        else userMarker.setLatLng(ll);
+        map.setView(ll, Math.max(10, map.getZoom()));
+        trySelectCanton(lat, lon);
+      }, err => {
+        console.warn(err); alert('Could not get your location (permission denied?). You can still tap a canton.');
+      }, { enableHighAccuracy:true, timeout:10000 });
+    }
+
+    function trySelectCanton(lat, lon){
+      if (!cantonsLayer) return;
+      const pt = turf.point([lon, lat]);
+      let found = null, foundLayer = null;
+      cantonsLayer.eachLayer(layer => {
+        const feat = layer.feature; if (!feat) return;
+        try { if (turf.booleanPointInPolygon(pt, feat)) { found = feat; foundLayer = layer; } } catch(_){ }
+      });
+      if (found) selectCanton(found, foundLayer);
+    }
+
+    // ====== Self‑tests (add-only) ======
+    document.getElementById('testBtn').addEventListener('click', () => {
+      try { if (!L || !map) throw new Error('Leaflet missing'); console.log('✔ Leaflet OK'); } catch(e){ console.error(e); }
+      try { const fg = L.featureGroup(); if (fg.getBounds().isValid()) throw new Error('Empty bounds should be invalid'); console.log('✔ Bounds guard OK'); } catch(e){ console.error(e); }
+      try { const r = baseRule(); if (!r.oneNight) throw new Error('baseRule missing oneNight'); console.log('✔ baseRule OK'); } catch(e){ console.error(e); }
+      try {
+        const el = document.getElementById('overnight'); if (!el) throw new Error('#overnight not found');
+        updatePanel(null); const cls = el.className; if (!(/\b(ok|warn|no)\b/).test(cls)) throw new Error('badge class not ok/warn/no');
+        console.log('✔ Overnight badge updates');
+      } catch(e) { console.error(e); }
+      try { let count = 0; map.eachLayer(l => { if (!(l instanceof L.TileLayer)) count++; }); if (count < 1) throw new Error('No vector overlays present'); console.log('✔ Overlay layer present'); } catch(e) { console.error(e); }
+      try {
+        const codes = ['AG','AI','AR','BE','BL','BS','FR','GE','GL','GR','JU','LU','NE','NW','OW','SG','SH','SO','SZ','TG','TI','UR','VD','VS','ZG','ZH'];
+        const missing = codes.filter(c => !Object.prototype.hasOwnProperty.call(RULES, c));
+        if (missing.length) throw new Error('Missing canton rules: ' + missing.join(','));
+        console.log('✔ All 26 cantons covered');
+      } catch(e) { console.error(e); }
+      // NEW: every loaded feature resolves to a known RULES code
+      try {
+        if (cantonsLayer) {
+          const unknown = [];
+          cantonsLayer.eachLayer(l => { const c = l.feature?.properties?._code; if (!c || !RULES[c]) unknown.push(l.feature?.properties?._name || 'Unknown'); });
+          if (unknown.length) throw new Error('Unmapped canton codes from GeoJSON: ' + unknown.join(', '));
+          console.log('✔ All features map to known canton codes');
+        }
+      } catch(e) { console.error(e); }
+      alert('Self‑tests executed. Open the console to see results.');
+    });
+  })();
+  </script>
+</body>
+</html>
