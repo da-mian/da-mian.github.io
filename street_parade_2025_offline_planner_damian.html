@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Street Parade 2025 – Offline Planner</title>
+  <meta name="theme-color" content="#111" />
+  <style>
+    :root { --bg:#0b0b0e; --fg:#f5f7fb; --muted:#a7adbb; --card:#16161a; --accent:#3A5BFF; --ok:#11b37f; --warn:#f0b429; --bad:#e44; }
+    html,body{height:100%; background:var(--bg); color:var(--fg); font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, Roboto, Segoe UI, Helvetica, Arial, sans-serif;}
+    *{box-sizing:border-box}
+    a{color:var(--accent); text-decoration:none}
+    header{position:sticky; top:0; z-index:50; background:linear-gradient(180deg, rgba(11,11,14,.95), rgba(11,11,14,.6)); backdrop-filter:saturate(1.2) blur(8px); padding:10px 12px; border-bottom:1px solid #222}
+    h1{font-size:18px; margin:0 0 4px 0}
+    .row{display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+    .pill{padding:6px 10px; border-radius:999px; background:#1f1f25; color:var(--muted); border:1px solid #222; font-size:12px}
+    .btn{padding:10px 14px; border-radius:12px; border:1px solid #2a2a33; background:#141419; color:var(--fg); font-weight:600;}
+    .btn[aria-pressed="true"]{outline:2px solid var(--accent)}
+    .grid{display:grid; gap:12px; padding:12px}
+    .card{background:var(--card); border:1px solid #262630; border-radius:16px; padding:12px}
+    .act{display:grid; grid-template-columns: 70px 1fr; gap:10px; align-items:center}
+    .time{font-variant-numeric:tabular-nums; color:var(--muted)}
+    .stage{font-size:12px; color:#97a0b3}
+    .title{font-weight:700}
+    .tag{font-size:11px; padding:3px 8px; border:1px solid #2a2a33; border-radius:999px; color:#c9d1e6}
+    .now{color:var(--ok); font-weight:700}
+    .muted{color:var(--muted)}
+    .small{font-size:12px}
+    .section-title{display:flex; align-items:center; justify-content:space-between; margin:6px 0 2px}
+    .switch{display:flex; gap:8px;}
+    .switch input{display:none}
+    .switch label{padding:8px 10px; border-radius:999px; border:1px solid #2a2a33; cursor:pointer; font-size:12px}
+    .switch input:checked + label{background:#1a1f2f; outline:2px solid var(--accent)}
+    .sticky-bottom{position:sticky; bottom:0; background:linear-gradient(0deg, rgba(11,11,14,.98), rgba(11,11,14,.0)); padding:8px 12px 14px;}
+    .toolbar{display:flex; gap:8px}
+    .toolbar .btn{flex:1}
+    .note{width:100%; min-height:80px; color:var(--fg); background:#111217; border:1px solid #2a2a33; border-radius:12px; padding:10px}
+    .kicker{font-size:12px; color:var(--muted)}
+    .install{display:none}
+    .offline{display:none}
+    .online{display:none}
+    .hidden{display:none !important}
+    .warn{color:var(--warn)}
+    .bad{color:var(--bad)}
+    .ok{color:var(--ok)}
+    code{background:#0f1016; border:1px solid #262630; padding:.1rem .35rem; border-radius:6px}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Street Parade 2025 – Damian’s Plan</h1>
+  <div class="row small">
+    <span class="pill" id="datePill">Sat 09.08.2025 · Zürich</span>
+    <span class="pill" id="statusPill">Checking offline…</span>
+    <span class="pill" id="nowPill">Now: –</span>
+  </div>
+  <div class="row" style="margin-top:6px">
+    <div class="switch" role="tablist" aria-label="View mode">
+      <input type="radio" id="view-best" name="view" checked><label for="view-best">Best option</label>
+      <input type="radio" id="view-second" name="view"><label for="view-second">Second option</label>
+      <input type="radio" id="view-all"  name="view"><label for="view-all">All Stages</label>
+    </div>
+    <button class="btn" id="btnNow">Jump to Now</button>
+  </div>
+</header>
+
+<main class="grid" id="list"></main>
+
+<section class="grid">
+  <div class="card">
+    <div class="section-title">
+      <div>
+        <div class="title">Notes</div>
+        <div class="kicker">Saved offline to this device only</div>
+      </div>
+      <button class="btn small" id="btnClearNotes" title="Clear notes">Clear</button>
+    </div>
+    <textarea class="note" id="notes" placeholder="Water? Food? Meeting points, backup plans…"></textarea>
+  </div>
+
+  <div class="card">
+    <div class="section-title">
+      <div class="title">Install</div>
+    </div>
+    <div class="small">
+      Add to Home Screen for full-screen, offline use. <span class="install" id="installUI"><button class="btn" id="btnInstall">Install app</button></span>
+      <span class="kicker">Works on iOS/Android/Desktop.</span>
+    </div>
+  </div>
+
+  <div class="card small" id="hostingHelp" style="display:none">
+    <div class="section-title"><div class="title">Hosting / Offline Setup</div></div>
+    <div id="hostingMsg" class="small"></div>
+    <div class="row" style="margin-top:8px">
+      <button class="btn" id="btnDownloadSW">Download <code>sp25-sw.js</code></button>
+      <button class="btn" id="btnDownloadManifest">Download <code>manifest.webmanifest</code></button>
+    </div>
+  </div>
+
+  <div class="card small">
+    <div class="section-title"><div class="title">Status</div></div>
+    <div class="online" id="online">Online</div>
+    <div class="offline" id="offline">Offline – using cached data</div>
+  </div>
+
+  <div class="card small" id="selfTests">
+    <div class="section-title"><div class="title">Self-checks</div></div>
+    <ul id="tests" class="small" style="margin:0; padding-left:18px"></ul>
+  </div>
+</section>
+
+<div class="sticky-bottom">
+  <div class="toolbar">
+    <button class="btn" id="btnExport">Export plan (.json)</button>
+    <button class="btn" id="btnImport">Import</button>
+  </div>
+  <input type="file" id="fileImport" class="hidden" accept="application/json" />
+</div>
+
+<script>
+// ------------------ Data ------------------
+// All times in local Zurich time (Europe/Zurich). Festival day: 2025-08-09
+const DAY = '2025-08-09';
+const STAGES = {
+  OPERA: { id:'OPERA', name:'Opera Stage (Bellevue)' },
+  INNO:  { id:'INNO',  name:'Innovation Stage (Hechtplatz)' },
+  CENTER:{ id:'CENTER',name:'Center Stage (Bürkliplatz)' },
+  VIP:   { id:'VIP',   name:'Rondell VIP (Bürkliplatz)' },
+  SWISS: { id:'SWISS', name:'Swiss Rave Stage (Schanzengraben)' },
+  CLUB:  { id:'CLUB',  name:'Clubbing Stage (Kongresshaus)' },
+  GEN:   { id:'GEN',   name:'Generations Stage (Swiss Re)' },
+  HARD:  { id:'HARD',  name:'Hardtechno Stage (HÖR Berlin × TechnoAbteil)' },
+  OPEN:  { id:'OPEN',  name:'Opening Truck (Frascati)' },
+};
+
+// Plan tags: plan: 'best' | 'second' | undefined
+// Tags: 'berlin-techno', 'panorama-house', 'melodic', 'hardtechno'
+const ACTS = [
+  // Opening Truck (optional)
+  act('13:00','15:00','Solardo', STAGES.OPEN, ['panorama-house']),
+
+  // Opera Stage
+  act('13:00','13:45','Ben Böhmer (LIVE)', STAGES.OPERA, ['melodic','panorama-house'], 'best'),
+  act('14:30','15:25','Massano', STAGES.OPERA, ['melodic'], 'second'),
+  act('16:00','16:55','Kölsch', STAGES.OPERA, ['melodic','house'], 'second'),
+  act('18:00','18:45','Kevin de Vries', STAGES.OPERA, ['melodic','berlin-techno'], 'best'),
+  act('19:30','20:10','Deborah de Luca', STAGES.OPERA, ['berlin-techno','hardtechno'], 'best'),
+  act('20:25','22:25','Pan-Pot', STAGES.OPERA, ['berlin-techno'], 'best'),
+  act('22:30','23:45','Adiel', STAGES.OPERA, ['berlin-techno','hypnotic'], 'best'),
+
+  // Innovation Stage
+  act('15:00','16:00','Fadi Mohem', STAGES.INNO, ['berlin-techno'], 'best'),
+  act('16:00','17:00','JakoJako', STAGES.INNO, ['berlin-techno','hypnotic'], 'best'),
+  act('17:00','17:45','KS012', STAGES.INNO, ['techno']),
+  act('20:00','20:45','Pelin Vedis', STAGES.INNO, ['techno'], 'second'),
+
+  // Center Stage
+  act('14:30','15:15','HoneyLuv', STAGES.CENTER, ['panorama-house'], 'best'),
+  act('19:30','20:15','Zamna Soundsystem', STAGES.CENTER, ['panorama-house'], 'second'),
+  act('22:30','23:59','Andrea Oliva b2b Arodes', STAGES.CENTER, ['house','melodic'], 'second'),
+
+  // Hardtechno (late alt)
+  act('21:00','21:40','Clara Cuvé', STAGES.HARD, ['hardtechno','berlin-techno'], 'second'),
+  act('21:45','22:25','Nikolina', STAGES.HARD, ['hardtechno'], 'second'),
+];
+
+function act(start, end, artist, stage, tags = [], plan){
+  const startISO = toISO(DAY, start);
+  const endISO   = toISO(DAY, end);
+  return { id: crypto.randomUUID(), start, end, startISO, endISO, artist, stage, tags, plan };
+}
+function toISO(day, hm){ return new Date(`${day}T${hm}:00`); }
+
+// ------------------ State ------------------
+const state = {
+  view: 'best', // best | second | all
+  notes: localStorage.getItem('sp25:notes')||'',
+};
+
+// ------------------ UI Render ------------------
+const $list = document.getElementById('list');
+const $nowPill = document.getElementById('nowPill');
+const $statusPill = document.getElementById('statusPill');
+
+function render(){
+  const view = state.view;
+  let items = ACTS.slice().sort((a,b)=>a.startISO-b.startISO);
+  if(view==='best') items = items.filter(a=>a.plan==='best');
+  if(view==='second') items = items.filter(a=>a.plan==='second');
+
+  $list.innerHTML = '';
+  const now = new Date();
+  for(const a of items){
+    const isNow = now>=a.startISO && now<=a.endISO;
+    const el = document.createElement('div');
+    el.className = 'card act';
+    el.dataset.id = a.id;
+    el.innerHTML = `
+      <div class="time ${isNow?'now':''}">${a.start}–${a.end}</div>
+      <div>
+        <div class="title">${a.artist}</div>
+        <div class="stage">${a.stage.name}</div>
+        <div class="row" style="margin-top:6px">${a.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+      </div>`;
+    $list.appendChild(el);
+  }
+  updateNowPill();
+}
+
+function updateNowPill(){
+  const now = new Date();
+  // compute against current view only
+  let items = ACTS.slice();
+  if(state.view==='best') items = items.filter(a=>a.plan==='best');
+  if(state.view==='second') items = items.filter(a=>a.plan==='second');
+  const current = items.find(a=> now>=a.startISO && now<=a.endISO);
+  $nowPill.textContent = current ? `Now: ${current.artist}` : 'Now: (no act in progress in this view)';
+}
+
+// Jump to the first card that is current or next
+function jumpToNow(){
+  const now = new Date();
+  const items = [...document.querySelectorAll('.act')];
+  let target = items.find(el=>{
+    const id = el.dataset.id;
+    const a = ACTS.find(x=>x.id===id);
+    return now>=a.startISO && now<=a.endISO;
+  });
+  if(!target){
+    const upcoming = items
+      .map(el=>{ const a = ACTS.find(x=>x.id===el.dataset.id); return {el, a}; })
+      .filter(x=> x.a.startISO>now)
+      .sort((x,y)=> x.a.startISO - y.a.startISO)[0];
+    if(upcoming) target = upcoming.el;
+  }
+  if(target) target.scrollIntoView({behavior:'smooth', block:'center'});
+}
+
+// View switches
+const viewBest = document.getElementById('view-best');
+const viewSecond = document.getElementById('view-second');
+const viewAll = document.getElementById('view-all');
+[viewBest,viewSecond,viewAll].forEach((el)=>{
+  el.addEventListener('change',()=>{
+    state.view = viewBest.checked?'best': viewSecond.checked?'second':'all';
+    render();
+  });
+});
+
+document.getElementById('btnNow').addEventListener('click', jumpToNow);
+
+// Notes persistence
+const $notes = document.getElementById('notes');
+$notes.value = state.notes;
+$notes.addEventListener('input', ()=>{
+  localStorage.setItem('sp25:notes', $notes.value);
+});
+document.getElementById('btnClearNotes').addEventListener('click', ()=>{
+  if(confirm('Clear notes?')){ $notes.value=''; localStorage.removeItem('sp25:notes'); }
+});
+
+// Export/Import (notes only, no favs)
+const $file = document.getElementById('fileImport');
+document.getElementById('btnExport').addEventListener('click', ()=>{
+  const data = { notes:$notes.value };
+  const blob = new Blob([JSON.stringify(data,null,2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = Object.assign(document.createElement('a'), { href:url, download:'street-parade-plan.json' });
+  document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+});
+document.getElementById('btnImport').addEventListener('click', ()=> $file.click());
+$file.addEventListener('change', async (e)=>{
+  const f = e.target.files[0]; if(!f) return;
+  const text = await f.text();
+  try{
+    const data = JSON.parse(text);
+    if(typeof data.notes==='string'){ $notes.value = data.notes; localStorage.setItem('sp25:notes', data.notes); }
+    render();
+    alert('Imported');
+  }catch(err){ alert('Invalid file'); }
+});
+
+// Online/offline indicators
+function updateNet(){
+  document.getElementById('online').style.display = navigator.onLine?'block':'none';
+  document.getElementById('offline').style.display = navigator.onLine?'none':'block';
+  $statusPill.textContent = navigator.onLine? 'Online' : 'Offline ready';
+}
+window.addEventListener('online', updateNet);
+window.addEventListener('offline', updateNet);
+updateNet();
+
+// Ticker for Now pill
+setInterval(updateNowPill, 30*1000);
+
+// ------------------ PWA bootstrap ------------------
+// Manifest (Blob is allowed for manifest; we also offer a downloadable copy.)
+const manifestObj = {
+  name: 'Street Parade 2025 – Planner',
+  short_name: 'SP25 Planner',
+  start_url: '.',
+  display: 'standalone',
+  background_color: '#0b0b0e',
+  theme_color: '#111111',
+  icons: [
+    { src: genIcon('#3A5BFF','512'), sizes:'512x512', type:'image/png' },
+    { src: genIcon('#3A5BFF','192'), sizes:'192x192', type:'image/png' }
+  ]
+};
+const manifestBlob = new Blob([JSON.stringify(manifestObj)], {type:'application/manifest+json'});
+const manifestURL = URL.createObjectURL(manifestBlob);
+const link = document.createElement('link');
+link.rel = 'manifest';
+link.href = manifestURL;
+document.head.appendChild(link);
+
+function genIcon(color, size){
+  const s = parseInt(size,10);
+  const cnv = document.createElement('canvas');
+  cnv.width = cnv.height = s; const ctx = cnv.getContext('2d');
+  ctx.fillStyle = '#0b0b0e'; ctx.fillRect(0,0,s,s);
+  ctx.fillStyle = color; ctx.beginPath(); ctx.arc(s/2, s/2, s*0.38, 0, Math.PI*2); ctx.fill();
+  ctx.fillStyle = 'white'; ctx.font = Math.floor(s*0.22)+'px system-ui'; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText('SP25', s/2, s/2);
+  return cnv.toDataURL('image/png');
+}
+
+// ----- Service worker registration (requires http/https) -----
+const hostingHelp = document.getElementById('hostingHelp');
+const hostingMsg = document.getElementById('hostingMsg');
+
+const swFileName = 'sp25-sw.js';
+const swSource = `
+  const CACHE = 'sp25-v1';
+  const CORE = ['/', './', 'index.html'];
+  self.addEventListener('install', (e)=>{
+    e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting()));
+  });
+  self.addEventListener('activate', (e)=>{ e.waitUntil(self.clients.claim()); });
+  self.addEventListener('fetch', (e)=>{
+    const req = e.request;
+    e.respondWith(
+      caches.match(req).then(r=> r || fetch(req).then(res=>{
+        const copy = res.clone();
+        caches.open(CACHE).then(c=> c.put(req, copy));
+        return res;
+      }).catch(()=> caches.match('./')))
+    );
+  });
+`;
+
+function offerDownloads(){
+  hostingHelp.style.display = 'block';
+  const msg = [];
+  if (!location.protocol.startsWith('http')) msg.push('Page is not served over HTTP(S); service worker cannot be registered.');
+  if (!('serviceWorker' in navigator)) msg.push('This browser does not support service workers.');
+  msg.push('If you plan to host this page (e.g., GitHub Pages/Netlify), download the files and place them next to this HTML:');
+  msg.push('<ul><li><code>'+swFileName+'</code> (service worker)</li><li><code>manifest.webmanifest</code> (manifest)</li></ul>');
+  hostingMsg.innerHTML = msg.join(' ');
+}
+
+// Buttons to download SW & manifest for hosting
+const btnSW = document.getElementById('btnDownloadSW');
+btnSW?.addEventListener('click', ()=>{
+  const blob = new Blob([swSource], {type:'application/javascript'});
+  const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: swFileName });
+  document.body.appendChild(a); a.click(); a.remove();
+});
+const btnMan = document.getElementById('btnDownloadManifest');
+btnMan?.addEventListener('click', ()=>{
+  const mBlob = new Blob([JSON.stringify(manifestObj, null, 2)], {type:'application/manifest+json'});
+  const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(mBlob), download: 'manifest.webmanifest' });
+  document.body.appendChild(a); a.click(); a.remove();
+});
+
+(async function initSW(){
+  if (!('serviceWorker' in navigator)) { offerDownloads(); return; }
+  if (!location.protocol.startsWith('http')) { offerDownloads(); return; }
+  try {
+    const reg = await navigator.serviceWorker.register('./'+swFileName);
+    console.log('SW registered', reg.scope);
+  } catch (err) {
+    console.warn('SW registration failed', err);
+    offerDownloads();
+  }
+})();
+
+// Install prompt (Android/desktop). On iOS use Share → Add to Home Screen.
+let deferredPrompt; const installUI = document.getElementById('installUI');
+window.addEventListener('beforeinstallprompt', (e)=>{ e.preventDefault(); deferredPrompt = e; installUI.style.display='inline'; });
+document.getElementById('btnInstall').addEventListener('click', async ()=>{
+  if(!deferredPrompt) return alert('Use your browser\'s Add to Home Screen');
+  deferredPrompt.prompt();
+  await deferredPrompt.userChoice; deferredPrompt = null; installUI.style.display='none';
+});
+
+// ------------------ Self-tests ------------------
+function addTest(name, pass, extra=''){
+  const li = document.createElement('li');
+  li.innerHTML = `${pass?'<span class="ok">✔</span>':'<span class="bad">✖</span>'} ${name} ${extra?`<span class="muted">${extra}</span>`:''}`;
+  document.getElementById('tests').appendChild(li);
+}
+
+(function runTests(){
+  // 1) Acts sorted
+  const sorted = ACTS.every((a,i,arr)=> i===0 || arr[i-1].startISO <= a.startISO);
+  addTest('Acts sorted by time', sorted);
+
+  // 2) No overlapping per curated plan
+  const best = ACTS.filter(a=>a.plan==='best').sort((a,b)=>a.startISO-b.startISO);
+  const second = ACTS.filter(a=>a.plan==='second').sort((a,b)=>a.startISO-b.startISO);
+  let overlapBest=false, overlapSecond=false;
+  for(let i=1;i<best.length;i++){ if(best[i-1].endISO>best[i].startISO){ overlapBest=true; break; } }
+  for(let i=1;i<second.length;i++){ if(second[i-1].endISO>second[i].startISO){ overlapSecond=true; break; } }
+  addTest('Best option has no overlaps', !overlapBest);
+  addTest('Second option has no overlaps', !overlapSecond);
+
+  // 3) Service worker environment sanity
+  const secure = location.protocol.startsWith('http');
+  addTest('Secure context for SW (http/https)', secure, secure?'':'(will show hosting help)');
+})();
+
+// Initial render
+render();
+</script>
+</body>
+</html>
