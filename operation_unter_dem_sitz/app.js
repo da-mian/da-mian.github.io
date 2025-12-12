@@ -210,15 +210,6 @@ holdBtn.addEventListener('pointerdown', startHoldProgress);
   });
 });
 
-restart.addEventListener('click', () => {
-  resetHold();
-  modeCards.forEach((c) => c.classList.remove('selected'));
-  modeReaction.textContent = 'Pick a mode to begin.';
-  modePolaroid.style.display = 'none';
-  modeNext.disabled = true;
-  showScreen('screen-start');
-});
-
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 setupFloating();
