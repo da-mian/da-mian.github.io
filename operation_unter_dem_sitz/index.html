@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Operation Under-the-Seat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-shell grid-bg">
+    <div class="floating" aria-hidden="true"></div>
+    <div class="badge">✈️ Operation Under-the-Seat</div>
+
+    <section class="screen active" id="screen-start">
+      <h1>Operation Under-the-Seat</h1>
+      <p>Welcome, Andreas. Quick mission (about 2 minutes). Difficulty: <em>Temu Express</em>.</p>
+      <div class="nav-actions">
+        <button class="cta" id="start-btn">Start Mission</button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-mode">
+      <h2>Choose your travel mode</h2>
+      <div class="layout">
+        <div class="card mode-card" data-mode="practical">
+          <h3>Practical</h3>
+          <p>fits under the seat, still fits everything</p>
+        </div>
+        <div class="card mode-card" data-mode="stylish">
+          <h3>Stylish</h3>
+          <p>looks premium, feels premium</p>
+        </div>
+        <div class="card" id="mode-result">
+          <div class="reaction" id="mode-reaction" aria-live="polite">Pick a mode to begin.</div>
+          <figure class="polaroid" id="mode-polaroid" style="display:none;">
+            <img src="./assets/us-in-travel-mode.jpg" alt="Trip memory" class="image">
+            <figcaption class="caption">Us in travel mode.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <button class="cta secondary" id="mode-next" disabled>Next</button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-quiz">
+      <h2 id="quiz-title">Mini quiz</h2>
+      <div class="layout">
+        <div class="card">
+          <h3 id="question-title"></h3>
+          <div class="answers" id="answers"></div>
+          <div class="feedback" id="answer-feedback" style="display:none;">Feedback</div>
+          <div class="nav-actions">
+            <button class="cta secondary" id="quiz-next" disabled>Next</button>
+          </div>
+        </div>
+        <div class="card">
+          <figure class="polaroid" id="quiz-polaroid" style="display:none;">
+            <img src="./assets/photo2.svg" alt="Quiz memory" class="image" id="quiz-photo">
+            <figcaption class="caption" id="quiz-caption"></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-scan">
+      <h2>Inventory scan running…</h2>
+      <ul class="check-list">
+        <li><span class="ok">✅</span> Premium backpack: detected</li>
+        <li><span class="ok">✅</span> Under-the-seat backpack: detected</li>
+        <li><span class="locked">🔒</span> Surprise: locked</li>
+      </ul>
+      <div class="nav-actions">
+        <button class="cta" id="scan-next">Unlock surprise</button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-hold">
+      <h2>Hold the button for 2 seconds. (No sneaking.)</h2>
+      <div class="hold-area">
+        <button class="hold-button" id="hold-btn">
+          <span class="hold-progress" id="hold-progress"></span>
+          Unlock
+        </button>
+        <p id="hold-instruction">Press and hold…</p>
+      </div>
+    </section>
+
+    <section class="screen" id="screen-reveal">
+      <div class="card">
+        <h2>Surprise unlocked</h2>
+        <p>Hint: look in the new backpack — main compartment.</p>
+        <p class="muted">The backpack turned into a surprise after all.</p>
+      </div>
+    </section>
+  </div>
+
+  <canvas id="confetti-canvas" class="confetti-layer"></canvas>
+  <script src="./app.js" defer></script>
+</body>
+</html>
