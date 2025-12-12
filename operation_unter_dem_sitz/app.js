@@ -18,12 +18,20 @@ const holdBtn = document.getElementById('hold-btn');
 const holdProgress = document.getElementById('hold-progress');
 const holdInstruction = document.getElementById('hold-instruction');
 const confettiCanvas = document.getElementById('confetti-canvas');
+const stickerLayer = document.getElementById('sticker-layer');
 
 let currentScreen = 'screen-start';
 let currentQuestion = 0;
 let holdTimer;
 let holdProgressInterval;
 let confettiActive = false;
+const stickerImages = [
+  './assets/stickers/sticker1.png',
+  './assets/stickers/sticker2.png',
+  './assets/stickers/sticker3.png',
+  './assets/stickers/sticker4.png',
+  './assets/stickers/sticker5.png'
+];
 
 const quizData = [
   {
@@ -90,6 +98,7 @@ function loadQuestion() {
     btn.addEventListener('click', () => {
       feedbackEl.textContent = item.feedback;
       feedbackEl.style.display = 'flex';
+      popMessage(feedbackEl);
       quizNext.disabled = false;
       if (item.photo) {
         quizPolaroid.style.display = 'block';
@@ -111,6 +120,7 @@ function startHoldProgress() {
   holdTimer = setTimeout(() => {
     holdInstruction.textContent = 'Unlocked!';
     triggerConfetti();
+    tossStickers();
     showScreen('screen-reveal');
   }, 2000);
 
@@ -166,6 +176,27 @@ function triggerConfetti() {
   }, 2500);
 }
 
+function tossStickers() {
+  stickerLayer.innerHTML = '';
+  const count = 14;
+  for (let i = 0; i < count; i++) {
+    const img = document.createElement('img');
+    img.className = 'sticker';
+    img.src = stickerImages[i % stickerImages.length];
+    img.style.left = Math.random() * 100 + '%';
+    img.style.width = 80 + Math.random() * 50 + 'px';
+    img.style.top = -(60 + Math.random() * 80) + 'px';
+    const duration = 5 + Math.random() * 2.5;
+    img.style.setProperty('--dur', `${duration}s`);
+    img.style.animationDelay = Math.random() * 1.2 + 's';
+    img.style.setProperty('--rotate', (Math.random() * 60 - 30) + 'deg');
+    stickerLayer.appendChild(img);
+  }
+  setTimeout(() => {
+    stickerLayer.innerHTML = '';
+  }, 9000);
+}
+
 function resizeCanvas() {
   confettiCanvas.width = window.innerWidth;
   confettiCanvas.height = window.innerHeight;
@@ -173,12 +204,19 @@ function resizeCanvas() {
 
 startBtn.addEventListener('click', () => showScreen('screen-mode'));
 
+function popMessage(el) {
+  el.classList.remove('pop');
+  void el.offsetWidth;
+  el.classList.add('pop');
+}
+
 modeCards.forEach((card) => {
   card.addEventListener('click', () => {
     modeCards.forEach((c) => c.classList.remove('selected'));
     card.classList.add('selected');
     modeReaction.textContent =
       'Great pick. I know you: clever first – and somehow everything fits.';
+    popMessage(modeReaction);
     modePolaroid.style.display = 'block';
     modeNext.disabled = false;
   });
