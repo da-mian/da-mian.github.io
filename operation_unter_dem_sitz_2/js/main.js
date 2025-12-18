@@ -44,7 +44,9 @@ function showScreen(screenId) {
     Object.values(screens).forEach(screen => {
         screen.classList.remove('active');
     });
-    screens[screenId].classList.add('active');
+    const nextScreen = screens[screenId];
+    nextScreen.classList.add('active');
+    nextScreen.scrollTop = 0;
 }
 
 function hideElement(element) {
@@ -76,7 +78,10 @@ function setupEventListeners() {
             
             // Show feedback after animation
             setTimeout(() => {
-                document.querySelectorAll('.card').forEach(c => c.style.display = 'none');
+                const cardContainer = document.querySelector('#travel-mode-screen .card-container');
+                if (cardContainer) {
+                    cardContainer.style.display = 'none';
+                }
                 showElement(document.getElementById('mode-feedback'));
             }, 500);
         });
@@ -113,6 +118,36 @@ function setupEventListeners() {
         const circleOverlay = document.getElementById('expanding-circle-overlay');
         const circleContent = document.getElementById('expanding-circle-content');
         const circleEmojis = document.getElementById('expanding-circle-emojis');
+
+        // Position effects at the button (not the center of the screen)
+        const rect = holdButton.getBoundingClientRect();
+        const originX = rect.left + rect.width / 2;
+        const originY = rect.top + rect.height / 2;
+        document.documentElement.style.setProperty('--unlock-origin-x', `${originX}px`);
+        document.documentElement.style.setProperty('--unlock-origin-y', `${originY}px`);
+
+        // Ensure orbit emoji elements exist
+        if (circleEmojis && !circleEmojis.querySelector('.orbit')) {
+            const orbit = document.createElement('div');
+            orbit.className = 'orbit';
+            const emojiSet = ['🔓', '🎁', '🔓', '🎁', '🔓', '🎁', '🔓', '🎁'];
+            const count = emojiSet.length;
+            const radius = 62; // px
+            for (let index = 0; index < count; index++) {
+                const angle = (index / count) * Math.PI * 2;
+                const x = Math.cos(angle) * radius;
+                const y = Math.sin(angle) * radius;
+                const span = document.createElement('span');
+                span.className = 'orbit-emoji';
+                span.textContent = emojiSet[index];
+                span.style.setProperty('--orbit-x', `${x}px`);
+                span.style.setProperty('--orbit-y', `${y}px`);
+                span.style.animationDelay = `${index * 60}ms`;
+                orbit.appendChild(span);
+            }
+            circleEmojis.textContent = '';
+            circleEmojis.appendChild(orbit);
+        }
         
         circleOverlay.classList.add('active');
         circleContent.classList.add('active');
@@ -150,26 +185,47 @@ function setupEventListeners() {
         console.log('Hold cancelled');
     }
 
-    // Mouse events
-    holdButton.addEventListener('mousedown', startHold);
-    holdButton.addEventListener('mouseup', cancelHold);
-    holdButton.addEventListener('mouseleave', cancelHold);
-    
-    // Touch events for mobile
-    holdButton.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-        startHold();
-    });
-    
-    holdButton.addEventListener('touchend', (e) => {
-        e.preventDefault();
-        cancelHold();
-    });
-    
-    holdButton.addEventListener('touchcancel', (e) => {
-        e.preventDefault();
-        cancelHold();
-    });
+    // Prevent iOS context menu interfering with long press
+    holdButton.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    // Prefer Pointer Events (more reliable on mobile Safari)
+    if (window.PointerEvent) {
+        holdButton.addEventListener('pointerdown', (e) => {
+            e.preventDefault();
+            if (holdButton.setPointerCapture) holdButton.setPointerCapture(e.pointerId);
+            startHold();
+        });
+        holdButton.addEventListener('pointerup', (e) => {
+            e.preventDefault();
+            cancelHold();
+        });
+        holdButton.addEventListener('pointercancel', (e) => {
+            e.preventDefault();
+            cancelHold();
+        });
+        holdButton.addEventListener('pointerleave', cancelHold);
+    } else {
+        // Mouse events
+        holdButton.addEventListener('mousedown', startHold);
+        holdButton.addEventListener('mouseup', cancelHold);
+        holdButton.addEventListener('mouseleave', cancelHold);
+
+        // Touch events for mobile (non-pointer fallback)
+        holdButton.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            startHold();
+        }, { passive: false });
+
+        holdButton.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            cancelHold();
+        }, { passive: false });
+
+        holdButton.addEventListener('touchcancel', (e) => {
+            e.preventDefault();
+            cancelHold();
+        }, { passive: false });
+    }
 
     // Final Button - Show celebration screen
     document.getElementById('final-btn').addEventListener('click', () => {
@@ -270,7 +326,8 @@ function init() {
 function registerServiceWorker() {
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
+            // Register relative to current path (important for GitHub Pages subpaths)
+            navigator.serviceWorker.register('sw.js')
                 .then(registration => {
                     console.log('ServiceWorker registration successful');
                 })
@@ -283,28 +340,49 @@ function registerServiceWorker() {
 
 // Enhanced Confetti Animation
 function triggerConfetti() {
-    // Multiple confetti bursts for more excitement
+    const colors = ['#ff6b6b', '#feca57', '#54a0ff', '#00d2d3', '#ff9ff3', '#48dbfb'];
+
+    // Big double-cannon burst
     confetti({
-        particleCount: 150,
-        spread: 90,
-        origin: { y: 0.6 }
+        particleCount: 220,
+        spread: 70,
+        startVelocity: 55,
+        decay: 0.9,
+        scalar: 1.2,
+        colors,
+        origin: { x: 0.18, y: 0.72 }
     });
-    
-    setTimeout(() => {
+
+    confetti({
+        particleCount: 220,
+        spread: 70,
+        startVelocity: 55,
+        decay: 0.9,
+        scalar: 1.2,
+        colors,
+        origin: { x: 0.82, y: 0.72 }
+    });
+
+    // Sparkly "wow" drizzle for ~1.2s
+    const durationMs = 1200;
+    const endTime = Date.now() + durationMs;
+
+    (function frame() {
         confetti({
-            particleCount: 100,
+            particleCount: 8,
+            startVelocity: 20,
             spread: 120,
-            origin: { y: 0.4, x: 0.2 }
+            ticks: 140,
+            gravity: 0.9,
+            scalar: 0.9,
+            colors,
+            shapes: ['circle', 'square'],
+            origin: { x: Math.random(), y: Math.random() * 0.35 + 0.05 }
         });
-    }, 200);
-    
-    setTimeout(() => {
-        confetti({
-            particleCount: 100,
-            spread: 120,
-            origin: { y: 0.4, x: 0.8 }
-        });
-    }, 400);
+        if (Date.now() < endTime) {
+            requestAnimationFrame(frame);
+        }
+    })();
     
     // Play sound effect if available
     playSound('celebration');
