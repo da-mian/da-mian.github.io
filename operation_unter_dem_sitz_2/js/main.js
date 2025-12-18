@@ -190,6 +190,7 @@ function setupEventListeners() {
 
     // Prevent iOS context menu interfering with long press
     holdButton.addEventListener('contextmenu', (e) => e.preventDefault());
+    holdButton.addEventListener('selectstart', (e) => e.preventDefault());
 
     // Prefer Pointer Events (more reliable on mobile Safari)
     if (window.PointerEvent) {
