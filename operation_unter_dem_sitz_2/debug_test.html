@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .test-section {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .console-output {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 10px;
+            height: 200px;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Debug Test for Button Functionality</h1>
+    
+    <div class="test-section">
+        <h2>Test 1: Basic Button Click</h2>
+        <button id="test-btn-1">Click Me</button>
+        <p id="result-1">Waiting for click...</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 2: Dynamic Button Creation</h2>
+        <button id="create-btn">Create Dynamic Button</button>
+        <div id="dynamic-container"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 3: Question Flow Simulation</h2>
+        <button id="simulate-question">Simulate Question Flow</button>
+        <div id="question-container"></div>
+        <div id="feedback-container"></div>
+    </div>
+
+    <h2>Console Output:</h2>
+    <div class="console-output" id="debug-console"></div>
+
+    <script>
+        // Simple logger
+        function log(message) {
+            const consoleDiv = document.getElementById('debug-console');
+            const logEntry = document.createElement('div');
+            logEntry.textContent = message;
+            consoleDiv.appendChild(logEntry);
+            consoleDiv.scrollTop = consoleDiv.scrollHeight;
+        }
+
+        // Test 1: Basic button click
+        document.getElementById('test-btn-1').addEventListener('click', function() {
+            document.getElementById('result-1').textContent = 'Button clicked successfully!';
+            document.getElementById('result-1').style.color = 'green';
+            log('Test 1: Basic button click - SUCCESS');
+        });
+
+        // Test 2: Dynamic button creation
+        document.getElementById('create-btn').addEventListener('click', function() {
+            const container = document.getElementById('dynamic-container');
+            container.innerHTML = '<button id="dynamic-btn">Dynamic Button</button>';
+            
+            document.getElementById('dynamic-btn').addEventListener('click', function() {
+                alert('Dynamic button works!');
+                log('Test 2: Dynamic button click - SUCCESS');
+            });
+            
+            log('Test 2: Dynamic button created');
+        });
+
+        // Test 3: Question flow simulation
+        let currentQuestion = 0;
+        const questions = [
+            { title: "Question 1", feedback: "Good answer!" },
+            { title: "Question 2", feedback: "Great answer!" },
+            { title: "Question 3", feedback: "Perfect answer!" }
+        ];
+
+        document.getElementById('simulate-question').addEventListener('click', function() {
+            showTestQuestion(currentQuestion);
+        });
+
+        function showTestQuestion(index) {
+            const question = questions[index];
+            const container = document.getElementById('question-container');
+            
+            container.innerHTML = `
+                <h3>${question.title}</h3>
+                <button class="answer-btn">Answer</button>
+            `;
+            
+            document.querySelector('.answer-btn').addEventListener('click', function() {
+                showTestFeedback(index);
+            });
+            
+            log(`Test 3: Showing question ${index + 1}`);
+        }
+
+        function showTestFeedback(index) {
+            const feedbackContainer = document.getElementById('feedback-container');
+            const question = questions[index];
+            
+            feedbackContainer.innerHTML = `
+                <p>${question.feedback}</p>
+                <button id="next-btn">${index < questions.length - 1 ? 'Next Question' : 'Finish'}</button>
+            `;
+            
+            document.getElementById('next-btn').addEventListener('click', function() {
+                currentQuestion++;
+                if (currentQuestion < questions.length) {
+                    showTestQuestion(currentQuestion);
+                    feedbackContainer.innerHTML = '';
+                } else {
+                    feedbackContainer.innerHTML = '<p>All questions completed!</p>';
+                }
+                log(`Test 3: Next button clicked, moving to question ${currentQuestion + 1}`);
+            });
+            
+            log(`Test 3: Showing feedback for question ${index + 1}`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hold Button Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+        .test-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+        }
+        .hold-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            margin: 20px 0;
+            min-width: 200px;
+            min-height: 60px;
+            transition: all 0.3s;
+        }
+        .hold-btn:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+        .hold-btn:active {
+            transform: scale(0.98);
+        }
+        .hold-btn.holding {
+            background-color: #c0392b;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .cancelled {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .instructions {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        .console-log {
+            text-align: left;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border: 1px solid #dee2e6;
+            height: 150px;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hold Button Test</h1>
+    
+    <div class="test-container">
+        <div class="instructions">
+            <p><strong>Test the hold functionality:</strong></p>
+            <p>Hold the button below for 2 seconds to see the success message.</p>
+            <p>Release before 2 seconds to see the cancel message.</p>
+        </div>
+        
+        <button id="hold-btn" class="hold-btn">Hold Me for 2 Seconds</button>
+        
+        <div id="result" class="result" style="display: none;"></div>
+        
+        <div class="console-log" id="console"></div>
+    </div>
+
+    <script>
+        // Console logging function
+        function log(message) {
+            const consoleDiv = document.getElementById('console');
+            const logEntry = document.createElement('div');
+            logEntry.textContent = new Date().toLocaleTimeString() + ' - ' + message;
+            consoleDiv.appendChild(logEntry);
+            consoleDiv.scrollTop = consoleDiv.scrollHeight;
+            console.log(message);
+        }
+
+        // Hold button functionality
+        let holdTimer;
+        let isHolding = false;
+        const holdBtn = document.getElementById('hold-btn');
+        const resultDiv = document.getElementById('result');
+        
+        function startHold() {
+            isHolding = true;
+            holdBtn.classList.add('holding');
+            holdBtn.textContent = 'Holding... (2 sec)';
+            log('Hold started');
+            
+            holdTimer = setTimeout(() => {
+                if (isHolding) {
+                    showSuccess();
+                }
+            }, 2000);
+        }
+        
+        function cancelHold() {
+            isHolding = false;
+            holdBtn.classList.remove('holding');
+            holdBtn.textContent = 'Hold Me for 2 Seconds';
+            clearTimeout(holdTimer);
+            log('Hold cancelled');
+            
+            showCancelled();
+        }
+        
+        function showSuccess() {
+            resultDiv.textContent = '✅ SUCCESS! Held for 2 seconds!';
+            resultDiv.className = 'result success';
+            resultDiv.style.display = 'block';
+            log('Hold completed successfully');
+            
+            // Reset button
+            holdBtn.classList.remove('holding');
+            holdBtn.textContent = 'Test Completed!';
+            holdBtn.disabled = true;
+        }
+        
+        function showCancelled() {
+            resultDiv.textContent = '❌ CANCELLED! Released too early.';
+            resultDiv.className = 'result cancelled';
+            resultDiv.style.display = 'block';
+            
+            // Hide result after 2 seconds
+            setTimeout(() => {
+                resultDiv.style.display = 'none';
+            }, 2000);
+        }
+
+        // Event listeners
+        holdBtn.addEventListener('mousedown', startHold);
+        holdBtn.addEventListener('mouseup', cancelHold);
+        holdBtn.addEventListener('mouseleave', cancelHold);
+        
+        // Touch events for mobile
+        holdBtn.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            startHold();
+        });
+        
+        holdBtn.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            cancelHold();
+        });
+        
+        holdBtn.addEventListener('touchcancel', (e) => {
+            e.preventDefault();
+            cancelHold();
+        });
+        
+        log('Hold button test initialized');
+    </script>
+</body>
+</html>

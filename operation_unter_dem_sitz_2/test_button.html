@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Test</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testing Next Question Button</h1>
+    <button id="test-btn">Click Me</button>
+    <div id="result"></div>
+    
+    <script>
+        document.getElementById('test-btn').addEventListener('click', function() {
+            document.getElementById('result').textContent = 'Button works! Event listener is properly attached.';
+            document.getElementById('result').style.backgroundColor = '#d4edda';
+            document.getElementById('result').style.color = '#155724';
+        });
+    </script>
+</body>
+</html>

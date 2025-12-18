@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎁 Secret Santa Mission</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ff6b6b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <div class="mission-header">
+                <h1>🎁 Lindo’s Christmas Mission</h1>
+            </div>
+            <div class="mission-text">
+                <p><strong>Hi my Lindo 👋</strong></p>
+                <p>Quick mission — about 2 minutes.</p>
+                <p>There’s a small mystery waiting for you.</p>
+                <p>Ready?</p>
+            </div>
+            <div class="sticker-preview">
+                <img src="images/stickers/sticker1.png" alt="Us having fun" class="sticker" onerror="this.style.display='none'">
+                <img src="images/stickers/sticker2.png" alt="Travel adventure" class="sticker" onerror="this.style.display='none'">
+            </div>
+            <button id="start-btn" class="btn mission-btn">🚀 Start mission</button>
+        </div>
+
+        <!-- Travel Mode Screen -->
+        <div id="travel-mode-screen" class="screen">
+            <h1>Choose Your Travel Style</h1>
+            <div class="card-container">
+                <div class="card" data-mode="practical">
+                    <h3>Practical</h3>
+                    <p>"Fits under the seat, yet holds everything!"</p>
+                </div>
+                <div class="card" data-mode="stylish">
+                    <h3>Stylish</h3>
+                    <p>"Looks premium, feels premium!"</p>
+                </div>
+            </div>
+            <div id="mode-feedback" class="feedback hidden">
+                <p class="fun-feedback">Of course, it has to fit a tent, sleeping bag, food for 3 days and 4 bottles of water inside! 😂</p>
+                <div class="polaroid">
+                    <img src="images/us-in-travel-mode.jpg" alt="Us in travel mode">
+                </div>
+                <button id="continue-btn" class="btn">Continue</button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div id="question-container"></div>
+            <div id="quiz-feedback" class="feedback hidden"></div>
+        </div>
+
+        <!-- System Scan Screen -->
+        <div id="scan-screen" class="screen">
+            <h1>🔍 Mission Progress...</h1>
+            <div class="scan-results">
+                <p>✅ Premium backpack: detected</p>
+                <p>✅ Under-seat backpack: detected</p>
+                <p>🔒 Mystery surprise: locked</p>
+            </div>
+            <button id="unlock-btn" class="btn">Unlock Surprise</button>
+        </div>
+
+        <!-- Unlock Screen -->
+        <div id="unlock-screen" class="screen">
+            <div id="unlock-instructions">
+                <h2>🔓 Unlock the Mystery</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    <strong>Hold the button for 2 seconds</strong>
+                </p>
+                <div style="text-align: center; margin: 20px 0;">
+                    <div id="hold-instructions" style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">
+                        👆 Press and hold 👆
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hold Progress Visualization -->
+            <div id="hold-progress-container" class="hidden">
+                <div class="progress-bar-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                    <div id="progress-text" class="progress-text">0%</div>
+                </div>
+                <div id="hold-animation" class="hold-animation">
+                    🔓🎁🔓🎁🔓
+                </div>
+            </div>
+            
+            <button id="hold-unlock-btn" class="btn hold-btn">Unlock Surprise</button>
+            
+            <!-- Expanding Circle Overlay -->
+            <div id="expanding-circle-overlay" class="expanding-circle-overlay"></div>
+            <div id="expanding-circle-content" class="expanding-circle-content">UNLOCKING...</div>
+            <div id="expanding-circle-emojis" class="expanding-circle-emojis">🔓🎁🔓🎁🔓</div>
+            
+            <div id="reveal-content" class="hidden">
+                <h2>🎁 SURPRISE UNLOCKED!</h2>
+                <p>Check <strong>inside your new backpack</strong> – <strong>main compartment</strong>.</p>
+                <p>The backpack had one surprise after all...</p>
+                <button id="final-btn" class="btn">🎉 Celebrate!</button>
+            </div>
+        </div>
+
+        <!-- Celebration Screen -->
+        <div id="celebration-screen" class="screen">
+            <div class="celebration-content">
+                <div class="sticker-celebration">
+                    <img src="images/stickers/sticker1.png" alt="Us celebrating" class="celebration-sticker" onerror="this.style.display='none'">
+                    <img src="images/stickers/sticker2.png" alt="Holiday fun" class="celebration-sticker" onerror="this.style.display='none'">
+                </div>
+                <h1>🎉 MERRY CHRISTMAS! 🎄</h1>
+                <div class="celebration-message">
+                    <p>🎁 Your secret mission is complete!</p>
+                    <p>💖 Hope you love your surprises!</p>
+                    <p>I love you more than anything! ❤️</p>
+                </div>
+                <div class="final-note">
+                    <p>💝 <em>From your lindo</em> 🎅</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</body>
+</html>

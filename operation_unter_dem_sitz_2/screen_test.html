@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Screen Switching Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .screen {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .screen.active {
+            display: block;
+            border: 2px solid #3498db;
+            background-color: #f8f9fa;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .debug-info {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border: 1px solid #dee2e6;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Screen Switching Test</h1>
+    
+    <div class="debug-info">
+        <strong>Current Active Screen:</strong> <span id="current-screen">None</span>
+    </div>
+    
+    <div class="screen active" id="screen-1">
+        <h2>Screen 1</h2>
+        <p>This is the first screen.</p>
+        <button onclick="showScreen('screen-2')">Go to Screen 2</button>
+    </div>
+
+    <div class="screen" id="screen-2">
+        <h2>Screen 2</h2>
+        <p>This is the second screen.</p>
+        <button onclick="showScreen('screen-3')">Go to Screen 3</button>
+        <button onclick="showScreen('screen-1')">Back to Screen 1</button>
+    </div>
+
+    <div class="screen" id="screen-3">
+        <h2>Screen 3</h2>
+        <p>This is the third screen.</p>
+        <button onclick="showScreen('screen-1')">Back to Screen 1</button>
+    </div>
+
+    <script>
+        function showScreen(screenId) {
+            // Hide all screens
+            document.querySelectorAll('.screen').forEach(screen => {
+                screen.classList.remove('active');
+            });
+            
+            // Show the requested screen
+            document.getElementById(screenId).classList.add('active');
+            
+            // Update debug info
+            document.getElementById('current-screen').textContent = screenId;
+            
+            console.log('Showing screen:', screenId);
+        }
+        
+        // Log initial state
+        console.log('Initial screen: screen-1');
+    </script>
+</body>
+</html>
