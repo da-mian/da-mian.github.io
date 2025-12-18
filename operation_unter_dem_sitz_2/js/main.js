@@ -126,27 +126,30 @@ function setupEventListeners() {
         document.documentElement.style.setProperty('--unlock-origin-x', `${originX}px`);
         document.documentElement.style.setProperty('--unlock-origin-y', `${originY}px`);
 
-        // Ensure orbit emoji elements exist
-        if (circleEmojis && !circleEmojis.querySelector('.orbit')) {
-            const orbit = document.createElement('div');
-            orbit.className = 'orbit';
+        // Ensure orbit emoji elements exist (planet-style: different radii and speeds)
+        if (circleEmojis && !circleEmojis.querySelector('.orbit-planet')) {
             const emojiSet = ['🔓', '🎁', '🔓', '🎁', '🔓', '🎁', '🔓', '🎁'];
-            const count = emojiSet.length;
-            const radius = 62; // px
-            for (let index = 0; index < count; index++) {
-                const angle = (index / count) * Math.PI * 2;
-                const x = Math.cos(angle) * radius;
-                const y = Math.sin(angle) * radius;
-                const span = document.createElement('span');
-                span.className = 'orbit-emoji';
-                span.textContent = emojiSet[index];
-                span.style.setProperty('--orbit-x', `${x}px`);
-                span.style.setProperty('--orbit-y', `${y}px`);
-                span.style.animationDelay = `${index * 60}ms`;
-                orbit.appendChild(span);
-            }
+            const radii = [58, 72, 86, 102, 66, 92, 110, 78]; // px, varied like "planets"
+            const durations = [1.05, 1.25, 1.45, 1.7, 1.15, 1.55, 1.95, 1.35]; // seconds, varied speeds
+
             circleEmojis.textContent = '';
-            circleEmojis.appendChild(orbit);
+
+            for (let index = 0; index < emojiSet.length; index++) {
+                const angleDeg = (index / emojiSet.length) * 360;
+                const planet = document.createElement('div');
+                planet.className = 'orbit-planet';
+                planet.style.setProperty('--orbit-angle', `${angleDeg}deg`);
+                planet.style.setProperty('--orbit-radius', `${radii[index % radii.length]}px`);
+                planet.style.setProperty('--orbit-duration', `${durations[index % durations.length]}s`);
+
+                const emoji = document.createElement('span');
+                emoji.className = 'orbit-emoji';
+                emoji.textContent = emojiSet[index];
+                emoji.style.animationDelay = `${index * 70}ms`;
+
+                planet.appendChild(emoji);
+                circleEmojis.appendChild(planet);
+            }
         }
         
         circleOverlay.classList.add('active');

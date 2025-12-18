@@ -1,5 +1,5 @@
 // Service Worker for PWA functionality
-const CACHE_NAME = 'operation-unter-dem-sitz-v3';
+const CACHE_NAME = 'operation-unter-dem-sitz-v4';
 const urlsToCache = [
     './',
     './index.html',
