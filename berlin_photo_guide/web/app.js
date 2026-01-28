@@ -7,6 +7,48 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "© OpenStreetMap contributors",
 }).addTo(map);
 
+const userLocation = {
+  marker: null,
+  circle: null,
+};
+
+const renderUserLocation = (latlng, accuracy) => {
+  if (userLocation.marker) {
+    userLocation.marker.setLatLng(latlng);
+  } else {
+    userLocation.marker = L.circleMarker(latlng, {
+      radius: 6,
+      color: "#1f6f8b",
+      fillColor: "#1f6f8b",
+      fillOpacity: 1,
+      weight: 2,
+    }).addTo(map);
+  }
+
+  if (accuracy) {
+    if (userLocation.circle) {
+      userLocation.circle.setLatLng(latlng).setRadius(accuracy);
+    } else {
+      userLocation.circle = L.circle(latlng, {
+        radius: accuracy,
+        color: "#1f6f8b",
+        fillColor: "#1f6f8b",
+        fillOpacity: 0.08,
+        weight: 1,
+      }).addTo(map);
+    }
+  }
+};
+
+map.locate({ setView: false, enableHighAccuracy: true, maximumAge: 30000 });
+map.on("locationfound", (event) => {
+  renderUserLocation(event.latlng, event.accuracy);
+});
+
+map.on("locationerror", (event) => {
+  console.warn("Location access denied or unavailable:", event.message);
+});
+
 const panelTitle = document.getElementById("panel-title");
 const panelLocation = document.getElementById("panel-location");
 const panelMeta = document.getElementById("panel-meta");
