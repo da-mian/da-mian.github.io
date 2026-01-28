@@ -1,6 +1,7 @@
 [
   {
-    "pdf_page": 22,
+    "pdf_page": 23,
+    "pdf_page_detail": 23,
     "place_number": 1,
     "title": "Abgeordnetenhaus State Parliament Berlin",
     "title_lines": [
@@ -18,18 +19,39 @@
     },
     "coordinates_raw": "52.508027, 13.381532",
     "accessibility": "hard",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Monday - Friday 9am - 6pm"
+    ],
+    "best_time_to_visit": [
+      "As early as possible",
+      "Cloudy days"
+    ],
+    "entry_fee": [
+      "Free",
+      "ID required"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)",
+      "This area is usually crowded so be patient and wait for the perfect moment",
+      "Take your time to explore the building there is a lot to discover",
+      "This photo is captured from the second floor"
+    ],
     "image": "022_abgeordnetenhaus_state_parliament_berlin.png",
     "image_path": "images/022_abgeordnetenhaus_state_parliament_berlin.png"
   },
   {
-    "pdf_page": 24,
+    "pdf_page": 25,
+    "pdf_page_detail": 25,
     "place_number": 2,
     "title": "Amtsgericht Mitte County Court <Mitte=",
     "title_lines": [
@@ -47,18 +69,38 @@
     },
     "coordinates_raw": "52.518888, 13.413609",
     "accessibility": "hard",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Monday - Friday 9am - 1pm"
+    ],
+    "best_time_to_visit": [
+      "As early as possible"
+    ],
+    "entry_fee": [
+      "Free",
+      "ID required"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "There is a guarded gate including a full body scan. Ask friendly for permission and explain",
+      "yourself (I am a hobby photographer and interested in the architecture)",
+      "This is a court please keep that in mind and act accordingly",
+      "Keep a low profile and respect any instructions given",
+      "This area is usually crowded so be patient and wait for the perfect moment"
+    ],
     "image": "024_amtsgericht_mitte_county_court_mitte.png",
     "image_path": "images/024_amtsgericht_mitte_county_court_mitte.png"
   },
   {
-    "pdf_page": 26,
+    "pdf_page": 27,
+    "pdf_page_detail": 27,
     "place_number": 3,
     "title": "Berliner Fernsehturm Television Tower Berlin",
     "title_lines": [
@@ -76,18 +118,36 @@
     },
     "coordinates_raw": "52.521166, 13.410113",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always (outside)",
+      "Daily from 9am - 11pm"
+    ],
+    "best_time_to_visit": [
+      "Golden hour"
+    ],
+    "entry_fee": [
+      "26,50 ¬"
+    ],
+    "gear": [
+      "Telephoto-lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Watch out for blown out highlights on the tower",
+      "Find an elevated position for the best perspective for example Humboldt Forum or Park Inn",
+      "Rooftop Terrace"
+    ],
     "image": "026_berliner_fernsehturm_television_tower_berlin.png",
     "image_path": "images/026_berliner_fernsehturm_television_tower_berlin.png"
   },
   {
-    "pdf_page": 28,
+    "pdf_page": 29,
+    "pdf_page_detail": 29,
     "place_number": 4,
     "title": "Bierpinsel",
     "title_lines": [
@@ -104,18 +164,36 @@
     },
     "coordinates_raw": "52.461687, 13.325087",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "This building is in the middle of the road in a busy area. Watch out for pedestrians and cars",
+      "Take your time to walk around the building and explore various angles",
+      "The metro station U Schloßstraße is directly below"
+    ],
     "image": "028_bierpinsel.png",
     "image_path": "images/028_bierpinsel.png"
   },
   {
-    "pdf_page": 30,
+    "pdf_page": 31,
+    "pdf_page_detail": 31,
     "place_number": 5,
     "title": "Brandenburger Tor Brandenburg Gate",
     "title_lines": [
@@ -133,18 +211,38 @@
     },
     "coordinates_raw": "52.516245, 13.377523",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always unless there's a special",
+      "event like a concert or marathon"
+    ],
+    "best_time_to_visit": [
+      "Sunrise and sunset",
+      "Golden hour"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "For a clean shot visit as early as possible ideally during summer when the sun rises early",
+      "The sun rises behind the gate twice a year around March 20th and September 22nd",
+      "This area is crowded during daytime so be patient and wait for the perfect moment",
+      "Take your time to walk around the building and explore various angles"
+    ],
     "image": "030_brandenburger_tor_brandenburg_gate.png",
     "image_path": "images/030_brandenburger_tor_brandenburg_gate.png"
   },
   {
-    "pdf_page": 32,
+    "pdf_page": 33,
+    "pdf_page_detail": 33,
     "place_number": 6,
     "title": "Cube Berlin",
     "title_lines": [
@@ -161,18 +259,36 @@
     },
     "coordinates_raw": "52.523540, 13.369318",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always (outside)"
+    ],
+    "best_time_to_visit": [
+      "Golden hour"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Watch out for reflections and blown out highlights",
+      "This area is usually crowded so be patient and wait for the perfect moment",
+      "Take your time to walk around the building and explore various angles",
+      "Berlin Hauptbahnhof with many shops and supermarkets is just nearby"
+    ],
     "image": "032_cube_berlin.png",
     "image_path": "images/032_cube_berlin.png"
   },
   {
-    "pdf_page": 34,
+    "pdf_page": 35,
+    "pdf_page_detail": 35,
     "place_number": 7,
     "title": "Dark Matter",
     "title_lines": [
@@ -189,26 +305,46 @@
     },
     "coordinates_raw": "52.492822, 13.492590",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Wednesday - Thursday 2pm - 10pm",
+      "Friday 12am - 11pm",
+      "Saturday - Sunday 11am - 10pm"
+    ],
+    "best_time_to_visit": [
+      "Anytime"
+    ],
+    "entry_fee": [
+      "22,50 ¬",
+      "Online booking in advance"
+    ],
+    "gear": [
+      "35mm equivalent",
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/2.8"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "The rooms are very small",
+      "Take your time to explore other rooms there is a lot to discover",
+      "Be patient and wait for the perfect moment"
+    ],
     "image": "034_dark_matter.png",
     "image_path": "images/034_dark_matter.png"
   },
   {
-    "pdf_page": 36,
+    "pdf_page": 37,
+    "pdf_page_detail": 37,
     "place_number": 8,
     "title": "Deutsche Kinemathek",
     "title_lines": [
       "Deutsche Kinemathek"
     ],
-    "location": "changed!, Mauerstraße 79, 10117 Berlin",
+    "location": "Mauerstraße 79, 10117 Berlin",
     "location_lines": [
-      "changed!",
       "Mauerstraße 79",
       "10117 Berlin"
     ],
@@ -218,18 +354,39 @@
     },
     "coordinates_raw": "52.508608, 13.3871501",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Location changed: reopening in",
+      "autumn 2025"
+    ],
+    "best_time_to_visit": [
+      "As early as possible"
+    ],
+    "entry_fee": [
+      "9,00 ¬"
+    ],
+    "gear": [
+      "35mm equivalent",
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Location changed!",
+      "This museum is moving to a new location and might look different. More details",
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)",
+      "This museum is usually crowded so be patient and wait for the perfect moment"
+    ],
     "image": "036_deutsche_kinemathek.png",
     "image_path": "images/036_deutsche_kinemathek.png"
   },
   {
-    "pdf_page": 38,
+    "pdf_page": 39,
+    "pdf_page_detail": 39,
     "place_number": 9,
     "title": "Deutsches Historisches Museum German Historical Museum",
     "title_lines": [
@@ -248,18 +405,38 @@
     },
     "coordinates_raw": "52.518015, 13.396945",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always (outside)",
+      "Daily 10am - 6pm"
+    ],
+    "best_time_to_visit": [
+      "Golden hour"
+    ],
+    "entry_fee": [
+      "Free",
+      "Indoors not allowed"
+    ],
+    "gear": [
+      "35mm equivalent",
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Outdoors possible"
+    ],
+    "tips": [
+      "Watch out for the reflections and blown out highlights",
+      "The museum's interior design is also quite stunning. If you have some extra time you should",
+      "explore it as well"
+    ],
     "image": "038_deutsches_historisches_museum_german_historical_museum.png",
     "image_path": "images/038_deutsches_historisches_museum_german_historical_museum.png"
   },
   {
-    "pdf_page": 40,
+    "pdf_page": 41,
+    "pdf_page_detail": 41,
     "place_number": 10,
     "title": "Deutsches Technikmuseum",
     "title_lines": [
@@ -277,18 +454,37 @@
     },
     "coordinates_raw": "52.498831, 13.378208",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always (outside)",
+      "Wide-angle lens"
+    ],
+    "best_time_to_visit": [
+      "Golden hour"
+    ],
+    "entry_fee": [
+      "Free",
+      "Indoors not allowed"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Outdoors possible"
+    ],
+    "tips": [
+      "Go close to the building and aim upwards while using the grid to keep the plane centered",
+      "This photo is captured in 35mm full-frame but you could go even wider to feature the whole",
+      "plane"
+    ],
     "image": "040_deutsches_technikmuseum.png",
     "image_path": "images/040_deutsches_technikmuseum.png"
   },
   {
-    "pdf_page": 42,
+    "pdf_page": 43,
+    "pdf_page_detail": 43,
     "place_number": 11,
     "title": "DZ Bank",
     "title_lines": [
@@ -305,18 +501,41 @@
     },
     "coordinates_raw": "52.515624, 13.379014",
     "accessibility": "hard",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Individual",
+      "Ask for permission in advance"
+    ],
+    "best_time_to_visit": [
+      "During daytime",
+      "Cloudy days"
+    ],
+    "entry_fee": [
+      "Free",
+      "Request visit in advance"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)",
+      "Take your time to explore the building there is a lot to discover",
+      "This photo is captured from the first floor",
+      "Don9t worry about having perfectly aligned lines when taking the picture as you can easily",
+      "fix the perspective in Lightroom or Photoshop"
+    ],
     "image": "042_dz_bank.png",
     "image_path": "images/042_dz_bank.png"
   },
   {
-    "pdf_page": 44,
+    "pdf_page": 45,
+    "pdf_page_detail": 45,
     "place_number": 12,
     "title": "Edeka Schnelle",
     "title_lines": [
@@ -333,18 +552,37 @@
     },
     "coordinates_raw": "52.514676, 13.431312",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always (outside)",
+      "Telephoto-lens"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Center the lantern in the middle of the building using the zoom of your camera",
+      "Don9t worry about having perfectly aligned lines when taking the picture as you can easily",
+      "fix the perspective in Lightroom or Photoshop",
+      "This photo is a 200% crop"
+    ],
     "image": "044_edeka_schnelle.png",
     "image_path": "images/044_edeka_schnelle.png"
   },
   {
-    "pdf_page": 46,
+    "pdf_page": 47,
+    "pdf_page_detail": 47,
     "place_number": 13,
     "title": "Energie Forum",
     "title_lines": [
@@ -361,18 +599,36 @@
     },
     "coordinates_raw": "52.509038, 13.432843",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Monday - Friday during business",
+      "hours"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)",
+      "Sunny days work best here because of the shadows and reflection of light"
+    ],
     "image": "046_energie_forum.png",
     "image_path": "images/046_energie_forum.png"
   },
   {
-    "pdf_page": 48,
+    "pdf_page": 49,
+    "pdf_page_detail": 49,
     "place_number": 14,
     "title": "Flughafen Tegel Tegel Airport",
     "title_lines": [
@@ -390,18 +646,35 @@
     },
     "coordinates_raw": "52.554183, 13.293752",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always (outside)",
+      "Wide-angle lens"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/5.6"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Take your time to explore the airport there is a lot to discover",
+      "This photo is taken from the parking lot"
+    ],
     "image": "048_flughafen_tegel_tegel_airport.png",
     "image_path": "images/048_flughafen_tegel_tegel_airport.png"
   },
   {
-    "pdf_page": 50,
+    "pdf_page": 51,
+    "pdf_page_detail": 51,
     "place_number": 15,
     "title": "Futurium",
     "title_lines": [
@@ -418,18 +691,39 @@
     },
     "coordinates_raw": "52.523832, 13.374293",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always (outside)",
+      "Wednesday - Monday 10am - 6pm"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free",
+      "Indoors not allowed"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Outdoors possible"
+    ],
+    "tips": [
+      "Explore various angles and focal lengths",
+      "Take your time and explore the museum and it surroundings",
+      "The museum's interior design is pretty cool. If you have some extra time you should explore",
+      "it as well"
+    ],
     "image": "050_futurium.png",
     "image_path": "images/050_futurium.png"
   },
   {
-    "pdf_page": 52,
+    "pdf_page": 53,
+    "pdf_page_detail": 53,
     "place_number": 16,
     "title": "GALERIA Alexanderplatz",
     "title_lines": [
@@ -447,18 +741,39 @@
     },
     "coordinates_raw": "52.522454, 13.411577",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Monday - Saturday 10am - 8pm",
+      "Wide-angle lens",
+      "NO Camera allowed"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "This location will close by the end of 2025 due to renovations",
+      "This area is usually crowded so be patient and wait for the perfect moment",
+      "Take your time to walk around and explore various angles and focal lengths",
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)"
+    ],
     "image": "052_galeria_alexanderplatz.png",
     "image_path": "images/052_galeria_alexanderplatz.png"
   },
   {
-    "pdf_page": 54,
+    "pdf_page": 55,
+    "pdf_page_detail": 55,
     "place_number": 17,
     "title": "Gärten der Welt: Christlicher Garten Christian Garden",
     "title_lines": [
@@ -477,18 +792,38 @@
     },
     "coordinates_raw": "52.536933, 13.577801",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Daily from 9am until sunset",
+      "Some gardens are closed during",
+      "winter"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "7,00 ¬"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "This area is usually crowded so be patient and wait for the perfect moment",
+      "There are multiple corridors - choose the right one based on the lighting",
+      "Sunny days work best here because of the shadows and reflection of light"
+    ],
     "image": "054_garten_der_welt_christlicher_garten_christian_garden.png",
     "image_path": "images/054_garten_der_welt_christlicher_garten_christian_garden.png"
   },
   {
-    "pdf_page": 56,
+    "pdf_page": 57,
+    "pdf_page_detail": 57,
     "place_number": 18,
     "title": "Gärten der Welt: Orientalisch Islamischer Garten",
     "title_lines": [
@@ -507,18 +842,38 @@
     },
     "coordinates_raw": "52.539808, 13.575539",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Daily from 9am until sunset",
+      "Some gardens are closed during",
+      "winter"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "7,00 ¬"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "This area is usually crowded so be patient and wait for the perfect moment",
+      "Take your time to explore the garden there is a lot to discover",
+      "Use the doors to create a frame within a frame"
+    ],
     "image": "056_garten_der_welt_orientalisch_islamischer_garten.png",
     "image_path": "images/056_garten_der_welt_orientalisch_islamischer_garten.png"
   },
   {
-    "pdf_page": 58,
+    "pdf_page": 59,
+    "pdf_page_detail": 59,
     "place_number": 19,
     "title": "Gropius Bau",
     "title_lines": [
@@ -535,18 +890,37 @@
     },
     "coordinates_raw": "52.507008, 13.381928",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Monday - Friday 11am - 7pm",
+      "Saturday - Sunday 10am - 7pm"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "9,00 ¬"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Check the ongoing exhibition before",
+      "The location may appear different depending on the exhibition",
+      "This area is usually crowded so be patient and wait for the perfect moment"
+    ],
     "image": "058_gropius_bau.png",
     "image_path": "images/058_gropius_bau.png"
   },
   {
-    "pdf_page": 60,
+    "pdf_page": 61,
+    "pdf_page_detail": 61,
     "place_number": 20,
     "title": "Hamburger Bahnhof",
     "title_lines": [
@@ -563,18 +937,37 @@
     },
     "coordinates_raw": "52.528306, 13.372201",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Tuesday - Friday 10am - 6pm",
+      "Saturday - Sunday 11am - 6pm"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "12,00 ¬"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Check the ongoing exhibition before",
+      "The location may appear different depending on the exhibition",
+      "This area is usually crowded so be patient and wait for the perfect moment"
+    ],
     "image": "060_hamburger_bahnhof.png",
     "image_path": "images/060_hamburger_bahnhof.png"
   },
   {
-    "pdf_page": 62,
+    "pdf_page": 63,
+    "pdf_page_detail": 63,
     "place_number": 21,
     "title": "Haus der Kulturen der Welt House of World Cultures",
     "title_lines": [
@@ -593,18 +986,37 @@
     },
     "coordinates_raw": "52.518764, 13.363965",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always (outside)",
+      "Wide-angle lens"
+    ],
+    "best_time_to_visit": [
+      "Anytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Use puddles or a pool to create reflections",
+      "Pool in front of the building is empty during winter",
+      "This area is usually crowded so be patient and wait for the perfect moment",
+      "Take your time to walk around and explore various angles and focal lengths"
+    ],
     "image": "062_haus_der_kulturen_der_welt_house_of_world_cultures.png",
     "image_path": "images/062_haus_der_kulturen_der_welt_house_of_world_cultures.png"
   },
   {
-    "pdf_page": 64,
+    "pdf_page": 65,
+    "pdf_page_detail": 65,
     "place_number": 22,
     "title": "Haus des Lehrers",
     "title_lines": [
@@ -621,18 +1033,37 @@
     },
     "coordinates_raw": "52.521356, 13.416358",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "This photo is taken from the building on the other side which isn't accessible anymore but",
+      "you can also take the shot from the ground",
+      "Don9t worry about having perfectly aligned lines when taking the picture as you can easily",
+      "fix the perspective in Lightroom or Photoshop"
+    ],
     "image": "064_haus_des_lehrers.png",
     "image_path": "images/064_haus_des_lehrers.png"
   },
   {
-    "pdf_page": 66,
+    "pdf_page": 67,
+    "pdf_page_detail": 67,
     "place_number": 23,
     "title": "Holocaust-Mahnmal Holocaust Memorial",
     "title_lines": [
@@ -650,18 +1081,38 @@
     },
     "coordinates_raw": "52.513980, 13.378358",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always",
+      "Telephoto-lens"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Take your time and explore the area there is a lot to discover",
+      "This is a memorial please keep that in mind and act accordingly",
+      "This area is usually crowded so be patient and wait for the perfect moment",
+      "Watch out for patterns and contrasty scenes"
+    ],
     "image": "066_holocaust_mahnmal_holocaust_memorial.png",
     "image_path": "images/066_holocaust_mahnmal_holocaust_memorial.png"
   },
   {
-    "pdf_page": 68,
+    "pdf_page": 69,
+    "pdf_page_detail": 69,
     "place_number": 24,
     "title": "ICC Underpass",
     "title_lines": [
@@ -678,18 +1129,36 @@
     },
     "coordinates_raw": "52.505955, 13.279716",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "There are multiple exits - choose the right one based on the lighting and your style",
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)"
+    ],
     "image": "068_icc_underpass.png",
     "image_path": "images/068_icc_underpass.png"
   },
   {
-    "pdf_page": 70,
+    "pdf_page": 71,
+    "pdf_page_detail": 71,
     "place_number": 25,
     "title": "Jacob-und-Wilhelm- Grimm-Zentrum",
     "title_lines": [
@@ -707,18 +1176,38 @@
     },
     "coordinates_raw": "52.520527, 13.390952",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Monday - Friday 9am - 12pm",
+      "Saturday - Sunday 10am - 10pm"
+    ],
+    "best_time_to_visit": [
+      "As early as possible"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Phone with wide-angle lens",
+      "No camera allowed"
+    ],
+    "settings": [
+      "Use all lenses and shoot in RAW"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Required to put your bags and jacket in a locker",
+      "Bring a small lock or buy one from the library shop",
+      "This is a library please keep that in mind and act accordingly",
+      "Keep a low profile and respect any instructions given"
+    ],
     "image": "070_jacob_und_wilhelm_grimm_zentrum.png",
     "image_path": "images/070_jacob_und_wilhelm_grimm_zentrum.png"
   },
   {
-    "pdf_page": 72,
+    "pdf_page": 73,
+    "pdf_page_detail": 73,
     "place_number": 26,
     "title": "Kirche am Hohenzollernplatz",
     "title_lines": [
@@ -736,18 +1225,39 @@
     },
     "coordinates_raw": "52.494173, 13.326845",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Mo & Th - 4pm - 6pm",
+      "Wednesday - 11am - 1 pm",
+      "Saturday - 1pm - 3pm"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Guided tours are offered every Thursday at 6 pm. No prior registration is needed",
+      "This photo is taken through the window of the entrance door",
+      "This is a church please keep that in mind and act accordingly",
+      "Keep a low profile and respect any instructions given"
+    ],
     "image": "072_kirche_am_hohenzollernplatz.png",
     "image_path": "images/072_kirche_am_hohenzollernplatz.png"
   },
   {
-    "pdf_page": 74,
+    "pdf_page": 75,
+    "pdf_page_detail": 75,
     "place_number": 27,
     "title": "Kolonnadenhof Museumsinsel",
     "title_lines": [
@@ -765,18 +1275,37 @@
     },
     "coordinates_raw": "52.520193, 13.399148",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always",
+      "Telephoto-lens"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "Early in the morning"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "For perfectly aligned shadows check the sun beforehand with apps like SunSeeker",
+      "This area is usually crowded so be patient and wait for the perfect moment",
+      "Take your time to walk around and explore various angles and focal lengths"
+    ],
     "image": "074_kolonnadenhof_museumsinsel.png",
     "image_path": "images/074_kolonnadenhof_museumsinsel.png"
   },
   {
-    "pdf_page": 76,
+    "pdf_page": 77,
+    "pdf_page_detail": 77,
     "place_number": 28,
     "title": "Königgalerie",
     "title_lines": [
@@ -793,18 +1322,36 @@
     },
     "coordinates_raw": "52.500645, 13.400945",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Monday by appointment",
+      "Tuesday - Sunday 11am - 6pm"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Check the ongoing exhibition before",
+      "The location may appear different depending on the exhibition",
+      "This area is usually crowded so be patient and wait for the perfect moment"
+    ],
     "image": "076_koniggalerie.png",
     "image_path": "images/076_koniggalerie.png"
   },
   {
-    "pdf_page": 78,
+    "pdf_page": 79,
+    "pdf_page_detail": 79,
     "place_number": 29,
     "title": "Krematorium Baumschulenweg Crematorium Baumschulenweg",
     "title_lines": [
@@ -823,18 +1370,38 @@
     },
     "coordinates_raw": "52.459662, 13.491381",
     "accessibility": "hard",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Monday - Friday 6am - 10pm"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free",
+      "Taking photos costs a few euros"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Ring at the entry and ask the security guy. Respect any instructions given",
+      "This is a crematorium please keep that in mind and act accordingly",
+      "Taking photos costs a few euros but afterward you can explore the entire area and take",
+      "pictures wherever you like. It's worth it!"
+    ],
     "image": "078_krematorium_baumschulenweg_crematorium_baumschulenweg.png",
     "image_path": "images/078_krematorium_baumschulenweg_crematorium_baumschulenweg.png"
   },
   {
-    "pdf_page": 80,
+    "pdf_page": 81,
+    "pdf_page_detail": 81,
     "place_number": 30,
     "title": "Kreuzberg Balconies",
     "title_lines": [
@@ -851,18 +1418,35 @@
     },
     "coordinates_raw": "52.503324, 13.391062",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Telephoto-lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Check the sun beforehand with apps like SunSeeker",
+      "Watch out for patterns and contrasty scenes",
+      "This photo is a 200% crop"
+    ],
     "image": "080_kreuzberg_balconies.png",
     "image_path": "images/080_kreuzberg_balconies.png"
   },
   {
-    "pdf_page": 82,
+    "pdf_page": 83,
+    "pdf_page_detail": 83,
     "place_number": 31,
     "title": "Liesenbrücken",
     "title_lines": [
@@ -879,18 +1463,34 @@
     },
     "coordinates_raw": "52.540356, 13.379603",
     "accessibility": "hard",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always",
+      "Wide-angle lens"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Not recommended"
+    ],
+    "tips": [
+      "No secure access to the bridge - exploring at your own risk"
+    ],
     "image": "082_liesenbrucken.png",
     "image_path": "images/082_liesenbrucken.png"
   },
   {
-    "pdf_page": 84,
+    "pdf_page": 85,
+    "pdf_page_detail": 85,
     "place_number": 32,
     "title": "Lookup BER Flughafen Lookup BER Airport Carpark",
     "title_lines": [
@@ -908,18 +1508,37 @@
     },
     "coordinates_raw": "52.366447, 13.511447",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "This carpark is sometimes busy so watch your surroundings",
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)",
+      "Walk to the center and aim straight upwards while using the grid to keep everything",
+      "balanced"
+    ],
     "image": "084_lookup_ber_flughafen_lookup_ber_airport_carpark.png",
     "image_path": "images/084_lookup_ber_flughafen_lookup_ber_airport_carpark.png"
   },
   {
-    "pdf_page": 86,
+    "pdf_page": 87,
+    "pdf_page_detail": 87,
     "place_number": 33,
     "title": "Lookup East Side",
     "title_lines": [
@@ -936,18 +1555,36 @@
     },
     "coordinates_raw": "52.507984, 13.433983",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Keep a low profile and respect any instructions given",
+      "This is a residential area please keep that in mind and act accordingly",
+      "Walk to the center and aim straight upwards while using the grid to keep everything",
+      "balanced"
+    ],
     "image": "086_lookup_east_side.png",
     "image_path": "images/086_lookup_east_side.png"
   },
   {
-    "pdf_page": 88,
+    "pdf_page": 89,
+    "pdf_page_detail": 89,
     "place_number": 34,
     "title": "Lookup Fasanenstraße",
     "title_lines": [
@@ -964,18 +1601,38 @@
     },
     "coordinates_raw": "52.499025, 13.327354",
     "accessibility": "hard",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not recommended"
+    ],
+    "tips": [
+      "Keep a low profile and respect any instructions given",
+      "This is a residential area please keep that in mind and act accordingly",
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)",
+      "Walk to the center and aim straight upwards while using the grid to keep everything",
+      "balanced"
+    ],
     "image": "088_lookup_fasanenstrae.png",
     "image_path": "images/088_lookup_fasanenstrae.png"
   },
   {
-    "pdf_page": 90,
+    "pdf_page": 91,
+    "pdf_page_detail": 91,
     "place_number": 35,
     "title": "Lookup Friedrichstraße",
     "title_lines": [
@@ -992,18 +1649,35 @@
     },
     "coordinates_raw": "52.520970, 13.387660",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always open"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Walk to the center and aim upwards while using the grid to keep everything balanced",
+      "Watch out for reflections and blown out highlights"
+    ],
     "image": "090_lookup_friedrichstrae.png",
     "image_path": "images/090_lookup_friedrichstrae.png"
   },
   {
-    "pdf_page": 92,
+    "pdf_page": 93,
+    "pdf_page_detail": 93,
     "place_number": 36,
     "title": "Lookup Hackesche Höfe",
     "title_lines": [
@@ -1021,18 +1695,35 @@
     },
     "coordinates_raw": "52.524153, 13.402138",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Blue hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Walk to the center and aim straight upwards while using the grid to keep everything",
+      "balanced"
+    ],
     "image": "092_lookup_hackesche_hofe.png",
     "image_path": "images/092_lookup_hackesche_hofe.png"
   },
   {
-    "pdf_page": 94,
+    "pdf_page": 95,
+    "pdf_page_detail": 95,
     "place_number": 37,
     "title": "Lookup Hallesches Tor",
     "title_lines": [
@@ -1049,18 +1740,37 @@
     },
     "coordinates_raw": "52.498677, 13.387851",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Early mornings",
+      "Cloudy days"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Keep a low profile and respect any instructions given",
+      "This is a residential area please keep that in mind and act accordingly",
+      "Walk down to the carpark and aim upwards while using the grid to keep everything",
+      "balanced"
+    ],
     "image": "094_lookup_hallesches_tor.png",
     "image_path": "images/094_lookup_hallesches_tor.png"
   },
   {
-    "pdf_page": 96,
+    "pdf_page": 97,
+    "pdf_page_detail": 97,
     "place_number": 38,
     "title": "Lookup Kochstraße",
     "title_lines": [
@@ -1077,18 +1787,38 @@
     },
     "coordinates_raw": "52.506437, 13.390108",
     "accessibility": "hard",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Not recommended"
+    ],
+    "tips": [
+      "This spot is behind locked doors so there is some luck involved",
+      "Keep a low profile and respect any instructions given",
+      "Check out the staircaise inside as well",
+      "Walk to the center and aim straight upwards while using the grid to keep everything",
+      "balanced"
+    ],
     "image": "096_lookup_kochstrae.png",
     "image_path": "images/096_lookup_kochstrae.png"
   },
   {
-    "pdf_page": 98,
+    "pdf_page": 99,
+    "pdf_page_detail": 99,
     "place_number": 39,
     "title": "Lookup Koppenstraße",
     "title_lines": [
@@ -1105,18 +1835,34 @@
     },
     "coordinates_raw": "52.512265, 13.434453",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Watch out for reflections and patterns"
+    ],
     "image": "098_lookup_koppenstrae.png",
     "image_path": "images/098_lookup_koppenstrae.png"
   },
   {
-    "pdf_page": 100,
+    "pdf_page": 101,
+    "pdf_page_detail": 101,
     "place_number": 40,
     "title": "Lookup Lietzenburger Straße",
     "title_lines": [
@@ -1134,18 +1880,33 @@
     },
     "coordinates_raw": "52.500056, 13.322456",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Walk to the center and aim upwards while using the grid to keep everything balanced"
+    ],
     "image": "100_lookup_lietzenburger_strae.png",
     "image_path": "images/100_lookup_lietzenburger_strae.png"
   },
   {
-    "pdf_page": 102,
+    "pdf_page": 103,
+    "pdf_page_detail": 103,
     "place_number": 41,
     "title": "Lookup Passauer Straße",
     "title_lines": [
@@ -1163,18 +1924,36 @@
     },
     "coordinates_raw": "52.500494, 13.339697",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Not recommended"
+    ],
+    "tips": [
+      "Don9t step in the garden",
+      "This is a residential area please keep that in mind and act accordingly",
+      "Keep a low profile and respect any instructions given",
+      "This photo is mirrored"
+    ],
     "image": "102_lookup_passauer_strae.png",
     "image_path": "images/102_lookup_passauer_strae.png"
   },
   {
-    "pdf_page": 104,
+    "pdf_page": 105,
+    "pdf_page_detail": 105,
     "place_number": 42,
     "title": "Lookup Potsdamer Platz",
     "title_lines": [
@@ -1192,18 +1971,35 @@
     },
     "coordinates_raw": "52.507376, 13.377972",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Sunset and sunrise",
+      "Golden hour"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Walk to one entrance and aim upwards while using the grid to keep everything balanced",
+      "Watch out for reflections and blown out highlights"
+    ],
     "image": "104_lookup_potsdamer_platz.png",
     "image_path": "images/104_lookup_potsdamer_platz.png"
   },
   {
-    "pdf_page": 106,
+    "pdf_page": 107,
+    "pdf_page_detail": 107,
     "place_number": 43,
     "title": "Lookup Quartier Schützenstraße Yellow",
     "title_lines": [
@@ -1221,18 +2017,37 @@
     },
     "coordinates_raw": "52.508143, 13.392745",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Early mornings",
+      "Cloudy days"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Don9t worry about having perfectly aligned lines when taking the picture as you can easily",
+      "fix the perspective in Lightroom or Photoshop",
+      "Walk to the center and aim straight upwards while using the grid to keep everything",
+      "balanced"
+    ],
     "image": "106_lookup_quartier_schutzenstrae_yellow.png",
     "image_path": "images/106_lookup_quartier_schutzenstrae_yellow.png"
   },
   {
-    "pdf_page": 108,
+    "pdf_page": 109,
+    "pdf_page_detail": 109,
     "place_number": 44,
     "title": "Lookup Quartier Schützenstraße Red",
     "title_lines": [
@@ -1250,18 +2065,37 @@
     },
     "coordinates_raw": "52.508438, 13.392671",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Early mornings",
+      "Cloudy days"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Walk to the center and aim straight upwards while using the grid to keep everything",
+      "balanced",
+      "Don9t worry about having perfectly aligned lines when taking the picture as you can easily",
+      "fix the perspective in Lightroom or Photoshop"
+    ],
     "image": "108_lookup_quartier_schutzenstrae_red.png",
     "image_path": "images/108_lookup_quartier_schutzenstrae_red.png"
   },
   {
-    "pdf_page": 110,
+    "pdf_page": 111,
+    "pdf_page_detail": 111,
     "place_number": 45,
     "title": "Ludwig Erhard Haus",
     "title_lines": [
@@ -1278,18 +2112,36 @@
     },
     "coordinates_raw": "52.506646, 13.328299",
     "accessibility": "hard",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Monday - Thursday 8am - 5pm",
+      "Friday 8am - 4pm"
+    ],
+    "best_time_to_visit": [
+      "Golden hour"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Ask at the entrance and explain yourself",
+      "Sometimes you get in and sometimes you don't",
+      "If you get in take your time and explore both elevator rooms"
+    ],
     "image": "110_ludwig_erhard_haus.png",
     "image_path": "images/110_ludwig_erhard_haus.png"
   },
   {
-    "pdf_page": 112,
+    "pdf_page": 113,
+    "pdf_page_detail": 113,
     "place_number": 46,
     "title": "Mall of Berlin",
     "title_lines": [
@@ -1306,18 +2158,35 @@
     },
     "coordinates_raw": "52.510618, 13.381089",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Monday - Saturday 10am - 8pm"
+    ],
+    "best_time_to_visit": [
+      "As early as possible"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Installations sometimes occupy the space",
+      "There are multiple levels to explore",
+      "Always busy and crowded"
+    ],
     "image": "112_mall_of_berlin.png",
     "image_path": "images/112_mall_of_berlin.png"
   },
   {
-    "pdf_page": 114,
+    "pdf_page": 115,
+    "pdf_page_detail": 115,
     "place_number": 47,
     "title": "Marie-Elisabeth- Lüdershaus",
     "title_lines": [
@@ -1335,18 +2204,36 @@
     },
     "coordinates_raw": "52.520474, 13.376979",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Sunrise and sunset",
+      "Golden hour"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Take your time to explore the area there is a lot to discover",
+      "Watch out for reflections and contrasty scenes",
+      "This photo was taken from the small bridge"
+    ],
     "image": "114_marie_elisabeth_ludershaus.png",
     "image_path": "images/114_marie_elisabeth_ludershaus.png"
   },
   {
-    "pdf_page": 116,
+    "pdf_page": 117,
+    "pdf_page_detail": 117,
     "place_number": 48,
     "title": "Minna-Todenhagen- Brücke",
     "title_lines": [
@@ -1364,18 +2251,36 @@
     },
     "coordinates_raw": "52.467445, 13.497910",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Golden hour"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Take your time to walk around and explore various angles and focal lengths",
+      "Play with the lines of the bridge to crete different shapes",
+      "There is a skate park which is sometimes busy",
+      "Avoid the homeless"
+    ],
     "image": "116_minna_todenhagen_brucke.png",
     "image_path": "images/116_minna_todenhagen_brucke.png"
   },
   {
-    "pdf_page": 118,
+    "pdf_page": 119,
+    "pdf_page_detail": 119,
     "place_number": 49,
     "title": "Motel One Upper West",
     "title_lines": [
@@ -1392,18 +2297,36 @@
     },
     "coordinates_raw": "52.505163, 13.333066",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "Sunrise and sunset"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Watch out for reflections and blown out highlights",
+      "Walk to the center and aim straight upwards while using the grid to keep everything",
+      "balanced"
+    ],
     "image": "118_motel_one_upper_west.png",
     "image_path": "images/118_motel_one_upper_west.png"
   },
   {
-    "pdf_page": 120,
+    "pdf_page": 121,
+    "pdf_page_detail": 121,
     "place_number": 50,
     "title": "Museum für Kommunikation Museum for Communication",
     "title_lines": [
@@ -1422,18 +2345,39 @@
     },
     "coordinates_raw": "52.510051, 13.387331",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Tuesday 9am - 8pm",
+      "Wednesday - Friday 9am - 5pm",
+      "Saturday - Sunday 10am - 6pm"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "8,00 ¬"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)",
+      "Walk to the center and aim straight upwards while using the grid to keep everything",
+      "balanced"
+    ],
     "image": "120_museum_fur_kommunikation_museum_for_communication.png",
     "image_path": "images/120_museum_fur_kommunikation_museum_for_communication.png"
   },
   {
-    "pdf_page": 123,
+    "pdf_page": 124,
+    "pdf_page_detail": 124,
     "place_number": 51,
     "title": "Oberbaumbrücke",
     "title_lines": [
@@ -1450,18 +2394,36 @@
     },
     "coordinates_raw": "52.501878, 13.445671",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "Sunrise"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Check the conditions before using Berlin Live Cams",
+      "Less wind results in clean reflections",
+      "Wait for the U-Bahn to cross"
+    ],
     "image": "123_oberbaumbrucke.png",
     "image_path": "images/123_oberbaumbrucke.png"
   },
   {
-    "pdf_page": 125,
+    "pdf_page": 126,
+    "pdf_page_detail": 126,
     "place_number": 52,
     "title": "Olympiastadion",
     "title_lines": [
@@ -1478,18 +2440,38 @@
     },
     "coordinates_raw": "52.514671, 13.239753",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Daily 10am - 6pm",
+      "Closed on event days, e.g. football",
+      "games or festivals"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "11,00 ¬"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Walk to the center use the grid to keep everything balanced",
+      "This area is usually crowded so be patient and wait for the perfect moment",
+      "Take your time to explore the whole area there is a lot to discover"
+    ],
     "image": "125_olympiastadion.png",
     "image_path": "images/125_olympiastadion.png"
   },
   {
-    "pdf_page": 127,
+    "pdf_page": 128,
+    "pdf_page_detail": 128,
     "place_number": 53,
     "title": "Panoramapunkt",
     "title_lines": [
@@ -1506,18 +2488,36 @@
     },
     "coordinates_raw": "52.508915, 13.374866",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Daily 10am - 6pm"
+    ],
+    "best_time_to_visit": [
+      "Cloudy days"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)",
+      "Keep a low profile and respect any instructions given",
+      "On top of the building is one of the best viewpoints in Berlin (9,00 ¬ entry fee)"
+    ],
     "image": "127_panoramapunkt.png",
     "image_path": "images/127_panoramapunkt.png"
   },
   {
-    "pdf_page": 129,
+    "pdf_page": 130,
+    "pdf_page_detail": 130,
     "place_number": 54,
     "title": "Parkhaus am Borsigturm",
     "title_lines": [
@@ -1535,18 +2535,37 @@
     },
     "coordinates_raw": "52.584491, 13.284713",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "During daytime",
+      "Cloudy days"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "This carpark is sometimes busy so watch your surroundings",
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)",
+      "There are multiple levels to explore"
+    ],
     "image": "129_parkhaus_am_borsigturm.png",
     "image_path": "images/129_parkhaus_am_borsigturm.png"
   },
   {
-    "pdf_page": 131,
+    "pdf_page": 132,
+    "pdf_page_detail": 132,
     "place_number": 55,
     "title": "Parkhaus Contipark am KaDeWe",
     "title_lines": [
@@ -1564,18 +2583,36 @@
     },
     "coordinates_raw": "52.500860, 13.339704",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "This area is usually crowded so be patient and wait for the perfect moment",
+      "Take your time to walk around and explore various angles",
+      "This photo is taken from the first floor at the end of the carpark"
+    ],
     "image": "131_parkhaus_contipark_am_kadewe.png",
     "image_path": "images/131_parkhaus_contipark_am_kadewe.png"
   },
   {
-    "pdf_page": 133,
+    "pdf_page": 134,
+    "pdf_page_detail": 134,
     "place_number": 56,
     "title": "Parkhaus Mercedes Benz",
     "title_lines": [
@@ -1593,18 +2630,36 @@
     },
     "coordinates_raw": "52.507169, 13.442513",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Golden hour"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Keep a low profile and respect any instructions given",
+      "This carpark is sometimes busy so watch your surroundings",
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)"
+    ],
     "image": "133_parkhaus_mercedes_benz.png",
     "image_path": "images/133_parkhaus_mercedes_benz.png"
   },
   {
-    "pdf_page": 135,
+    "pdf_page": 136,
+    "pdf_page_detail": 136,
     "place_number": 57,
     "title": "Parkhaus Rathauspassagen",
     "title_lines": [
@@ -1622,18 +2677,36 @@
     },
     "coordinates_raw": "52.518845, 13.410815",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Keep a low profile and respect any instructions given",
+      "This carpark is sometimes busy so watch your surroundings",
+      "Walk to the center and aim straight upwards while using the grid to keep everything",
+      "balanced"
+    ],
     "image": "135_parkhaus_rathauspassagen.png",
     "image_path": "images/135_parkhaus_rathauspassagen.png"
   },
   {
-    "pdf_page": 137,
+    "pdf_page": 138,
+    "pdf_page_detail": 138,
     "place_number": 58,
     "title": "Paul Löbe Haus",
     "title_lines": [
@@ -1650,18 +2723,37 @@
     },
     "coordinates_raw": "52.520173, 13.373604",
     "accessibility": "hard",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Check available tours on the",
+      "official website"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free",
+      "Book a tour in advance"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "This is a government building please keep that in mind and act accordingly",
+      "You need to book a few weeks in advance, spots are limited",
+      "Keep a low profile and respect any instructions given"
+    ],
     "image": "137_paul_lobe_haus.png",
     "image_path": "images/137_paul_lobe_haus.png"
   },
   {
-    "pdf_page": 139,
+    "pdf_page": 140,
+    "pdf_page_detail": 140,
     "place_number": 59,
     "title": "Peter-Behrens-Haus Behrensbau",
     "title_lines": [
@@ -1679,18 +2771,36 @@
     },
     "coordinates_raw": "52.456650, 13.529694",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Unknown",
+      "Hours on Google are inaccurate"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent",
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Take your time to walk around the building and explore various angles",
+      "This photo is captured from the second floor"
+    ],
     "image": "139_peter_behrens_haus_behrensbau.png",
     "image_path": "images/139_peter_behrens_haus_behrensbau.png"
   },
   {
-    "pdf_page": 141,
+    "pdf_page": 142,
+    "pdf_page_detail": 142,
     "place_number": 60,
     "title": "Philologische Bibliothek Philological Library",
     "title_lines": [
@@ -1709,18 +2819,38 @@
     },
     "coordinates_raw": "52.451650, 13.288554",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Monday - Friday 9am - 10pm",
+      "Saturday - Sunday 10am - 8pm"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Phone with wide-angle lens",
+      "NO Camera allowed"
+    ],
+    "settings": [
+      "Use all lenses and shoot RAW"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Required to put your bags and jacket in a locker (Mensa Card / Student Card required)",
+      "Keep a low profile and respect any instructions given",
+      "This is a library please keep that in mind and act accordingly",
+      "This area is usually crowded so be patient and wait for the perfect moment"
+    ],
     "image": "141_philologische_bibliothek_philological_library.png",
     "image_path": "images/141_philologische_bibliothek_philological_library.png"
   },
   {
-    "pdf_page": 143,
+    "pdf_page": 144,
+    "pdf_page_detail": 144,
     "place_number": 61,
     "title": "Regenbogenhaus Rainbow House",
     "title_lines": [
@@ -1738,18 +2868,36 @@
     },
     "coordinates_raw": "52.526286, 13.480480",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Telephoto-lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Search for a good angle to align the rainbow",
+      "Don9t worry about having perfectly aligned lines when taking the picture as you can easily",
+      "fix the perspective in Lightroom or Photoshop",
+      "This photo is a 100% crop"
+    ],
     "image": "143_regenbogenhaus_rainbow_house.png",
     "image_path": "images/143_regenbogenhaus_rainbow_house.png"
   },
   {
-    "pdf_page": 145,
+    "pdf_page": 146,
+    "pdf_page_detail": 146,
     "place_number": 62,
     "title": "Rotes Haus am Lokdepot Red House at Lokdepot",
     "title_lines": [
@@ -1768,18 +2916,35 @@
     },
     "coordinates_raw": "52.487502, 13.373182",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Golden hour to sunset"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Telephoto-lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Watch out for the light and explore different angles",
+      "Don9t worry about having perfectly aligned lines when taking the picture as you can easily",
+      "fix the perspective in Lightroom or Photoshop"
+    ],
     "image": "145_rotes_haus_am_lokdepot_red_house_at_lokdepot.png",
     "image_path": "images/145_rotes_haus_am_lokdepot_red_house_at_lokdepot.png"
   },
   {
-    "pdf_page": 147,
+    "pdf_page": 148,
+    "pdf_page_detail": 148,
     "place_number": 63,
     "title": "Rotes Rathaus Red Town Hall",
     "title_lines": [
@@ -1797,18 +2962,34 @@
     },
     "coordinates_raw": "52.518380, 13.408513",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Monday - Friday 9am - 6pm"
+    ],
+    "best_time_to_visit": [
+      "As early as possible"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Take your time to explore the building there is a lot to discover",
+      "Don't miss the white room with the red ceiling"
+    ],
     "image": "147_rotes_rathaus_red_town_hall.png",
     "image_path": "images/147_rotes_rathaus_red_town_hall.png"
   },
   {
-    "pdf_page": 149,
+    "pdf_page": 150,
+    "pdf_page_detail": 150,
     "place_number": 64,
     "title": "S-Bahnhof Friedrichstraße",
     "title_lines": [
@@ -1826,18 +3007,36 @@
     },
     "coordinates_raw": "52.520410, 13.386812",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always",
+      "Wide-angle lens"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "Early mornings"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "For perfectly aligned shadows check the sun beforehand with apps like SunSeeker",
+      "This station is usually crowded so be patient and wait for the perfect moment"
+    ],
     "image": "149_s_bahnhof_friedrichstrae.png",
     "image_path": "images/149_s_bahnhof_friedrichstrae.png"
   },
   {
-    "pdf_page": 151,
+    "pdf_page": 152,
+    "pdf_page_detail": 152,
     "place_number": 65,
     "title": "S-Karlshorst Passenger Bridge",
     "title_lines": [
@@ -1855,18 +3054,34 @@
     },
     "coordinates_raw": "52.481309, 13.525468",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "For perfectly aligned shadows check the sun beforehand with apps like SunSeeker",
+      "This station is usually crowded so be patient and wait for the perfect moment"
+    ],
     "image": "151_s_karlshorst_passenger_bridge.png",
     "image_path": "images/151_s_karlshorst_passenger_bridge.png"
   },
   {
-    "pdf_page": 153,
+    "pdf_page": 154,
+    "pdf_page_detail": 154,
     "place_number": 66,
     "title": "Schloss Bellevue",
     "title_lines": [
@@ -1883,18 +3098,34 @@
     },
     "coordinates_raw": "52.517508, 13.352765",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Telephoto-lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Keep your distance",
+      "Watch out for contrasty scenes"
+    ],
     "image": "153_schloss_bellevue.png",
     "image_path": "images/153_schloss_bellevue.png"
   },
   {
-    "pdf_page": 155,
+    "pdf_page": 156,
+    "pdf_page_detail": 156,
     "place_number": 67,
     "title": "Schloss Charlottenburg",
     "title_lines": [
@@ -1912,18 +3143,36 @@
     },
     "coordinates_raw": "52.520693, 13.295940",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always",
+      "Wide-angle lens"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Take your time to explore the area there is a lot to discover",
+      "This area is usually crowded so be patient and wait for the perfect moment"
+    ],
     "image": "155_schloss_charlottenburg.png",
     "image_path": "images/155_schloss_charlottenburg.png"
   },
   {
-    "pdf_page": 157,
+    "pdf_page": 158,
+    "pdf_page_detail": 158,
     "place_number": 68,
     "title": "Schloss Sanssouci",
     "title_lines": [
@@ -1940,18 +3189,36 @@
     },
     "coordinates_raw": "52.403410, 13.038521",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Tuesday - Sunday 10am - 4.30pm",
+      "Telephoto-lens"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Take your time to explore the area there is a lot to discover",
+      "Best season is autumn"
+    ],
     "image": "157_schloss_sanssouci.png",
     "image_path": "images/157_schloss_sanssouci.png"
   },
   {
-    "pdf_page": 159,
+    "pdf_page": 160,
+    "pdf_page_detail": 160,
     "place_number": 69,
     "title": "Schloss Sanssouci: Belvedere Pfingstberg",
     "title_lines": [
@@ -1969,18 +3236,37 @@
     },
     "coordinates_raw": "52.418779, 13.059033",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "April until October",
+      "Sunday - Friday 10am - 5pm",
+      "Saturday 10am - 6pm"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent",
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Take your time to walk around the building and explore various angles"
+    ],
     "image": "159_schloss_sanssouci_belvedere_pfingstberg.png",
     "image_path": "images/159_schloss_sanssouci_belvedere_pfingstberg.png"
   },
   {
-    "pdf_page": 161,
+    "pdf_page": 162,
+    "pdf_page_detail": 162,
     "place_number": 70,
     "title": "Schwedter Steg",
     "title_lines": [
@@ -1997,18 +3283,34 @@
     },
     "coordinates_raw": "52.549925, 13.399995",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "This area is usually crowded so be patient and wait for the perfect moment"
+    ],
     "image": "161_schwedter_steg.png",
     "image_path": "images/161_schwedter_steg.png"
   },
   {
-    "pdf_page": 163,
+    "pdf_page": 164,
+    "pdf_page_detail": 164,
     "place_number": 71,
     "title": "Shell Haus",
     "title_lines": [
@@ -2025,18 +3327,38 @@
     },
     "coordinates_raw": "52.506081, 13.363371",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "Before noon"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Telephoto-lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Take your time to walk around and explore various angles",
+      "Don9t worry about having perfectly aligned lines when taking the picture as you can easily",
+      "fix the perspective in Lightroom or Photoshop",
+      "Watch out for patterns and contrasty scenes",
+      "This photo is a 200% crop"
+    ],
     "image": "163_shell_haus.png",
     "image_path": "images/163_shell_haus.png"
   },
   {
-    "pdf_page": 165,
+    "pdf_page": 166,
+    "pdf_page_detail": 166,
     "place_number": 72,
     "title": "Siegessäule Top Victory Column Top",
     "title_lines": [
@@ -2054,18 +3376,41 @@
     },
     "coordinates_raw": "52.514507, 13.350178",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "April - October",
+      "Monday - Friday 9.30am - 6.30pm",
+      "Saturday - Sunday 9.30am - 7pm",
+      "November - March",
+      "Monday - Sunday 9.30am - 5.30pm"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "4,00 ¬"
+    ],
+    "gear": [
+      "35mm equivalent",
+      "Telephoto-lens"
+    ],
+    "settings": [
+      "Aperture around f/2.8 to f/8"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "285 steps to the top",
+      "Take your time to walk around and explore various angles",
+      "Best season is autumn"
+    ],
     "image": "165_siegessaule_top_victory_column_top.png",
     "image_path": "images/165_siegessaule_top_victory_column_top.png"
   },
   {
-    "pdf_page": 167,
+    "pdf_page": 168,
+    "pdf_page_detail": 168,
     "place_number": 73,
     "title": "Siegessäule Underpass Victory Column Underpass",
     "title_lines": [
@@ -2084,18 +3429,37 @@
     },
     "coordinates_raw": "52.514507, 13.350178",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always (outside)",
+      "Wide-angle lens"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "Sunset"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "There are multiple exits but only one facing the statue",
+      "Watch out for blown out highlights on the statue on sunny days",
+      "This area is usually crowded so be patient and wait for the perfect moment"
+    ],
     "image": "167_siegessaule_underpass_victory_column_underpass.png",
     "image_path": "images/167_siegessaule_underpass_victory_column_underpass.png"
   },
   {
-    "pdf_page": 169,
+    "pdf_page": 170,
+    "pdf_page_detail": 170,
     "place_number": 74,
     "title": "Sony Center",
     "title_lines": [
@@ -2112,18 +3476,37 @@
     },
     "coordinates_raw": "52.510080, 13.373316",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always",
+      "Wide-angle lens",
+      "Telephoto-lens"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Often busy or under construction",
+      "Take your time to walk around and explore various angles and focal lengths"
+    ],
     "image": "169_sony_center.png",
     "image_path": "images/169_sony_center.png"
   },
   {
-    "pdf_page": 171,
+    "pdf_page": 172,
+    "pdf_page_detail": 172,
     "place_number": 75,
     "title": "Sowjetisches Ehrenmal Treptow Soviet War Memorial Treptow",
     "title_lines": [
@@ -2142,18 +3525,37 @@
     },
     "coordinates_raw": "52.486296, 13.471560",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "Early mornings"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Drone"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "This is a drone photo. Check the laws before and act accordingly",
+      "The memorial is worth exploring by foot",
+      "Many different shots are possible",
+      "Take your time and explore various angles and focal lengths"
+    ],
     "image": "171_sowjetisches_ehrenmal_treptow_soviet_war_memorial_treptow.png",
     "image_path": "images/171_sowjetisches_ehrenmal_treptow_soviet_war_memorial_treptow.png"
   },
   {
-    "pdf_page": 173,
+    "pdf_page": 174,
+    "pdf_page_detail": 174,
     "place_number": 76,
     "title": "St. Augustinus Kirche",
     "title_lines": [
@@ -2170,18 +3572,38 @@
     },
     "coordinates_raw": "52.549968, 13.406827",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Monday - Friday 12am - 1pm",
+      "Tuesday 7-8pm",
+      "Thursday 9-10am",
+      "Sunday 9-10am and 6-7pm"
+    ],
+    "best_time_to_visit": [
+      "Before noon"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Ask kindly for permission and explain yourself",
+      "This is a church please keep that in mind and act accordingly",
+      "Keep a low profile and respect any instructions given"
+    ],
     "image": "173_st_augustinus_kirche.png",
     "image_path": "images/173_st_augustinus_kirche.png"
   },
   {
-    "pdf_page": 175,
+    "pdf_page": 176,
+    "pdf_page_detail": 176,
     "place_number": 77,
     "title": "Staatsbibliothek Unter den Linden State Library Berlin (Unter den Linden)",
     "title_lines": [
@@ -2200,18 +3622,37 @@
     },
     "coordinates_raw": "52.517524, 13.391758",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Monday - Saturday 8am - 10pm",
+      "Sunday 10am - 6pm"
+    ],
+    "best_time_to_visit": [
+      "As early as possible"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Ask friendly at the entry and explain yourself",
+      "Required to put your bags and jacket in a locker (1 ¬ or 2¬ coin required)",
+      "This is a library please keep that in mind and act accordingly",
+      "Keep a low profile and respect any instructions given"
+    ],
     "image": "175_staatsbibliothek_unter_den_linden_state_library_berlin_unter_den_linden.png",
     "image_path": "images/175_staatsbibliothek_unter_den_linden_state_library_berlin_unter_den_linden.png"
   },
   {
-    "pdf_page": 177,
+    "pdf_page": 178,
+    "pdf_page_detail": 178,
     "place_number": 78,
     "title": "Stadtbad Charlottenburg Charlottenburg City Pool",
     "title_lines": [
@@ -2230,18 +3671,37 @@
     },
     "coordinates_raw": "52.514521, 13.309592",
     "accessibility": "hard",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Individual, ask for permission in",
+      "advance"
+    ],
+    "best_time_to_visit": [
+      "Depending on the time slot given"
+    ],
+    "entry_fee": [
+      "5,50 ¬"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "For camera photos ask for permission in advance",
+      "Phone photos always possible but the pool is usually busy",
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)"
+    ],
     "image": "177_stadtbad_charlottenburg_charlottenburg_city_pool.png",
     "image_path": "images/177_stadtbad_charlottenburg_charlottenburg_city_pool.png"
   },
   {
-    "pdf_page": 179,
+    "pdf_page": 180,
+    "pdf_page_detail": 180,
     "place_number": 79,
     "title": "Stadtbad Neukölln Neukölln City Pool",
     "title_lines": [
@@ -2259,18 +3719,38 @@
     },
     "coordinates_raw": "52.479229, 13.439971",
     "accessibility": "hard",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Individual, ask for permission in",
+      "advance"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "5,50 ¬"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "For camera photos ask for permission in advance",
+      "Phone photos always possible but the pool is mostly busy",
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)"
+    ],
     "image": "179_stadtbad_neukolln_neukolln_city_pool.png",
     "image_path": "images/179_stadtbad_neukolln_neukolln_city_pool.png"
   },
   {
-    "pdf_page": 181,
+    "pdf_page": 182,
+    "pdf_page_detail": 182,
     "place_number": 80,
     "title": "Staircase KaDeWe",
     "title_lines": [
@@ -2287,18 +3767,33 @@
     },
     "coordinates_raw": "52.501744, 13.341003",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Monday - Saturday 10am - 8pm"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "This area is usually crowded so be patient and wait for the perfect moment"
+    ],
     "image": "181_staircase_kadewe.png",
     "image_path": "images/181_staircase_kadewe.png"
   },
   {
-    "pdf_page": 183,
+    "pdf_page": 184,
+    "pdf_page_detail": 184,
     "place_number": 81,
     "title": "Staircase Rankestraße",
     "title_lines": [
@@ -2315,18 +3810,35 @@
     },
     "coordinates_raw": "52.500291, 13.331741",
     "accessibility": "hard",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "This staircase is behind locked doors so there is some luck involved",
+      "This staircase is a beauty from above and below. Don9t miss the Lookup",
+      "Keep a low profile and respect any instructions given"
+    ],
     "image": "183_staircase_rankestrae.png",
     "image_path": "images/183_staircase_rankestrae.png"
   },
   {
-    "pdf_page": 185,
+    "pdf_page": 186,
+    "pdf_page_detail": 186,
     "place_number": 82,
     "title": "Stößenseebrücke",
     "title_lines": [
@@ -2343,18 +3855,35 @@
     },
     "coordinates_raw": "52.509473, 13.214922",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Not recommended"
+    ],
+    "tips": [
+      "Don9t visit alone",
+      "Avoid the homeless",
+      "No secure access to the bridge"
+    ],
     "image": "185_stoenseebrucke.png",
     "image_path": "images/185_stoenseebrucke.png"
   },
   {
-    "pdf_page": 187,
+    "pdf_page": 188,
+    "pdf_page_detail": 188,
     "place_number": 83,
     "title": "Technische Universität Lichthof Atrium of the TU Berlin",
     "title_lines": [
@@ -2373,18 +3902,38 @@
     },
     "coordinates_raw": "52.512064, 13.327030",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Monday - Friday 6am - 10pm",
+      "Saturday 8am - 10pm",
+      "Saturday closed (student card required)"
+    ],
+    "best_time_to_visit": [
+      "Saturday morning"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Take your time to explore the building there is a lot to discover",
+      "This is a university please keep that in mind and act accordingly",
+      "Keep a low profile and respect any instructions given",
+      "This photo is captured from the second floor"
+    ],
     "image": "187_technische_universitat_lichthof_atrium_of_the_tu_berlin.png",
     "image_path": "images/187_technische_universitat_lichthof_atrium_of_the_tu_berlin.png"
   },
   {
-    "pdf_page": 189,
+    "pdf_page": 190,
+    "pdf_page_detail": 190,
     "place_number": 84,
     "title": "Tempodrom",
     "title_lines": [
@@ -2401,18 +3950,37 @@
     },
     "coordinates_raw": "52.501634, 13.381151",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always (outside)",
+      "Wide-angle lens"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Going on the roof is officially not allowed",
+      "Walk around the building and choose the light you prefer",
+      "Take your time to walk around and explore various angles and focal lengths"
+    ],
     "image": "189_tempodrom.png",
     "image_path": "images/189_tempodrom.png"
   },
   {
-    "pdf_page": 191,
+    "pdf_page": 192,
+    "pdf_page_detail": 192,
     "place_number": 85,
     "title": "Tieranatomisches Theater Veterinary Anatomy Theatre",
     "title_lines": [
@@ -2432,18 +4000,35 @@
     },
     "coordinates_raw": "52.525120, 13.381311",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Tuesday - Saturday 2pm - 6pm"
+    ],
+    "best_time_to_visit": [
+      "After opening"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Take your time to explore the building there is a lot to discover",
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)"
+    ],
     "image": "191_tieranatomisches_theater_veterinary_anatomy_theatre.png",
     "image_path": "images/191_tieranatomisches_theater_veterinary_anatomy_theatre.png"
   },
   {
-    "pdf_page": 193,
+    "pdf_page": 194,
+    "pdf_page_detail": 194,
     "place_number": 86,
     "title": "U Alexanderplatz Exit",
     "title_lines": [
@@ -2459,18 +4044,36 @@
     },
     "coordinates_raw": "52.521602, 13.413193",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always",
+      "Wide-angle lens"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "Early mornings"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/5.6 to f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "There are multiple exits but only one facing the Park Inn Hotel",
+      "This area is usually crowded so be patient and wait for the perfect moment"
+    ],
     "image": "193_u_alexanderplatz_exit.png",
     "image_path": "images/193_u_alexanderplatz_exit.png"
   },
   {
-    "pdf_page": 195,
+    "pdf_page": 196,
+    "pdf_page_detail": 196,
     "place_number": 87,
     "title": "U Altstadt Spandau",
     "title_lines": [
@@ -2487,18 +4090,37 @@
     },
     "coordinates_raw": "52.538420, 13.206963",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always except",
+      "Monday - Friday 1am - 4am"
+    ],
+    "best_time_to_visit": [
+      "Weekdays early or late"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Don't visit alone",
+      "Avoid the homeless",
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)"
+    ],
     "image": "195_u_altstadt_spandau.png",
     "image_path": "images/195_u_altstadt_spandau.png"
   },
   {
-    "pdf_page": 197,
+    "pdf_page": 198,
+    "pdf_page_detail": 198,
     "place_number": 88,
     "title": "U Brandenburger Tor",
     "title_lines": [
@@ -2515,18 +4137,35 @@
     },
     "coordinates_raw": "52.516579, 13.381789",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always except",
+      "Monday - Friday 1am - 4am"
+    ],
+    "best_time_to_visit": [
+      "Weekdays early or late"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent",
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "This station is always crowded so be patient and wait for the perfect moment"
+    ],
     "image": "197_u_brandenburger_tor.png",
     "image_path": "images/197_u_brandenburger_tor.png"
   },
   {
-    "pdf_page": 199,
+    "pdf_page": 200,
+    "pdf_page_detail": 200,
     "place_number": 89,
     "title": "U Eberswalder Straße",
     "title_lines": [
@@ -2543,18 +4182,36 @@
     },
     "coordinates_raw": "52.541251, 13.412182",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always except",
+      "Monday - Friday 1am - 4am"
+    ],
+    "best_time_to_visit": [
+      "As early as possible"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "This area is usually crowded so be patient and wait for the perfect moment",
+      "There is second photo spot below the train tracks",
+      "This photo is mirrored"
+    ],
     "image": "199_u_eberswalder_strae.png",
     "image_path": "images/199_u_eberswalder_strae.png"
   },
   {
-    "pdf_page": 201,
+    "pdf_page": 202,
+    "pdf_page_detail": 202,
     "place_number": 90,
     "title": "U Fehrbelliner Platz",
     "title_lines": [
@@ -2571,18 +4228,35 @@
     },
     "coordinates_raw": "52.490442, 13.314234",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always except",
+      "Monday - Friday 1am - 4am"
+    ],
+    "best_time_to_visit": [
+      "Weekdays early or late"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/5.6"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "This station is usually crowded so be patient and wait for the perfect moment",
+      "This photo is mirrored"
+    ],
     "image": "201_u_fehrbelliner_platz.png",
     "image_path": "images/201_u_fehrbelliner_platz.png"
   },
   {
-    "pdf_page": 203,
+    "pdf_page": 204,
+    "pdf_page_detail": 204,
     "place_number": 91,
     "title": "U Museumsinsel",
     "title_lines": [
@@ -2599,18 +4273,37 @@
     },
     "coordinates_raw": "52.517445, 13.399823",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always except",
+      "Monday - Friday 1am - 4am"
+    ],
+    "best_time_to_visit": [
+      "Weekdays early or late"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent",
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)",
+      "This station is usually crowded so be patient and wait for the perfect moment"
+    ],
     "image": "203_u_museumsinsel.png",
     "image_path": "images/203_u_museumsinsel.png"
   },
   {
-    "pdf_page": 205,
+    "pdf_page": 206,
+    "pdf_page_detail": 206,
     "place_number": 92,
     "title": "U Paracelsus-Bad",
     "title_lines": [
@@ -2627,18 +4320,34 @@
     },
     "coordinates_raw": "52.574408, 13.347446",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always except",
+      "Monday - Friday 1am - 4am"
+    ],
+    "best_time_to_visit": [
+      "Weekdays early or late"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "This area is usually crowded so be patient and wait for the perfect moment"
+    ],
     "image": "205_u_paracelsus_bad.png",
     "image_path": "images/205_u_paracelsus_bad.png"
   },
   {
-    "pdf_page": 207,
+    "pdf_page": 208,
+    "pdf_page_detail": 208,
     "place_number": 93,
     "title": "U Richard- Wagner-Platz",
     "title_lines": [
@@ -2656,18 +4365,35 @@
     },
     "coordinates_raw": "52.517265, 13.306597",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always except",
+      "Monday - Friday 1am - 4am"
+    ],
+    "best_time_to_visit": [
+      "Weekdays early or late"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "This area is usually crowded so be patient and wait for the perfect moment",
+      "The timing of this photo was fortunate yet the station is scenic in its entirety"
+    ],
     "image": "207_u_richard_wagner_platz.png",
     "image_path": "images/207_u_richard_wagner_platz.png"
   },
   {
-    "pdf_page": 209,
+    "pdf_page": 210,
+    "pdf_page_detail": 210,
     "place_number": 94,
     "title": "U Schlossstraße",
     "title_lines": [
@@ -2684,18 +4410,36 @@
     },
     "coordinates_raw": "52.461316, 13.324865",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always except",
+      "Monday - Friday 1am - 4am"
+    ],
+    "best_time_to_visit": [
+      "Weekdays early or late"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Don9t visit alone",
+      "Avoid the homeless",
+      "Take your time to walk around and explore various angles"
+    ],
     "image": "209_u_schlossstrae.png",
     "image_path": "images/209_u_schlossstrae.png"
   },
   {
-    "pdf_page": 211,
+    "pdf_page": 212,
+    "pdf_page_detail": 212,
     "place_number": 95,
     "title": "U Siemensdamm",
     "title_lines": [
@@ -2712,18 +4456,34 @@
     },
     "coordinates_raw": "52.536693, 13.272521",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always except",
+      "Monday - Friday 1am - 4am"
+    ],
+    "best_time_to_visit": [
+      "Weekdays early or late"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "This area is usually crowded so be patient and wait for the perfect moment"
+    ],
     "image": "211_u_siemensdamm.png",
     "image_path": "images/211_u_siemensdamm.png"
   },
   {
-    "pdf_page": 213,
+    "pdf_page": 214,
+    "pdf_page_detail": 214,
     "place_number": 96,
     "title": "U Strausberger Platz",
     "title_lines": [
@@ -2740,18 +4500,35 @@
     },
     "coordinates_raw": "52.518035, 13.432266",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always except",
+      "Monday - Friday 1am - 4am"
+    ],
+    "best_time_to_visit": [
+      "Weekdays early or late"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "This station is usually crowded so be patient and wait for the perfect moment",
+      "This photo is mirrored"
+    ],
     "image": "213_u_strausberger_platz.png",
     "image_path": "images/213_u_strausberger_platz.png"
   },
   {
-    "pdf_page": 215,
+    "pdf_page": 216,
+    "pdf_page_detail": 216,
     "place_number": 97,
     "title": "U Weberwiese",
     "title_lines": [
@@ -2768,18 +4545,35 @@
     },
     "coordinates_raw": "52.516618, 13.443174",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always except",
+      "Monday - Friday 1am - 4am"
+    ],
+    "best_time_to_visit": [
+      "Weekdays early or late"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "This station is usually crowded so be patient and wait for the perfect moment",
+      "This photo is mirrored"
+    ],
     "image": "215_u_weberwiese.png",
     "image_path": "images/215_u_weberwiese.png"
   },
   {
-    "pdf_page": 217,
+    "pdf_page": 218,
+    "pdf_page_detail": 218,
     "place_number": 98,
     "title": "Wachturm Prenzlauer Berg Watchtower Prenzlauer Berg",
     "title_lines": [
@@ -2798,18 +4592,35 @@
     },
     "coordinates_raw": "52.537124, 13.393451",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Walk to the center and aim straight upwards while using the grid to keep everything",
+      "balanced"
+    ],
     "image": "217_wachturm_prenzlauer_berg_watchtower_prenzlauer_berg.png",
     "image_path": "images/217_wachturm_prenzlauer_berg_watchtower_prenzlauer_berg.png"
   },
   {
-    "pdf_page": 219,
+    "pdf_page": 220,
+    "pdf_page_detail": 220,
     "place_number": 99,
     "title": "Westin Grand Hotel",
     "title_lines": [
@@ -2826,18 +4637,34 @@
     },
     "coordinates_raw": "52.515904, 13.388559",
     "accessibility": "hard",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "This is a hotel please keep that in mind and act accordingly",
+      "Keep a low profile and respect any instructions given"
+    ],
     "image": "219_westin_grand_hotel.png",
     "image_path": "images/219_westin_grand_hotel.png"
   },
   {
-    "pdf_page": 221,
+    "pdf_page": 222,
+    "pdf_page_detail": 222,
     "place_number": 100,
     "title": "Willy-Brandt-Haus",
     "title_lines": [
@@ -2854,18 +4681,37 @@
     },
     "coordinates_raw": "52.500057, 13.388305",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Tuesday - Sunday 12am - 6pm",
+      "Wide-angle lens"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Take your time to explore the building there is a lot to discover",
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)"
+    ],
     "image": "221_willy_brandt_haus.png",
     "image_path": "images/221_willy_brandt_haus.png"
   },
   {
-    "pdf_page": 224,
+    "pdf_page": 225,
+    "pdf_page_detail": 225,
     "place_number": 101,
     "title": "Babylon Kino Babylon Cinema",
     "title_lines": [
@@ -2883,18 +4729,36 @@
     },
     "coordinates_raw": "52.525901, 13.411421",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always (outside)",
+      "Wide-angle lens"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Take your time to explore the building there is a lot to discover",
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)"
+    ],
     "image": "224_babylon_kino_babylon_cinema.png",
     "image_path": "images/224_babylon_kino_babylon_cinema.png"
   },
   {
-    "pdf_page": 226,
+    "pdf_page": 227,
+    "pdf_page_detail": 227,
     "place_number": 102,
     "title": "Berliner Philharmonie",
     "title_lines": [
@@ -2911,18 +4775,36 @@
     },
     "coordinates_raw": "52.509823, 13.370037",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always (outside)",
+      "Telephoto-lens"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Take your time to walk around the building and explore various angles",
+      "Guided tours are available for 10,00 ¬ to explore the building from inside"
+    ],
     "image": "226_berliner_philharmonie.png",
     "image_path": "images/226_berliner_philharmonie.png"
   },
   {
-    "pdf_page": 228,
+    "pdf_page": 229,
+    "pdf_page_detail": 229,
     "place_number": 103,
     "title": "Hotel de Rome",
     "title_lines": [
@@ -2939,18 +4821,38 @@
     },
     "coordinates_raw": "52.515728, 13.394075",
     "accessibility": "hard",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always",
+      "Wide-angle lens"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Ask friendly for permission and explain yourself (I am a hobby photographer and interested",
+      "in the architecture)",
+      "There is also a restaurant/café with a terrace offering a beautiful view",
+      "This is a hotel please keep that in mind and act accordingly",
+      "Keep a low profile and respect any instructions given"
+    ],
     "image": "228_hotel_de_rome.png",
     "image_path": "images/228_hotel_de_rome.png"
   },
   {
-    "pdf_page": 230,
+    "pdf_page": 231,
+    "pdf_page_detail": 231,
     "place_number": 104,
     "title": "Lookup Alte Nationalgalerie",
     "title_lines": [
@@ -2968,18 +4870,36 @@
     },
     "coordinates_raw": "52.500057, 13.388305",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Monday - closed",
+      "Tuesday - Sunday 10am - 6pm"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "14,00 ¬"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Take your time to explore the building there is a lot to discover",
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)"
+    ],
     "image": "230_lookup_alte_nationalgalerie.png",
     "image_path": "images/230_lookup_alte_nationalgalerie.png"
   },
   {
-    "pdf_page": 232,
+    "pdf_page": 233,
+    "pdf_page_detail": 233,
     "place_number": 105,
     "title": "Lookup Am Tacheles",
     "title_lines": [
@@ -2996,18 +4916,36 @@
     },
     "coordinates_raw": "52.525166, 13.388305",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Don9t worry about having perfectly aligned lines when taking the picture as you can easily",
+      "fix the perspective in Lightroom or Photoshop",
+      "Walk to the center and aim straight upwards while using the grid to keep everything",
+      "balanced"
+    ],
     "image": "232_lookup_am_tacheles.png",
     "image_path": "images/232_lookup_am_tacheles.png"
   },
   {
-    "pdf_page": 234,
+    "pdf_page": 235,
+    "pdf_page_detail": 235,
     "place_number": 106,
     "title": "Lookup Berliner Dom",
     "title_lines": [
@@ -3024,18 +4962,39 @@
     },
     "coordinates_raw": "52.519159, 13.401157",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Monday - Saturday 9am - 5pm",
+      "Sunday - 12pm - 5pm"
+    ],
+    "best_time_to_visit": [
+      "Any time during opening hours"
+    ],
+    "entry_fee": [
+      "10,00 ¬",
+      "Book your ticket in advance"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Not allowed"
+    ],
+    "tips": [
+      "Take your time to explore the building there is a lot to discover",
+      "Avoid blowing out the highlights by watching the histogram or by taking multiple exposures",
+      "and merging them later in Lightroom or Photoshop (HDR)",
+      "Walk to the center and aim straight upwards while using the grid to keep everything",
+      "balanced"
+    ],
     "image": "234_lookup_berliner_dom.png",
     "image_path": "images/234_lookup_berliner_dom.png"
   },
   {
-    "pdf_page": 236,
+    "pdf_page": 237,
+    "pdf_page_detail": 237,
     "place_number": 107,
     "title": "Mäusebunker",
     "title_lines": [
@@ -3052,18 +5011,37 @@
     },
     "coordinates_raw": "52.436521, 13.316848",
     "accessibility": "hard",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always (outside)",
+      "Wide-angle lens"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "This view isn9t accessible anymore, because of newly build fence.",
+      "Take your time to walk around the building and explore various angles",
+      "Keep a low profile and respect any instructions given"
+    ],
     "image": "236_mausebunker.png",
     "image_path": "images/236_mausebunker.png"
   },
   {
-    "pdf_page": 238,
+    "pdf_page": 239,
+    "pdf_page_detail": 239,
     "place_number": 108,
     "title": "Reflection Berliner Dom",
     "title_lines": [
@@ -3080,18 +5058,37 @@
     },
     "coordinates_raw": "52.521394, 13.400199",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always (outside)",
+      "Telephoto-lens"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "Sunrise"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Less wind results in cleaner reflections",
+      "The best chance for clean reflections is early in the morning",
+      "Take your time to walk around and explore various angles"
+    ],
     "image": "238_reflection_berliner_dom.png",
     "image_path": "images/238_reflection_berliner_dom.png"
   },
   {
-    "pdf_page": 240,
+    "pdf_page": 241,
+    "pdf_page_detail": 241,
     "place_number": 109,
     "title": "Reflection Bodemuseum",
     "title_lines": [
@@ -3109,18 +5106,37 @@
     },
     "coordinates_raw": "52.522627, 13.393099",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always (outside)",
+      "Wide-angle lens"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "Sunrise"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Less wind results in cleaner reflections",
+      "The best chance for clean reflections is early in the morning",
+      "Take your time to walk around and explore various angles"
+    ],
     "image": "240_reflection_bodemuseum.png",
     "image_path": "images/240_reflection_bodemuseum.png"
   },
   {
-    "pdf_page": 242,
+    "pdf_page": 243,
+    "pdf_page_detail": 243,
     "place_number": 110,
     "title": "Reflection Reichtstagsgebäude Reichstags Building",
     "title_lines": [
@@ -3139,18 +5155,37 @@
     },
     "coordinates_raw": "52.519822, 13.377803",
     "accessibility": "easy",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Always (outside)"
+    ],
+    "best_time_to_visit": [
+      "Golden hour",
+      "Sunrise"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "35mm equivalent"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "The photo spot at Marie-Elisabeth-Lüders-Haus (No.47) is nearby",
+      "The best chance for clean reflections is early in the morning",
+      "Take your time to walk around and explore various angles",
+      "Less wind results in cleaner reflections"
+    ],
     "image": "242_reflection_reichtstagsgebaude_reichstags_building.png",
     "image_path": "images/242_reflection_reichtstagsgebaude_reichstags_building.png"
   },
   {
-    "pdf_page": 244,
+    "pdf_page": 245,
+    "pdf_page_detail": 245,
     "place_number": 111,
     "title": "Rooftop Humboldt Forum",
     "title_lines": [
@@ -3168,13 +5203,31 @@
     },
     "coordinates_raw": "52.517091, 13.401436",
     "accessibility": "medium",
-    "hours": [],
-    "best_time_to_visit": [],
-    "entry_fee": [],
-    "gear": [],
-    "settings": [],
-    "tripod": [],
-    "tips": [],
+    "hours": [
+      "Tuesday - closed",
+      "Mo, Wed, Th, Su - 10:30am 3 6.30 pm",
+      "Fr, Sa: 10:30am 3 8pm"
+    ],
+    "best_time_to_visit": [
+      "Golden hour to sunset"
+    ],
+    "entry_fee": [
+      "3,00 ¬"
+    ],
+    "gear": [
+      "35mm equivalent",
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/8"
+    ],
+    "tripod": [
+      "Possible"
+    ],
+    "tips": [
+      "Take your time to walk around the terrace and explore various angles",
+      "There is a restaurant/café if you need a break with a beautiful view"
+    ],
     "image": "244_rooftop_humboldt_forum.png",
     "image_path": "images/244_rooftop_humboldt_forum.png"
   }

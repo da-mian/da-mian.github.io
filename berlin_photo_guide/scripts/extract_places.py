@@ -55,7 +55,7 @@ def parse_pages(pdf_path):
     return text.split("\f")
 
 
-def parse_location_page(page_text, pdf_page_number):
+def parse_location_page(page_text, pdf_page_number, pdf_page_detail=None):
     lines = [line.rstrip("\n") for line in page_text.splitlines()]
     def is_location_heading(text):
         stripped = text.strip()
@@ -75,7 +75,15 @@ def parse_location_page(page_text, pdf_page_number):
     title_lines = header_lines
     title = " ".join(title_lines).strip()
 
+    if place_number is None:
+        return None
+
     sections = {h: [] for h in HEADINGS}
+
+    if "Location changed!" in title_lines:
+        title_lines = [line for line in title_lines if line != "Location changed!"]
+        title = " ".join(title_lines).strip()
+        sections["Tips & additional information"].append("Location changed!")
     current_single = None
     left_section = None
     right_section = None
@@ -87,7 +95,7 @@ def parse_location_page(page_text, pdf_page_number):
             continue
 
         # Single-line sections with inline values.
-        if stripped.startswith("Location"):
+        if stripped.startswith("Location") and not stripped.startswith("Location changed"):
             current_single = "Location"
             left_section = right_section = None
             value = stripped[len("Location"):].strip()
@@ -159,10 +167,11 @@ def parse_location_page(page_text, pdf_page_number):
 
     return {
         "pdf_page": pdf_page_number,
+        "pdf_page_detail": pdf_page_detail,
         "place_number": place_number,
         "title": title,
         "title_lines": title_lines,
-        "location": ", ".join(location_lines).strip(),
+        "location": ", ".join([line for line in location_lines if line]).strip(),
         "location_lines": location_lines,
         "coordinates": coords,
         "coordinates_raw": coords_raw,
@@ -175,6 +184,42 @@ def parse_location_page(page_text, pdf_page_number):
         "tripod": sections["Tripod"],
         "tips": sections["Tips & additional information"],
     }
+
+
+def parse_places_from_pages(pages):
+    places = []
+    index = 0
+    while index < len(pages):
+        page_text = pages[index]
+        has_location = any(
+            line.strip().startswith("Location")
+            and not line.strip().startswith("Location changed")
+            for line in page_text.splitlines()
+        )
+        if not has_location:
+            index += 1
+            continue
+
+        merged_text = page_text
+        detail_page = None
+        if index + 1 < len(pages):
+            next_text = pages[index + 1]
+            next_has_location = any(
+                line.strip().startswith("Location")
+                and not line.strip().startswith("Location changed")
+                for line in next_text.splitlines()
+            )
+            if not next_has_location:
+                merged_text = f"{page_text}\n{next_text}"
+                detail_page = index + 2
+                index += 1
+
+        place = parse_location_page(merged_text, index + 1, detail_page)
+        if place:
+            places.append(place)
+        index += 1
+
+    return places
 
 
 @contextmanager
@@ -215,19 +260,20 @@ def main():
     images_dir.mkdir(parents=True, exist_ok=True)
 
     pages = parse_pages(pdf_path)
-    places = []
-    page_to_place = {}
+    if args.page_min or args.page_max:
+        page_min = args.page_min or 1
+        page_max = args.page_max or len(pages)
+        pages_slice = pages[page_min - 1:page_max]
+        places = parse_places_from_pages(pages_slice)
+        # Adjust page numbers when slicing.
+        for place in places:
+            place["pdf_page"] = (place["pdf_page"] or 0) + (page_min - 1)
+            if place.get("pdf_page_detail"):
+                place["pdf_page_detail"] = place["pdf_page_detail"] + (page_min - 1)
+    else:
+        places = parse_places_from_pages(pages)
 
-    for idx, page_text in enumerate(pages, start=1):
-        if args.page_min and idx < args.page_min:
-            continue
-        if args.page_max and idx > args.page_max:
-            continue
-        place = parse_location_page(page_text, idx)
-        if not place:
-            continue
-        places.append(place)
-        page_to_place[idx] = place
+    page_to_place = {place["pdf_page"]: place for place in places if place.get("pdf_page")}
 
     if places and not args.skip_images:
         pages_with_places = sorted(page_to_place.keys())
