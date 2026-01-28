@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Berlin Photo Guide Map</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div>
+          <h1>Berlin Photo Guide</h1>
+          <p>Tap a pin to see the photo spot details.</p>
+        </div>
+        <div class="legend">
+          <span class="dot dot-easy"></span> Easy
+          <span class="dot dot-medium"></span> Medium
+          <span class="dot dot-hard"></span> Hard
+        </div>
+      </header>
+
+      <main class="layout">
+        <div id="map"></div>
+
+        <aside id="panel" class="panel">
+          <div class="panel-inner">
+            <div class="panel-hero" id="panel-hero">
+              <div class="panel-hero-placeholder">Select a location</div>
+            </div>
+            <div class="panel-content">
+              <h2 id="panel-title">Select a location</h2>
+              <div id="panel-location" class="panel-location"></div>
+              <div id="panel-meta" class="panel-meta"></div>
+              <div id="panel-sections" class="panel-sections"></div>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>

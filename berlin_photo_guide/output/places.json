@@ -1,0 +1,3181 @@
+[
+  {
+    "pdf_page": 22,
+    "place_number": 1,
+    "title": "Abgeordnetenhaus State Parliament Berlin",
+    "title_lines": [
+      "Abgeordnetenhaus",
+      "State Parliament Berlin"
+    ],
+    "location": "Niederkirchnerstraße 5, 10117 Berlin",
+    "location_lines": [
+      "Niederkirchnerstraße 5",
+      "10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.508027,
+      "lng": 13.381532
+    },
+    "coordinates_raw": "52.508027, 13.381532",
+    "accessibility": "hard",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "022_abgeordnetenhaus_state_parliament_berlin.png",
+    "image_path": "images/022_abgeordnetenhaus_state_parliament_berlin.png"
+  },
+  {
+    "pdf_page": 24,
+    "place_number": 2,
+    "title": "Amtsgericht Mitte County Court <Mitte=",
+    "title_lines": [
+      "Amtsgericht Mitte",
+      "County Court <Mitte="
+    ],
+    "location": "Littenstraße 12-17, 10179 Berlin",
+    "location_lines": [
+      "Littenstraße 12-17",
+      "10179 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.518888,
+      "lng": 13.413609
+    },
+    "coordinates_raw": "52.518888, 13.413609",
+    "accessibility": "hard",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "024_amtsgericht_mitte_county_court_mitte.png",
+    "image_path": "images/024_amtsgericht_mitte_county_court_mitte.png"
+  },
+  {
+    "pdf_page": 26,
+    "place_number": 3,
+    "title": "Berliner Fernsehturm Television Tower Berlin",
+    "title_lines": [
+      "Berliner Fernsehturm",
+      "Television Tower Berlin"
+    ],
+    "location": "1 Panoramastraße 1A, 10178 Berlin",
+    "location_lines": [
+      "1 Panoramastraße 1A",
+      "10178 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.521166,
+      "lng": 13.410113
+    },
+    "coordinates_raw": "52.521166, 13.410113",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "026_berliner_fernsehturm_television_tower_berlin.png",
+    "image_path": "images/026_berliner_fernsehturm_television_tower_berlin.png"
+  },
+  {
+    "pdf_page": 28,
+    "place_number": 4,
+    "title": "Bierpinsel",
+    "title_lines": [
+      "Bierpinsel"
+    ],
+    "location": "Schloßstraße 17, 12163 Berlin",
+    "location_lines": [
+      "Schloßstraße 17",
+      "12163 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.461687,
+      "lng": 13.325087
+    },
+    "coordinates_raw": "52.461687, 13.325087",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "028_bierpinsel.png",
+    "image_path": "images/028_bierpinsel.png"
+  },
+  {
+    "pdf_page": 30,
+    "place_number": 5,
+    "title": "Brandenburger Tor Brandenburg Gate",
+    "title_lines": [
+      "Brandenburger Tor",
+      "Brandenburg Gate"
+    ],
+    "location": "Pariser Platz, 10117 Berlin",
+    "location_lines": [
+      "Pariser Platz",
+      "10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.516245,
+      "lng": 13.377523
+    },
+    "coordinates_raw": "52.516245, 13.377523",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "030_brandenburger_tor_brandenburg_gate.png",
+    "image_path": "images/030_brandenburger_tor_brandenburg_gate.png"
+  },
+  {
+    "pdf_page": 32,
+    "place_number": 6,
+    "title": "Cube Berlin",
+    "title_lines": [
+      "Cube Berlin"
+    ],
+    "location": "Washingtonpl. 3, 10557 Berlin",
+    "location_lines": [
+      "Washingtonpl. 3",
+      "10557 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.52354,
+      "lng": 13.369318
+    },
+    "coordinates_raw": "52.523540, 13.369318",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "032_cube_berlin.png",
+    "image_path": "images/032_cube_berlin.png"
+  },
+  {
+    "pdf_page": 34,
+    "place_number": 7,
+    "title": "Dark Matter",
+    "title_lines": [
+      "Dark Matter"
+    ],
+    "location": "Köpenicker Chaussee 46, 10317 Berlin",
+    "location_lines": [
+      "Köpenicker Chaussee 46",
+      "10317 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.492822,
+      "lng": 13.49259
+    },
+    "coordinates_raw": "52.492822, 13.492590",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "034_dark_matter.png",
+    "image_path": "images/034_dark_matter.png"
+  },
+  {
+    "pdf_page": 36,
+    "place_number": 8,
+    "title": "Deutsche Kinemathek",
+    "title_lines": [
+      "Deutsche Kinemathek"
+    ],
+    "location": "changed!, Mauerstraße 79, 10117 Berlin",
+    "location_lines": [
+      "changed!",
+      "Mauerstraße 79",
+      "10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.508608,
+      "lng": 13.3871501
+    },
+    "coordinates_raw": "52.508608, 13.3871501",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "036_deutsche_kinemathek.png",
+    "image_path": "images/036_deutsche_kinemathek.png"
+  },
+  {
+    "pdf_page": 38,
+    "place_number": 9,
+    "title": "Deutsches Historisches Museum German Historical Museum",
+    "title_lines": [
+      "Deutsches",
+      "Historisches Museum",
+      "German Historical Museum"
+    ],
+    "location": "Unter den Linden 2, 10117 Berlin",
+    "location_lines": [
+      "Unter den Linden 2",
+      "10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.518015,
+      "lng": 13.396945
+    },
+    "coordinates_raw": "52.518015, 13.396945",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "038_deutsches_historisches_museum_german_historical_museum.png",
+    "image_path": "images/038_deutsches_historisches_museum_german_historical_museum.png"
+  },
+  {
+    "pdf_page": 40,
+    "place_number": 10,
+    "title": "Deutsches Technikmuseum",
+    "title_lines": [
+      "Deutsches",
+      "Technikmuseum"
+    ],
+    "location": "Trebbiner Str. 9, 10963 Berlin",
+    "location_lines": [
+      "Trebbiner Str. 9",
+      "10963 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.498831,
+      "lng": 13.378208
+    },
+    "coordinates_raw": "52.498831, 13.378208",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "040_deutsches_technikmuseum.png",
+    "image_path": "images/040_deutsches_technikmuseum.png"
+  },
+  {
+    "pdf_page": 42,
+    "place_number": 11,
+    "title": "DZ Bank",
+    "title_lines": [
+      "DZ Bank"
+    ],
+    "location": "Pariser Platz 3, 10117 Berlin",
+    "location_lines": [
+      "Pariser Platz 3",
+      "10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.515624,
+      "lng": 13.379014
+    },
+    "coordinates_raw": "52.515624, 13.379014",
+    "accessibility": "hard",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "042_dz_bank.png",
+    "image_path": "images/042_dz_bank.png"
+  },
+  {
+    "pdf_page": 44,
+    "place_number": 12,
+    "title": "Edeka Schnelle",
+    "title_lines": [
+      "Edeka Schnelle"
+    ],
+    "location": "Andreasstraße 59, 10243 Berlin",
+    "location_lines": [
+      "Andreasstraße 59",
+      "10243 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.514676,
+      "lng": 13.431312
+    },
+    "coordinates_raw": "52.514676, 13.431312",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "044_edeka_schnelle.png",
+    "image_path": "images/044_edeka_schnelle.png"
+  },
+  {
+    "pdf_page": 46,
+    "place_number": 13,
+    "title": "Energie Forum",
+    "title_lines": [
+      "Energie Forum"
+    ],
+    "location": "Stralauer Pl. 33-34, 10243 Berlin",
+    "location_lines": [
+      "Stralauer Pl. 33-34",
+      "10243 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.509038,
+      "lng": 13.432843
+    },
+    "coordinates_raw": "52.509038, 13.432843",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "046_energie_forum.png",
+    "image_path": "images/046_energie_forum.png"
+  },
+  {
+    "pdf_page": 48,
+    "place_number": 14,
+    "title": "Flughafen Tegel Tegel Airport",
+    "title_lines": [
+      "Flughafen Tegel",
+      "Tegel Airport"
+    ],
+    "location": "Zufahrt zum Flughafen, Tegel, 13405 Berlin",
+    "location_lines": [
+      "Zufahrt zum Flughafen",
+      "Tegel, 13405 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.554183,
+      "lng": 13.293752
+    },
+    "coordinates_raw": "52.554183, 13.293752",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "048_flughafen_tegel_tegel_airport.png",
+    "image_path": "images/048_flughafen_tegel_tegel_airport.png"
+  },
+  {
+    "pdf_page": 50,
+    "place_number": 15,
+    "title": "Futurium",
+    "title_lines": [
+      "Futurium"
+    ],
+    "location": "Alexanderufer 2, 10117 Berlin",
+    "location_lines": [
+      "Alexanderufer 2",
+      "10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.523832,
+      "lng": 13.374293
+    },
+    "coordinates_raw": "52.523832, 13.374293",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "050_futurium.png",
+    "image_path": "images/050_futurium.png"
+  },
+  {
+    "pdf_page": 52,
+    "place_number": 16,
+    "title": "GALERIA Alexanderplatz",
+    "title_lines": [
+      "GALERIA",
+      "Alexanderplatz"
+    ],
+    "location": "Alexanderpl. 9, 10178 Berlin",
+    "location_lines": [
+      "Alexanderpl. 9",
+      "10178 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.522454,
+      "lng": 13.411577
+    },
+    "coordinates_raw": "52.522454, 13.411577",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "052_galeria_alexanderplatz.png",
+    "image_path": "images/052_galeria_alexanderplatz.png"
+  },
+  {
+    "pdf_page": 54,
+    "place_number": 17,
+    "title": "Gärten der Welt: Christlicher Garten Christian Garden",
+    "title_lines": [
+      "Gärten der Welt:",
+      "Christlicher Garten",
+      "Christian Garden"
+    ],
+    "location": "Eisenacher Str. 99, 12685 Berlin",
+    "location_lines": [
+      "Eisenacher Str. 99",
+      "12685 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.536933,
+      "lng": 13.577801
+    },
+    "coordinates_raw": "52.536933, 13.577801",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "054_garten_der_welt_christlicher_garten_christian_garden.png",
+    "image_path": "images/054_garten_der_welt_christlicher_garten_christian_garden.png"
+  },
+  {
+    "pdf_page": 56,
+    "place_number": 18,
+    "title": "Gärten der Welt: Orientalisch Islamischer Garten",
+    "title_lines": [
+      "Gärten der Welt:",
+      "Orientalisch",
+      "Islamischer Garten"
+    ],
+    "location": "Eisenacher Str. 104, 12685 Berlin",
+    "location_lines": [
+      "Eisenacher Str. 104",
+      "12685 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.539808,
+      "lng": 13.575539
+    },
+    "coordinates_raw": "52.539808, 13.575539",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "056_garten_der_welt_orientalisch_islamischer_garten.png",
+    "image_path": "images/056_garten_der_welt_orientalisch_islamischer_garten.png"
+  },
+  {
+    "pdf_page": 58,
+    "place_number": 19,
+    "title": "Gropius Bau",
+    "title_lines": [
+      "Gropius Bau"
+    ],
+    "location": "Niederkirchnerstraße 7, 10963 Berlin",
+    "location_lines": [
+      "Niederkirchnerstraße 7",
+      "10963 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.507008,
+      "lng": 13.381928
+    },
+    "coordinates_raw": "52.507008, 13.381928",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "058_gropius_bau.png",
+    "image_path": "images/058_gropius_bau.png"
+  },
+  {
+    "pdf_page": 60,
+    "place_number": 20,
+    "title": "Hamburger Bahnhof",
+    "title_lines": [
+      "Hamburger Bahnhof"
+    ],
+    "location": "Invalidenstraße 50, 10557 Berlin",
+    "location_lines": [
+      "Invalidenstraße 50",
+      "10557 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.528306,
+      "lng": 13.372201
+    },
+    "coordinates_raw": "52.528306, 13.372201",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "060_hamburger_bahnhof.png",
+    "image_path": "images/060_hamburger_bahnhof.png"
+  },
+  {
+    "pdf_page": 62,
+    "place_number": 21,
+    "title": "Haus der Kulturen der Welt House of World Cultures",
+    "title_lines": [
+      "Haus der",
+      "Kulturen der Welt",
+      "House of World Cultures"
+    ],
+    "location": "John-Foster-Dulles-Allee, 10, 10557 Berlin",
+    "location_lines": [
+      "John-Foster-Dulles-Allee",
+      "10, 10557 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.518764,
+      "lng": 13.363965
+    },
+    "coordinates_raw": "52.518764, 13.363965",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "062_haus_der_kulturen_der_welt_house_of_world_cultures.png",
+    "image_path": "images/062_haus_der_kulturen_der_welt_house_of_world_cultures.png"
+  },
+  {
+    "pdf_page": 64,
+    "place_number": 22,
+    "title": "Haus des Lehrers",
+    "title_lines": [
+      "Haus des Lehrers"
+    ],
+    "location": "Alexanderstraße 9, 10178 Berlin",
+    "location_lines": [
+      "Alexanderstraße 9",
+      "10178 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.521356,
+      "lng": 13.416358
+    },
+    "coordinates_raw": "52.521356, 13.416358",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "064_haus_des_lehrers.png",
+    "image_path": "images/064_haus_des_lehrers.png"
+  },
+  {
+    "pdf_page": 66,
+    "place_number": 23,
+    "title": "Holocaust-Mahnmal Holocaust Memorial",
+    "title_lines": [
+      "Holocaust-Mahnmal",
+      "Holocaust Memorial"
+    ],
+    "location": "Cora-Berliner-Straße 1, 10117 Berlin",
+    "location_lines": [
+      "Cora-Berliner-Straße 1",
+      "10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.51398,
+      "lng": 13.378358
+    },
+    "coordinates_raw": "52.513980, 13.378358",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "066_holocaust_mahnmal_holocaust_memorial.png",
+    "image_path": "images/066_holocaust_mahnmal_holocaust_memorial.png"
+  },
+  {
+    "pdf_page": 68,
+    "place_number": 24,
+    "title": "ICC Underpass",
+    "title_lines": [
+      "ICC Underpass"
+    ],
+    "location": "Hammarskjöldpl. 7, 14055 Berlin",
+    "location_lines": [
+      "Hammarskjöldpl. 7",
+      "14055 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.505955,
+      "lng": 13.279716
+    },
+    "coordinates_raw": "52.505955, 13.279716",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "068_icc_underpass.png",
+    "image_path": "images/068_icc_underpass.png"
+  },
+  {
+    "pdf_page": 70,
+    "place_number": 25,
+    "title": "Jacob-und-Wilhelm- Grimm-Zentrum",
+    "title_lines": [
+      "Jacob-und-Wilhelm-",
+      "Grimm-Zentrum"
+    ],
+    "location": "Geschwister-Scholl-, Straße 1-3, 10117 Berlin",
+    "location_lines": [
+      "Geschwister-Scholl-",
+      "Straße 1-3, 10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.520527,
+      "lng": 13.390952
+    },
+    "coordinates_raw": "52.520527, 13.390952",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "070_jacob_und_wilhelm_grimm_zentrum.png",
+    "image_path": "images/070_jacob_und_wilhelm_grimm_zentrum.png"
+  },
+  {
+    "pdf_page": 72,
+    "place_number": 26,
+    "title": "Kirche am Hohenzollernplatz",
+    "title_lines": [
+      "Kirche am",
+      "Hohenzollernplatz"
+    ],
+    "location": "Hohenzollerndamm, 10717 Berlin",
+    "location_lines": [
+      "Hohenzollerndamm",
+      "10717 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.494173,
+      "lng": 13.326845
+    },
+    "coordinates_raw": "52.494173, 13.326845",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "072_kirche_am_hohenzollernplatz.png",
+    "image_path": "images/072_kirche_am_hohenzollernplatz.png"
+  },
+  {
+    "pdf_page": 74,
+    "place_number": 27,
+    "title": "Kolonnadenhof Museumsinsel",
+    "title_lines": [
+      "Kolonnadenhof",
+      "Museumsinsel"
+    ],
+    "location": "Bodestraße 1, 10178 Berlin",
+    "location_lines": [
+      "Bodestraße 1",
+      "10178 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.520193,
+      "lng": 13.399148
+    },
+    "coordinates_raw": "52.520193, 13.399148",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "074_kolonnadenhof_museumsinsel.png",
+    "image_path": "images/074_kolonnadenhof_museumsinsel.png"
+  },
+  {
+    "pdf_page": 76,
+    "place_number": 28,
+    "title": "Königgalerie",
+    "title_lines": [
+      "Königgalerie"
+    ],
+    "location": "Alexandrinenstraße 118-, 121, 10969 Berlin",
+    "location_lines": [
+      "Alexandrinenstraße 118-",
+      "121, 10969 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.500645,
+      "lng": 13.400945
+    },
+    "coordinates_raw": "52.500645, 13.400945",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "076_koniggalerie.png",
+    "image_path": "images/076_koniggalerie.png"
+  },
+  {
+    "pdf_page": 78,
+    "place_number": 29,
+    "title": "Krematorium Baumschulenweg Crematorium Baumschulenweg",
+    "title_lines": [
+      "Krematorium",
+      "Baumschulenweg",
+      "Crematorium Baumschulenweg"
+    ],
+    "location": "Kiefholzstraße 221, 12437 Berlin",
+    "location_lines": [
+      "Kiefholzstraße 221",
+      "12437 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.459662,
+      "lng": 13.491381
+    },
+    "coordinates_raw": "52.459662, 13.491381",
+    "accessibility": "hard",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "078_krematorium_baumschulenweg_crematorium_baumschulenweg.png",
+    "image_path": "images/078_krematorium_baumschulenweg_crematorium_baumschulenweg.png"
+  },
+  {
+    "pdf_page": 80,
+    "place_number": 30,
+    "title": "Kreuzberg Balconies",
+    "title_lines": [
+      "Kreuzberg Balconies"
+    ],
+    "location": "Friedrichstraße 24-226, 10969 Berlin",
+    "location_lines": [
+      "Friedrichstraße 24-226",
+      "10969 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.503324,
+      "lng": 13.391062
+    },
+    "coordinates_raw": "52.503324, 13.391062",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "080_kreuzberg_balconies.png",
+    "image_path": "images/080_kreuzberg_balconies.png"
+  },
+  {
+    "pdf_page": 82,
+    "place_number": 31,
+    "title": "Liesenbrücken",
+    "title_lines": [
+      "Liesenbrücken"
+    ],
+    "location": "Gartenstraße 65, 13355 Berlin",
+    "location_lines": [
+      "Gartenstraße 65",
+      "13355 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.540356,
+      "lng": 13.379603
+    },
+    "coordinates_raw": "52.540356, 13.379603",
+    "accessibility": "hard",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "082_liesenbrucken.png",
+    "image_path": "images/082_liesenbrucken.png"
+  },
+  {
+    "pdf_page": 84,
+    "place_number": 32,
+    "title": "Lookup BER Flughafen Lookup BER Airport Carpark",
+    "title_lines": [
+      "Lookup BER Flughafen",
+      "Lookup BER Airport Carpark"
+    ],
+    "location": "Brunolf-Baade-Straße 1, 12529 Schönefeld",
+    "location_lines": [
+      "Brunolf-Baade-Straße 1",
+      "12529 Schönefeld"
+    ],
+    "coordinates": {
+      "lat": 52.366447,
+      "lng": 13.511447
+    },
+    "coordinates_raw": "52.366447, 13.511447",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "084_lookup_ber_flughafen_lookup_ber_airport_carpark.png",
+    "image_path": "images/084_lookup_ber_flughafen_lookup_ber_airport_carpark.png"
+  },
+  {
+    "pdf_page": 86,
+    "place_number": 33,
+    "title": "Lookup East Side",
+    "title_lines": [
+      "Lookup East Side"
+    ],
+    "location": "Stralauer Platz 39, 10243 Berlin",
+    "location_lines": [
+      "Stralauer Platz 39",
+      "10243 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.507984,
+      "lng": 13.433983
+    },
+    "coordinates_raw": "52.507984, 13.433983",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "086_lookup_east_side.png",
+    "image_path": "images/086_lookup_east_side.png"
+  },
+  {
+    "pdf_page": 88,
+    "place_number": 34,
+    "title": "Lookup Fasanenstraße",
+    "title_lines": [
+      "Lookup Fasanenstraße"
+    ],
+    "location": "Fasanenstraße 62, 10719 Berlin",
+    "location_lines": [
+      "Fasanenstraße 62",
+      "10719 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.499025,
+      "lng": 13.327354
+    },
+    "coordinates_raw": "52.499025, 13.327354",
+    "accessibility": "hard",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "088_lookup_fasanenstrae.png",
+    "image_path": "images/088_lookup_fasanenstrae.png"
+  },
+  {
+    "pdf_page": 90,
+    "place_number": 35,
+    "title": "Lookup Friedrichstraße",
+    "title_lines": [
+      "Lookup Friedrichstraße"
+    ],
+    "location": "Friedrichstraße 140, 10117 Berlin",
+    "location_lines": [
+      "Friedrichstraße 140",
+      "10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.52097,
+      "lng": 13.38766
+    },
+    "coordinates_raw": "52.520970, 13.387660",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "090_lookup_friedrichstrae.png",
+    "image_path": "images/090_lookup_friedrichstrae.png"
+  },
+  {
+    "pdf_page": 92,
+    "place_number": 36,
+    "title": "Lookup Hackesche Höfe",
+    "title_lines": [
+      "Lookup",
+      "Hackesche Höfe"
+    ],
+    "location": "Rosenthaler Str. 40, 10178 Berlin",
+    "location_lines": [
+      "Rosenthaler Str. 40",
+      "10178 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.524153,
+      "lng": 13.402138
+    },
+    "coordinates_raw": "52.524153, 13.402138",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "092_lookup_hackesche_hofe.png",
+    "image_path": "images/092_lookup_hackesche_hofe.png"
+  },
+  {
+    "pdf_page": 94,
+    "place_number": 37,
+    "title": "Lookup Hallesches Tor",
+    "title_lines": [
+      "Lookup Hallesches Tor"
+    ],
+    "location": "Hallesches Ufer 24, 10963 Berlin",
+    "location_lines": [
+      "Hallesches Ufer 24",
+      "10963 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.498677,
+      "lng": 13.387851
+    },
+    "coordinates_raw": "52.498677, 13.387851",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "094_lookup_hallesches_tor.png",
+    "image_path": "images/094_lookup_hallesches_tor.png"
+  },
+  {
+    "pdf_page": 96,
+    "place_number": 38,
+    "title": "Lookup Kochstraße",
+    "title_lines": [
+      "Lookup Kochstraße"
+    ],
+    "location": "Friedrichstraße 210, 10969 Berlin",
+    "location_lines": [
+      "Friedrichstraße 210",
+      "10969 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.506437,
+      "lng": 13.390108
+    },
+    "coordinates_raw": "52.506437, 13.390108",
+    "accessibility": "hard",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "096_lookup_kochstrae.png",
+    "image_path": "images/096_lookup_kochstrae.png"
+  },
+  {
+    "pdf_page": 98,
+    "place_number": 39,
+    "title": "Lookup Koppenstraße",
+    "title_lines": [
+      "Lookup Koppenstraße"
+    ],
+    "location": "Koppenstraße 8, 10243 Berlin",
+    "location_lines": [
+      "Koppenstraße 8",
+      "10243 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.512265,
+      "lng": 13.434453
+    },
+    "coordinates_raw": "52.512265, 13.434453",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "098_lookup_koppenstrae.png",
+    "image_path": "images/098_lookup_koppenstrae.png"
+  },
+  {
+    "pdf_page": 100,
+    "place_number": 40,
+    "title": "Lookup Lietzenburger Straße",
+    "title_lines": [
+      "Lookup",
+      "Lietzenburger Straße"
+    ],
+    "location": "Lietzenburger Straße 86, 10719 Berlin",
+    "location_lines": [
+      "Lietzenburger Straße 86",
+      "10719 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.500056,
+      "lng": 13.322456
+    },
+    "coordinates_raw": "52.500056, 13.322456",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "100_lookup_lietzenburger_strae.png",
+    "image_path": "images/100_lookup_lietzenburger_strae.png"
+  },
+  {
+    "pdf_page": 102,
+    "place_number": 41,
+    "title": "Lookup Passauer Straße",
+    "title_lines": [
+      "Lookup",
+      "Passauer Straße"
+    ],
+    "location": "Passauerstraße 34, 10789 Berlin",
+    "location_lines": [
+      "Passauerstraße 34",
+      "10789 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.500494,
+      "lng": 13.339697
+    },
+    "coordinates_raw": "52.500494, 13.339697",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "102_lookup_passauer_strae.png",
+    "image_path": "images/102_lookup_passauer_strae.png"
+  },
+  {
+    "pdf_page": 104,
+    "place_number": 42,
+    "title": "Lookup Potsdamer Platz",
+    "title_lines": [
+      "Lookup",
+      "Potsdamer Platz"
+    ],
+    "location": "Stresemannstraße 123, 10963 Berlin",
+    "location_lines": [
+      "Stresemannstraße 123",
+      "10963 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.507376,
+      "lng": 13.377972
+    },
+    "coordinates_raw": "52.507376, 13.377972",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "104_lookup_potsdamer_platz.png",
+    "image_path": "images/104_lookup_potsdamer_platz.png"
+  },
+  {
+    "pdf_page": 106,
+    "place_number": 43,
+    "title": "Lookup Quartier Schützenstraße Yellow",
+    "title_lines": [
+      "Lookup Quartier",
+      "Schützenstraße Yellow"
+    ],
+    "location": "Charlottenstraße 16, 10117 Berlin",
+    "location_lines": [
+      "Charlottenstraße 16",
+      "10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.508143,
+      "lng": 13.392745
+    },
+    "coordinates_raw": "52.508143, 13.392745",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "106_lookup_quartier_schutzenstrae_yellow.png",
+    "image_path": "images/106_lookup_quartier_schutzenstrae_yellow.png"
+  },
+  {
+    "pdf_page": 108,
+    "place_number": 44,
+    "title": "Lookup Quartier Schützenstraße Red",
+    "title_lines": [
+      "Lookup Quartier",
+      "Schützenstraße Red"
+    ],
+    "location": "Charlottenstraße 16, 10117 Berlin",
+    "location_lines": [
+      "Charlottenstraße 16",
+      "10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.508438,
+      "lng": 13.392671
+    },
+    "coordinates_raw": "52.508438, 13.392671",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "108_lookup_quartier_schutzenstrae_red.png",
+    "image_path": "images/108_lookup_quartier_schutzenstrae_red.png"
+  },
+  {
+    "pdf_page": 110,
+    "place_number": 45,
+    "title": "Ludwig Erhard Haus",
+    "title_lines": [
+      "Ludwig Erhard Haus"
+    ],
+    "location": "Fasanenstraße 85, 10623 Berlin",
+    "location_lines": [
+      "Fasanenstraße 85",
+      "10623 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.506646,
+      "lng": 13.328299
+    },
+    "coordinates_raw": "52.506646, 13.328299",
+    "accessibility": "hard",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "110_ludwig_erhard_haus.png",
+    "image_path": "images/110_ludwig_erhard_haus.png"
+  },
+  {
+    "pdf_page": 112,
+    "place_number": 46,
+    "title": "Mall of Berlin",
+    "title_lines": [
+      "Mall of Berlin"
+    ],
+    "location": "Leipziger Pl. 12, 10117 Berlin",
+    "location_lines": [
+      "Leipziger Pl. 12",
+      "10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.510618,
+      "lng": 13.381089
+    },
+    "coordinates_raw": "52.510618, 13.381089",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "112_mall_of_berlin.png",
+    "image_path": "images/112_mall_of_berlin.png"
+  },
+  {
+    "pdf_page": 114,
+    "place_number": 47,
+    "title": "Marie-Elisabeth- Lüdershaus",
+    "title_lines": [
+      "Marie-Elisabeth-",
+      "Lüdershaus"
+    ],
+    "location": "Adele-Schreiber-Krieger-, Straße 1, 10117 Berlin",
+    "location_lines": [
+      "Adele-Schreiber-Krieger-",
+      "Straße 1, 10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.520474,
+      "lng": 13.376979
+    },
+    "coordinates_raw": "52.520474, 13.376979",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "114_marie_elisabeth_ludershaus.png",
+    "image_path": "images/114_marie_elisabeth_ludershaus.png"
+  },
+  {
+    "pdf_page": 116,
+    "place_number": 48,
+    "title": "Minna-Todenhagen- Brücke",
+    "title_lines": [
+      "Minna-Todenhagen-",
+      "Brücke"
+    ],
+    "location": "Köpenicker Landstraße, 297Z, 12437 Berlin",
+    "location_lines": [
+      "Köpenicker Landstraße",
+      "297Z, 12437 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.467445,
+      "lng": 13.49791
+    },
+    "coordinates_raw": "52.467445, 13.497910",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "116_minna_todenhagen_brucke.png",
+    "image_path": "images/116_minna_todenhagen_brucke.png"
+  },
+  {
+    "pdf_page": 118,
+    "place_number": 49,
+    "title": "Motel One Upper West",
+    "title_lines": [
+      "Motel One Upper West"
+    ],
+    "location": "Kantstraße 163-165, 10623 Berlin",
+    "location_lines": [
+      "Kantstraße 163-165",
+      "10623 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.505163,
+      "lng": 13.333066
+    },
+    "coordinates_raw": "52.505163, 13.333066",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "118_motel_one_upper_west.png",
+    "image_path": "images/118_motel_one_upper_west.png"
+  },
+  {
+    "pdf_page": 120,
+    "place_number": 50,
+    "title": "Museum für Kommunikation Museum for Communication",
+    "title_lines": [
+      "Museum für",
+      "Kommunikation",
+      "Museum for Communication"
+    ],
+    "location": "Leipziger Str. 16, 10117 Berlin",
+    "location_lines": [
+      "Leipziger Str. 16",
+      "10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.510051,
+      "lng": 13.387331
+    },
+    "coordinates_raw": "52.510051, 13.387331",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "120_museum_fur_kommunikation_museum_for_communication.png",
+    "image_path": "images/120_museum_fur_kommunikation_museum_for_communication.png"
+  },
+  {
+    "pdf_page": 123,
+    "place_number": 51,
+    "title": "Oberbaumbrücke",
+    "title_lines": [
+      "Oberbaumbrücke"
+    ],
+    "location": "Oberbaumbrücke, 10243 Berlin",
+    "location_lines": [
+      "Oberbaumbrücke",
+      "10243 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.501878,
+      "lng": 13.445671
+    },
+    "coordinates_raw": "52.501878, 13.445671",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "123_oberbaumbrucke.png",
+    "image_path": "images/123_oberbaumbrucke.png"
+  },
+  {
+    "pdf_page": 125,
+    "place_number": 52,
+    "title": "Olympiastadion",
+    "title_lines": [
+      "Olympiastadion"
+    ],
+    "location": "Olympischer Platz 3, 14053 Berlin",
+    "location_lines": [
+      "Olympischer Platz 3",
+      "14053 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.514671,
+      "lng": 13.239753
+    },
+    "coordinates_raw": "52.514671, 13.239753",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "125_olympiastadion.png",
+    "image_path": "images/125_olympiastadion.png"
+  },
+  {
+    "pdf_page": 127,
+    "place_number": 53,
+    "title": "Panoramapunkt",
+    "title_lines": [
+      "Panoramapunkt"
+    ],
+    "location": "Kollhoff Tower, Potsdamer, Str. 1, 10785 Berlin",
+    "location_lines": [
+      "Kollhoff Tower, Potsdamer",
+      "Str. 1, 10785 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.508915,
+      "lng": 13.374866
+    },
+    "coordinates_raw": "52.508915, 13.374866",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "127_panoramapunkt.png",
+    "image_path": "images/127_panoramapunkt.png"
+  },
+  {
+    "pdf_page": 129,
+    "place_number": 54,
+    "title": "Parkhaus am Borsigturm",
+    "title_lines": [
+      "Parkhaus",
+      "am Borsigturm"
+    ],
+    "location": "Am Borsigturm 2, 13507 Berlin",
+    "location_lines": [
+      "Am Borsigturm 2",
+      "13507 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.584491,
+      "lng": 13.284713
+    },
+    "coordinates_raw": "52.584491, 13.284713",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "129_parkhaus_am_borsigturm.png",
+    "image_path": "images/129_parkhaus_am_borsigturm.png"
+  },
+  {
+    "pdf_page": 131,
+    "place_number": 55,
+    "title": "Parkhaus Contipark am KaDeWe",
+    "title_lines": [
+      "Parkhaus Contipark",
+      "am KaDeWe"
+    ],
+    "location": "Passauer Str. 33-37, 10789 Berlin",
+    "location_lines": [
+      "Passauer Str. 33-37",
+      "10789 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.50086,
+      "lng": 13.339704
+    },
+    "coordinates_raw": "52.500860, 13.339704",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "131_parkhaus_contipark_am_kadewe.png",
+    "image_path": "images/131_parkhaus_contipark_am_kadewe.png"
+  },
+  {
+    "pdf_page": 133,
+    "place_number": 56,
+    "title": "Parkhaus Mercedes Benz",
+    "title_lines": [
+      "Parkhaus",
+      "Mercedes Benz"
+    ],
+    "location": "Helen-Ernst-Straße 2, 10243 Berlin",
+    "location_lines": [
+      "Helen-Ernst-Straße 2",
+      "10243 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.507169,
+      "lng": 13.442513
+    },
+    "coordinates_raw": "52.507169, 13.442513",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "133_parkhaus_mercedes_benz.png",
+    "image_path": "images/133_parkhaus_mercedes_benz.png"
+  },
+  {
+    "pdf_page": 135,
+    "place_number": 57,
+    "title": "Parkhaus Rathauspassagen",
+    "title_lines": [
+      "Parkhaus",
+      "Rathauspassagen"
+    ],
+    "location": "Grunerstraße 7, 10179 Berlin",
+    "location_lines": [
+      "Grunerstraße 7",
+      "10179 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.518845,
+      "lng": 13.410815
+    },
+    "coordinates_raw": "52.518845, 13.410815",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "135_parkhaus_rathauspassagen.png",
+    "image_path": "images/135_parkhaus_rathauspassagen.png"
+  },
+  {
+    "pdf_page": 137,
+    "place_number": 58,
+    "title": "Paul Löbe Haus",
+    "title_lines": [
+      "Paul Löbe Haus"
+    ],
+    "location": "Konrad-Adenauer-Straße, 1, 10557 Berlin",
+    "location_lines": [
+      "Konrad-Adenauer-Straße",
+      "1, 10557 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.520173,
+      "lng": 13.373604
+    },
+    "coordinates_raw": "52.520173, 13.373604",
+    "accessibility": "hard",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "137_paul_lobe_haus.png",
+    "image_path": "images/137_paul_lobe_haus.png"
+  },
+  {
+    "pdf_page": 139,
+    "place_number": 59,
+    "title": "Peter-Behrens-Haus Behrensbau",
+    "title_lines": [
+      "Peter-Behrens-Haus",
+      "Behrensbau"
+    ],
+    "location": "Ostendstraße 1-4, 12459 Berlin",
+    "location_lines": [
+      "Ostendstraße 1-4",
+      "12459 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.45665,
+      "lng": 13.529694
+    },
+    "coordinates_raw": "52.456650, 13.529694",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "139_peter_behrens_haus_behrensbau.png",
+    "image_path": "images/139_peter_behrens_haus_behrensbau.png"
+  },
+  {
+    "pdf_page": 141,
+    "place_number": 60,
+    "title": "Philologische Bibliothek Philological Library",
+    "title_lines": [
+      "Philologische",
+      "Bibliothek",
+      "Philological Library"
+    ],
+    "location": "Habelschwerdter Allee, 45, 14195 Berlin",
+    "location_lines": [
+      "Habelschwerdter Allee",
+      "45, 14195 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.45165,
+      "lng": 13.288554
+    },
+    "coordinates_raw": "52.451650, 13.288554",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "141_philologische_bibliothek_philological_library.png",
+    "image_path": "images/141_philologische_bibliothek_philological_library.png"
+  },
+  {
+    "pdf_page": 143,
+    "place_number": 61,
+    "title": "Regenbogenhaus Rainbow House",
+    "title_lines": [
+      "Regenbogenhaus",
+      "Rainbow House"
+    ],
+    "location": "Herzbergstraße 1, 10367 Berlin",
+    "location_lines": [
+      "Herzbergstraße 1",
+      "10367 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.526286,
+      "lng": 13.48048
+    },
+    "coordinates_raw": "52.526286, 13.480480",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "143_regenbogenhaus_rainbow_house.png",
+    "image_path": "images/143_regenbogenhaus_rainbow_house.png"
+  },
+  {
+    "pdf_page": 145,
+    "place_number": 62,
+    "title": "Rotes Haus am Lokdepot Red House at Lokdepot",
+    "title_lines": [
+      "Rotes Haus am",
+      "Lokdepot",
+      "Red House at Lokdepot"
+    ],
+    "location": "Am Lokdepot 5, 10965 Berlin",
+    "location_lines": [
+      "Am Lokdepot 5",
+      "10965 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.487502,
+      "lng": 13.373182
+    },
+    "coordinates_raw": "52.487502, 13.373182",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "145_rotes_haus_am_lokdepot_red_house_at_lokdepot.png",
+    "image_path": "images/145_rotes_haus_am_lokdepot_red_house_at_lokdepot.png"
+  },
+  {
+    "pdf_page": 147,
+    "place_number": 63,
+    "title": "Rotes Rathaus Red Town Hall",
+    "title_lines": [
+      "Rotes Rathaus",
+      "Red Town Hall"
+    ],
+    "location": "Rathausstraße 15, 10178 Berlin",
+    "location_lines": [
+      "Rathausstraße 15",
+      "10178 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.51838,
+      "lng": 13.408513
+    },
+    "coordinates_raw": "52.518380, 13.408513",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "147_rotes_rathaus_red_town_hall.png",
+    "image_path": "images/147_rotes_rathaus_red_town_hall.png"
+  },
+  {
+    "pdf_page": 149,
+    "place_number": 64,
+    "title": "S-Bahnhof Friedrichstraße",
+    "title_lines": [
+      "S-Bahnhof",
+      "Friedrichstraße"
+    ],
+    "location": "Georgenstraße 14/17, 10117 Berlin",
+    "location_lines": [
+      "Georgenstraße 14/17",
+      "10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.52041,
+      "lng": 13.386812
+    },
+    "coordinates_raw": "52.520410, 13.386812",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "149_s_bahnhof_friedrichstrae.png",
+    "image_path": "images/149_s_bahnhof_friedrichstrae.png"
+  },
+  {
+    "pdf_page": 151,
+    "place_number": 65,
+    "title": "S-Karlshorst Passenger Bridge",
+    "title_lines": [
+      "S-Karlshorst",
+      "Passenger Bridge"
+    ],
+    "location": "S Karlshorst, 10318 Berlin",
+    "location_lines": [
+      "S Karlshorst",
+      "10318 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.481309,
+      "lng": 13.525468
+    },
+    "coordinates_raw": "52.481309, 13.525468",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "151_s_karlshorst_passenger_bridge.png",
+    "image_path": "images/151_s_karlshorst_passenger_bridge.png"
+  },
+  {
+    "pdf_page": 153,
+    "place_number": 66,
+    "title": "Schloss Bellevue",
+    "title_lines": [
+      "Schloss Bellevue"
+    ],
+    "location": "Spreeweg 1, 10557 Berlin",
+    "location_lines": [
+      "Spreeweg 1",
+      "10557 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.517508,
+      "lng": 13.352765
+    },
+    "coordinates_raw": "52.517508, 13.352765",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "153_schloss_bellevue.png",
+    "image_path": "images/153_schloss_bellevue.png"
+  },
+  {
+    "pdf_page": 155,
+    "place_number": 67,
+    "title": "Schloss Charlottenburg",
+    "title_lines": [
+      "Schloss",
+      "Charlottenburg"
+    ],
+    "location": "Spandauer Damm 10-22, 14059 Berlin",
+    "location_lines": [
+      "Spandauer Damm 10-22",
+      "14059 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.520693,
+      "lng": 13.29594
+    },
+    "coordinates_raw": "52.520693, 13.295940",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "155_schloss_charlottenburg.png",
+    "image_path": "images/155_schloss_charlottenburg.png"
+  },
+  {
+    "pdf_page": 157,
+    "place_number": 68,
+    "title": "Schloss Sanssouci",
+    "title_lines": [
+      "Schloss Sanssouci"
+    ],
+    "location": "Maulbeerallee, 14469 Potsdam",
+    "location_lines": [
+      "Maulbeerallee",
+      "14469 Potsdam"
+    ],
+    "coordinates": {
+      "lat": 52.40341,
+      "lng": 13.038521
+    },
+    "coordinates_raw": "52.403410, 13.038521",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "157_schloss_sanssouci.png",
+    "image_path": "images/157_schloss_sanssouci.png"
+  },
+  {
+    "pdf_page": 159,
+    "place_number": 69,
+    "title": "Schloss Sanssouci: Belvedere Pfingstberg",
+    "title_lines": [
+      "Schloss Sanssouci:",
+      "Belvedere Pfingstberg"
+    ],
+    "location": "Pfingstberg, Neuer, Garten, 14469 Potsdam",
+    "location_lines": [
+      "Pfingstberg, Neuer",
+      "Garten, 14469 Potsdam"
+    ],
+    "coordinates": {
+      "lat": 52.418779,
+      "lng": 13.059033
+    },
+    "coordinates_raw": "52.418779, 13.059033",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "159_schloss_sanssouci_belvedere_pfingstberg.png",
+    "image_path": "images/159_schloss_sanssouci_belvedere_pfingstberg.png"
+  },
+  {
+    "pdf_page": 161,
+    "place_number": 70,
+    "title": "Schwedter Steg",
+    "title_lines": [
+      "Schwedter Steg"
+    ],
+    "location": "Schwedter Steg, 10437 Berlin",
+    "location_lines": [
+      "Schwedter Steg",
+      "10437 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.549925,
+      "lng": 13.399995
+    },
+    "coordinates_raw": "52.549925, 13.399995",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "161_schwedter_steg.png",
+    "image_path": "images/161_schwedter_steg.png"
+  },
+  {
+    "pdf_page": 163,
+    "place_number": 71,
+    "title": "Shell Haus",
+    "title_lines": [
+      "Shell Haus"
+    ],
+    "location": "Reichpietschufer 60-62, 10785 Berlin",
+    "location_lines": [
+      "Reichpietschufer 60-62",
+      "10785 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.506081,
+      "lng": 13.363371
+    },
+    "coordinates_raw": "52.506081, 13.363371",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "163_shell_haus.png",
+    "image_path": "images/163_shell_haus.png"
+  },
+  {
+    "pdf_page": 165,
+    "place_number": 72,
+    "title": "Siegessäule Top Victory Column Top",
+    "title_lines": [
+      "Siegessäule Top",
+      "Victory Column Top"
+    ],
+    "location": "Großer Stern 1, 10557 Berlin",
+    "location_lines": [
+      "Großer Stern 1",
+      "10557 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.514507,
+      "lng": 13.350178
+    },
+    "coordinates_raw": "52.514507, 13.350178",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "165_siegessaule_top_victory_column_top.png",
+    "image_path": "images/165_siegessaule_top_victory_column_top.png"
+  },
+  {
+    "pdf_page": 167,
+    "place_number": 73,
+    "title": "Siegessäule Underpass Victory Column Underpass",
+    "title_lines": [
+      "Siegessäule",
+      "Underpass",
+      "Victory Column Underpass"
+    ],
+    "location": "Großer Stern 1, 10557 Berlin",
+    "location_lines": [
+      "Großer Stern 1",
+      "10557 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.514507,
+      "lng": 13.350178
+    },
+    "coordinates_raw": "52.514507, 13.350178",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "167_siegessaule_underpass_victory_column_underpass.png",
+    "image_path": "images/167_siegessaule_underpass_victory_column_underpass.png"
+  },
+  {
+    "pdf_page": 169,
+    "place_number": 74,
+    "title": "Sony Center",
+    "title_lines": [
+      "Sony Center"
+    ],
+    "location": "Potsdamer Str. 2, 10785 Berlin",
+    "location_lines": [
+      "Potsdamer Str. 2",
+      "10785 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.51008,
+      "lng": 13.373316
+    },
+    "coordinates_raw": "52.510080, 13.373316",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "169_sony_center.png",
+    "image_path": "images/169_sony_center.png"
+  },
+  {
+    "pdf_page": 171,
+    "place_number": 75,
+    "title": "Sowjetisches Ehrenmal Treptow Soviet War Memorial Treptow",
+    "title_lines": [
+      "Sowjetisches",
+      "Ehrenmal Treptow",
+      "Soviet War Memorial Treptow"
+    ],
+    "location": "Puschkinallee, 12435 Berlin",
+    "location_lines": [
+      "Puschkinallee",
+      "12435 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.486296,
+      "lng": 13.47156
+    },
+    "coordinates_raw": "52.486296, 13.471560",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "171_sowjetisches_ehrenmal_treptow_soviet_war_memorial_treptow.png",
+    "image_path": "images/171_sowjetisches_ehrenmal_treptow_soviet_war_memorial_treptow.png"
+  },
+  {
+    "pdf_page": 173,
+    "place_number": 76,
+    "title": "St. Augustinus Kirche",
+    "title_lines": [
+      "St. Augustinus Kirche"
+    ],
+    "location": "Dänenstraße 17/18, 10439 Berlin",
+    "location_lines": [
+      "Dänenstraße 17/18",
+      "10439 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.549968,
+      "lng": 13.406827
+    },
+    "coordinates_raw": "52.549968, 13.406827",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "173_st_augustinus_kirche.png",
+    "image_path": "images/173_st_augustinus_kirche.png"
+  },
+  {
+    "pdf_page": 175,
+    "place_number": 77,
+    "title": "Staatsbibliothek Unter den Linden State Library Berlin (Unter den Linden)",
+    "title_lines": [
+      "Staatsbibliothek",
+      "Unter den Linden",
+      "State Library Berlin (Unter den Linden)"
+    ],
+    "location": "Unter den Linden 8, 10117 Berlin",
+    "location_lines": [
+      "Unter den Linden 8",
+      "10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.517524,
+      "lng": 13.391758
+    },
+    "coordinates_raw": "52.517524, 13.391758",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "175_staatsbibliothek_unter_den_linden_state_library_berlin_unter_den_linden.png",
+    "image_path": "images/175_staatsbibliothek_unter_den_linden_state_library_berlin_unter_den_linden.png"
+  },
+  {
+    "pdf_page": 177,
+    "place_number": 78,
+    "title": "Stadtbad Charlottenburg Charlottenburg City Pool",
+    "title_lines": [
+      "Stadtbad",
+      "Charlottenburg",
+      "Charlottenburg City Pool"
+    ],
+    "location": "Krumme Straße 10, 10585 Berlin",
+    "location_lines": [
+      "Krumme Straße 10",
+      "10585 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.514521,
+      "lng": 13.309592
+    },
+    "coordinates_raw": "52.514521, 13.309592",
+    "accessibility": "hard",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "177_stadtbad_charlottenburg_charlottenburg_city_pool.png",
+    "image_path": "images/177_stadtbad_charlottenburg_charlottenburg_city_pool.png"
+  },
+  {
+    "pdf_page": 179,
+    "place_number": 79,
+    "title": "Stadtbad Neukölln Neukölln City Pool",
+    "title_lines": [
+      "Stadtbad Neukölln",
+      "Neukölln City Pool"
+    ],
+    "location": "Ganghoferstraße 3, 12043 Berlin",
+    "location_lines": [
+      "Ganghoferstraße 3",
+      "12043 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.479229,
+      "lng": 13.439971
+    },
+    "coordinates_raw": "52.479229, 13.439971",
+    "accessibility": "hard",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "179_stadtbad_neukolln_neukolln_city_pool.png",
+    "image_path": "images/179_stadtbad_neukolln_neukolln_city_pool.png"
+  },
+  {
+    "pdf_page": 181,
+    "place_number": 80,
+    "title": "Staircase KaDeWe",
+    "title_lines": [
+      "Staircase KaDeWe"
+    ],
+    "location": "Tauentzienstraße 21-24, 10789 Berlin",
+    "location_lines": [
+      "Tauentzienstraße 21-24",
+      "10789 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.501744,
+      "lng": 13.341003
+    },
+    "coordinates_raw": "52.501744, 13.341003",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "181_staircase_kadewe.png",
+    "image_path": "images/181_staircase_kadewe.png"
+  },
+  {
+    "pdf_page": 183,
+    "place_number": 81,
+    "title": "Staircase Rankestraße",
+    "title_lines": [
+      "Staircase Rankestraße"
+    ],
+    "location": "Lietzenburger Straße 51, 10789 Berlin",
+    "location_lines": [
+      "Lietzenburger Straße 51",
+      "10789 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.500291,
+      "lng": 13.331741
+    },
+    "coordinates_raw": "52.500291, 13.331741",
+    "accessibility": "hard",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "183_staircase_rankestrae.png",
+    "image_path": "images/183_staircase_rankestrae.png"
+  },
+  {
+    "pdf_page": 185,
+    "place_number": 82,
+    "title": "Stößenseebrücke",
+    "title_lines": [
+      "Stößenseebrücke"
+    ],
+    "location": "Havelchaussee 147, 14055 Berlin",
+    "location_lines": [
+      "Havelchaussee 147",
+      "14055 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.509473,
+      "lng": 13.214922
+    },
+    "coordinates_raw": "52.509473, 13.214922",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "185_stoenseebrucke.png",
+    "image_path": "images/185_stoenseebrucke.png"
+  },
+  {
+    "pdf_page": 187,
+    "place_number": 83,
+    "title": "Technische Universität Lichthof Atrium of the TU Berlin",
+    "title_lines": [
+      "Technische",
+      "Universität Lichthof",
+      "Atrium of the TU Berlin"
+    ],
+    "location": "Str. des 17. Juni 135, 10623 Berlin",
+    "location_lines": [
+      "Str. des 17. Juni 135",
+      "10623 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.512064,
+      "lng": 13.32703
+    },
+    "coordinates_raw": "52.512064, 13.327030",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "187_technische_universitat_lichthof_atrium_of_the_tu_berlin.png",
+    "image_path": "images/187_technische_universitat_lichthof_atrium_of_the_tu_berlin.png"
+  },
+  {
+    "pdf_page": 189,
+    "place_number": 84,
+    "title": "Tempodrom",
+    "title_lines": [
+      "Tempodrom"
+    ],
+    "location": "Möckernstraße 10, 10963 Berlin",
+    "location_lines": [
+      "Möckernstraße 10",
+      "10963 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.501634,
+      "lng": 13.381151
+    },
+    "coordinates_raw": "52.501634, 13.381151",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "189_tempodrom.png",
+    "image_path": "images/189_tempodrom.png"
+  },
+  {
+    "pdf_page": 191,
+    "place_number": 85,
+    "title": "Tieranatomisches Theater Veterinary Anatomy Theatre",
+    "title_lines": [
+      "Tieranatomisches",
+      "Theater",
+      "Veterinary Anatomy Theatre"
+    ],
+    "location": "Campus Nord, Philippstraße 13/Haus 3, 10115 Berlin",
+    "location_lines": [
+      "Campus Nord",
+      "Philippstraße 13/Haus 3",
+      "10115 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.52512,
+      "lng": 13.381311
+    },
+    "coordinates_raw": "52.525120, 13.381311",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "191_tieranatomisches_theater_veterinary_anatomy_theatre.png",
+    "image_path": "images/191_tieranatomisches_theater_veterinary_anatomy_theatre.png"
+  },
+  {
+    "pdf_page": 193,
+    "place_number": 86,
+    "title": "U Alexanderplatz Exit",
+    "title_lines": [
+      "U Alexanderplatz Exit"
+    ],
+    "location": "Alexanderpl., 10178 Berlin",
+    "location_lines": [
+      "Alexanderpl., 10178 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.521602,
+      "lng": 13.413193
+    },
+    "coordinates_raw": "52.521602, 13.413193",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "193_u_alexanderplatz_exit.png",
+    "image_path": "images/193_u_alexanderplatz_exit.png"
+  },
+  {
+    "pdf_page": 195,
+    "place_number": 87,
+    "title": "U Altstadt Spandau",
+    "title_lines": [
+      "U Altstadt Spandau"
+    ],
+    "location": "U Altstadt Spandau, 13597 Spandau",
+    "location_lines": [
+      "U Altstadt Spandau",
+      "13597 Spandau"
+    ],
+    "coordinates": {
+      "lat": 52.53842,
+      "lng": 13.206963
+    },
+    "coordinates_raw": "52.538420, 13.206963",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "195_u_altstadt_spandau.png",
+    "image_path": "images/195_u_altstadt_spandau.png"
+  },
+  {
+    "pdf_page": 197,
+    "place_number": 88,
+    "title": "U Brandenburger Tor",
+    "title_lines": [
+      "U Brandenburger Tor"
+    ],
+    "location": "U Brandenburger Tor, 10117 Berlin",
+    "location_lines": [
+      "U Brandenburger Tor",
+      "10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.516579,
+      "lng": 13.381789
+    },
+    "coordinates_raw": "52.516579, 13.381789",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "197_u_brandenburger_tor.png",
+    "image_path": "images/197_u_brandenburger_tor.png"
+  },
+  {
+    "pdf_page": 199,
+    "place_number": 89,
+    "title": "U Eberswalder Straße",
+    "title_lines": [
+      "U Eberswalder Straße"
+    ],
+    "location": "U Eberswalder Straße, 10437 Berlin",
+    "location_lines": [
+      "U Eberswalder Straße",
+      "10437 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.541251,
+      "lng": 13.412182
+    },
+    "coordinates_raw": "52.541251, 13.412182",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "199_u_eberswalder_strae.png",
+    "image_path": "images/199_u_eberswalder_strae.png"
+  },
+  {
+    "pdf_page": 201,
+    "place_number": 90,
+    "title": "U Fehrbelliner Platz",
+    "title_lines": [
+      "U Fehrbelliner Platz"
+    ],
+    "location": "U Fehrbelliner Platz, 10707 Berlin",
+    "location_lines": [
+      "U Fehrbelliner Platz",
+      "10707 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.490442,
+      "lng": 13.314234
+    },
+    "coordinates_raw": "52.490442, 13.314234",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "201_u_fehrbelliner_platz.png",
+    "image_path": "images/201_u_fehrbelliner_platz.png"
+  },
+  {
+    "pdf_page": 203,
+    "place_number": 91,
+    "title": "U Museumsinsel",
+    "title_lines": [
+      "U Museumsinsel"
+    ],
+    "location": "U Museumsinsel, 10178 Berlin",
+    "location_lines": [
+      "U Museumsinsel",
+      "10178 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.517445,
+      "lng": 13.399823
+    },
+    "coordinates_raw": "52.517445, 13.399823",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "203_u_museumsinsel.png",
+    "image_path": "images/203_u_museumsinsel.png"
+  },
+  {
+    "pdf_page": 205,
+    "place_number": 92,
+    "title": "U Paracelsus-Bad",
+    "title_lines": [
+      "U Paracelsus-Bad"
+    ],
+    "location": "U Paracelsus-Bad, 13407 Berlin",
+    "location_lines": [
+      "U Paracelsus-Bad",
+      "13407 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.574408,
+      "lng": 13.347446
+    },
+    "coordinates_raw": "52.574408, 13.347446",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "205_u_paracelsus_bad.png",
+    "image_path": "images/205_u_paracelsus_bad.png"
+  },
+  {
+    "pdf_page": 207,
+    "place_number": 93,
+    "title": "U Richard- Wagner-Platz",
+    "title_lines": [
+      "U Richard-",
+      "Wagner-Platz"
+    ],
+    "location": "U Richard-Wagner-Platz, 10585 Berlin",
+    "location_lines": [
+      "U Richard-Wagner-Platz",
+      "10585 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.517265,
+      "lng": 13.306597
+    },
+    "coordinates_raw": "52.517265, 13.306597",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "207_u_richard_wagner_platz.png",
+    "image_path": "images/207_u_richard_wagner_platz.png"
+  },
+  {
+    "pdf_page": 209,
+    "place_number": 94,
+    "title": "U Schlossstraße",
+    "title_lines": [
+      "U Schlossstraße"
+    ],
+    "location": "U Schloßstraße, 12163 Berlin",
+    "location_lines": [
+      "U Schloßstraße",
+      "12163 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.461316,
+      "lng": 13.324865
+    },
+    "coordinates_raw": "52.461316, 13.324865",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "209_u_schlossstrae.png",
+    "image_path": "images/209_u_schlossstrae.png"
+  },
+  {
+    "pdf_page": 211,
+    "place_number": 95,
+    "title": "U Siemensdamm",
+    "title_lines": [
+      "U Siemensdamm"
+    ],
+    "location": "U Siemensdamm, 13629 Berlin",
+    "location_lines": [
+      "U Siemensdamm",
+      "13629 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.536693,
+      "lng": 13.272521
+    },
+    "coordinates_raw": "52.536693, 13.272521",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "211_u_siemensdamm.png",
+    "image_path": "images/211_u_siemensdamm.png"
+  },
+  {
+    "pdf_page": 213,
+    "place_number": 96,
+    "title": "U Strausberger Platz",
+    "title_lines": [
+      "U Strausberger Platz"
+    ],
+    "location": "U Strausberger Platz, 10243 Berlin",
+    "location_lines": [
+      "U Strausberger Platz",
+      "10243 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.518035,
+      "lng": 13.432266
+    },
+    "coordinates_raw": "52.518035, 13.432266",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "213_u_strausberger_platz.png",
+    "image_path": "images/213_u_strausberger_platz.png"
+  },
+  {
+    "pdf_page": 215,
+    "place_number": 97,
+    "title": "U Weberwiese",
+    "title_lines": [
+      "U Weberwiese"
+    ],
+    "location": "U Weberwiese, 10243 Berlin",
+    "location_lines": [
+      "U Weberwiese",
+      "10243 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.516618,
+      "lng": 13.443174
+    },
+    "coordinates_raw": "52.516618, 13.443174",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "215_u_weberwiese.png",
+    "image_path": "images/215_u_weberwiese.png"
+  },
+  {
+    "pdf_page": 217,
+    "place_number": 98,
+    "title": "Wachturm Prenzlauer Berg Watchtower Prenzlauer Berg",
+    "title_lines": [
+      "Wachturm",
+      "Prenzlauer Berg",
+      "Watchtower Prenzlauer Berg"
+    ],
+    "location": "Strelitzer Straße 27, 10115 Berlin",
+    "location_lines": [
+      "Strelitzer Straße 27",
+      "10115 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.537124,
+      "lng": 13.393451
+    },
+    "coordinates_raw": "52.537124, 13.393451",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "217_wachturm_prenzlauer_berg_watchtower_prenzlauer_berg.png",
+    "image_path": "images/217_wachturm_prenzlauer_berg_watchtower_prenzlauer_berg.png"
+  },
+  {
+    "pdf_page": 219,
+    "place_number": 99,
+    "title": "Westin Grand Hotel",
+    "title_lines": [
+      "Westin Grand Hotel"
+    ],
+    "location": "Friedrichstraße 158-164, 10117 Berlin",
+    "location_lines": [
+      "Friedrichstraße 158-164",
+      "10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.515904,
+      "lng": 13.388559
+    },
+    "coordinates_raw": "52.515904, 13.388559",
+    "accessibility": "hard",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "219_westin_grand_hotel.png",
+    "image_path": "images/219_westin_grand_hotel.png"
+  },
+  {
+    "pdf_page": 221,
+    "place_number": 100,
+    "title": "Willy-Brandt-Haus",
+    "title_lines": [
+      "Willy-Brandt-Haus"
+    ],
+    "location": "Wilhelmstraße 140, 10963 Berlin",
+    "location_lines": [
+      "Wilhelmstraße 140",
+      "10963 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.500057,
+      "lng": 13.388305
+    },
+    "coordinates_raw": "52.500057, 13.388305",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "221_willy_brandt_haus.png",
+    "image_path": "images/221_willy_brandt_haus.png"
+  },
+  {
+    "pdf_page": 224,
+    "place_number": 101,
+    "title": "Babylon Kino Babylon Cinema",
+    "title_lines": [
+      "Babylon Kino",
+      "Babylon Cinema"
+    ],
+    "location": "Rosa-Luxemburg-Straße, 30, 10178 Berlin",
+    "location_lines": [
+      "Rosa-Luxemburg-Straße",
+      "30, 10178 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.525901,
+      "lng": 13.411421
+    },
+    "coordinates_raw": "52.525901, 13.411421",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "224_babylon_kino_babylon_cinema.png",
+    "image_path": "images/224_babylon_kino_babylon_cinema.png"
+  },
+  {
+    "pdf_page": 226,
+    "place_number": 102,
+    "title": "Berliner Philharmonie",
+    "title_lines": [
+      "Berliner Philharmonie"
+    ],
+    "location": "Herbert-von-Karajan-, Straße 1, 10785 Berlin",
+    "location_lines": [
+      "Herbert-von-Karajan-",
+      "Straße 1, 10785 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.509823,
+      "lng": 13.370037
+    },
+    "coordinates_raw": "52.509823, 13.370037",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "226_berliner_philharmonie.png",
+    "image_path": "images/226_berliner_philharmonie.png"
+  },
+  {
+    "pdf_page": 228,
+    "place_number": 103,
+    "title": "Hotel de Rome",
+    "title_lines": [
+      "Hotel de Rome"
+    ],
+    "location": "Behrenstraße 37, 10117 Berlin",
+    "location_lines": [
+      "Behrenstraße 37",
+      "10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.515728,
+      "lng": 13.394075
+    },
+    "coordinates_raw": "52.515728, 13.394075",
+    "accessibility": "hard",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "228_hotel_de_rome.png",
+    "image_path": "images/228_hotel_de_rome.png"
+  },
+  {
+    "pdf_page": 230,
+    "place_number": 104,
+    "title": "Lookup Alte Nationalgalerie",
+    "title_lines": [
+      "Lookup Alte",
+      "Nationalgalerie"
+    ],
+    "location": "Bodestraße 1-3, 10178 Berlin",
+    "location_lines": [
+      "Bodestraße 1-3",
+      "10178 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.500057,
+      "lng": 13.388305
+    },
+    "coordinates_raw": "52.500057, 13.388305",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "230_lookup_alte_nationalgalerie.png",
+    "image_path": "images/230_lookup_alte_nationalgalerie.png"
+  },
+  {
+    "pdf_page": 232,
+    "place_number": 105,
+    "title": "Lookup Am Tacheles",
+    "title_lines": [
+      "Lookup Am Tacheles"
+    ],
+    "location": "Friedrichstraße 110,, 10117 Berlin",
+    "location_lines": [
+      "Friedrichstraße 110,",
+      "10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.525166,
+      "lng": 13.388305
+    },
+    "coordinates_raw": "52.525166, 13.388305",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "232_lookup_am_tacheles.png",
+    "image_path": "images/232_lookup_am_tacheles.png"
+  },
+  {
+    "pdf_page": 234,
+    "place_number": 106,
+    "title": "Lookup Berliner Dom",
+    "title_lines": [
+      "Lookup Berliner Dom"
+    ],
+    "location": "Am Lustgarten, 10178 Berlin",
+    "location_lines": [
+      "Am Lustgarten",
+      "10178 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.519159,
+      "lng": 13.401157
+    },
+    "coordinates_raw": "52.519159, 13.401157",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "234_lookup_berliner_dom.png",
+    "image_path": "images/234_lookup_berliner_dom.png"
+  },
+  {
+    "pdf_page": 236,
+    "place_number": 107,
+    "title": "Mäusebunker",
+    "title_lines": [
+      "Mäusebunker"
+    ],
+    "location": "Krahmerstraße 6, 12207 Berlin",
+    "location_lines": [
+      "Krahmerstraße 6",
+      "12207 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.436521,
+      "lng": 13.316848
+    },
+    "coordinates_raw": "52.436521, 13.316848",
+    "accessibility": "hard",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "236_mausebunker.png",
+    "image_path": "images/236_mausebunker.png"
+  },
+  {
+    "pdf_page": 238,
+    "place_number": 108,
+    "title": "Reflection Berliner Dom",
+    "title_lines": [
+      "Reflection Berliner Dom"
+    ],
+    "location": "Burgstraße 27, 10178 Berlin",
+    "location_lines": [
+      "Burgstraße 27",
+      "10178 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.521394,
+      "lng": 13.400199
+    },
+    "coordinates_raw": "52.521394, 13.400199",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "238_reflection_berliner_dom.png",
+    "image_path": "images/238_reflection_berliner_dom.png"
+  },
+  {
+    "pdf_page": 240,
+    "place_number": 109,
+    "title": "Reflection Bodemuseum",
+    "title_lines": [
+      "Reflection",
+      "Bodemuseum"
+    ],
+    "location": "Monbijoustraße 1, 10117 Berlin",
+    "location_lines": [
+      "Monbijoustraße 1",
+      "10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.522627,
+      "lng": 13.393099
+    },
+    "coordinates_raw": "52.522627, 13.393099",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "240_reflection_bodemuseum.png",
+    "image_path": "images/240_reflection_bodemuseum.png"
+  },
+  {
+    "pdf_page": 242,
+    "place_number": 110,
+    "title": "Reflection Reichtstagsgebäude Reichstags Building",
+    "title_lines": [
+      "Reflection",
+      "Reichtstagsgebäude",
+      "Reichstags Building"
+    ],
+    "location": "Adele-Schreiber-Krieger-, Straße 1, 10117 Berlin",
+    "location_lines": [
+      "Adele-Schreiber-Krieger-",
+      "Straße 1, 10117 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.519822,
+      "lng": 13.377803
+    },
+    "coordinates_raw": "52.519822, 13.377803",
+    "accessibility": "easy",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "242_reflection_reichtstagsgebaude_reichstags_building.png",
+    "image_path": "images/242_reflection_reichtstagsgebaude_reichstags_building.png"
+  },
+  {
+    "pdf_page": 244,
+    "place_number": 111,
+    "title": "Rooftop Humboldt Forum",
+    "title_lines": [
+      "Rooftop",
+      "Humboldt Forum"
+    ],
+    "location": "Schloßplatz, 10178 Berlin",
+    "location_lines": [
+      "Schloßplatz",
+      "10178 Berlin"
+    ],
+    "coordinates": {
+      "lat": 52.517091,
+      "lng": 13.401436
+    },
+    "coordinates_raw": "52.517091, 13.401436",
+    "accessibility": "medium",
+    "hours": [],
+    "best_time_to_visit": [],
+    "entry_fee": [],
+    "gear": [],
+    "settings": [],
+    "tripod": [],
+    "tips": [],
+    "image": "244_rooftop_humboldt_forum.png",
+    "image_path": "images/244_rooftop_humboldt_forum.png"
+  }
+]
