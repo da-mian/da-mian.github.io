@@ -150,6 +150,19 @@ body {
   color: var(--muted);
   font-size: 15px;
   margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.maps-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.maps-link:hover {
+  text-decoration: underline;
 }
 
 .panel-meta {

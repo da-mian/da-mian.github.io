@@ -73,12 +73,14 @@ const createTag = (label, className = "") => {
 
 const renderSection = (title, items) => {
   if (!items || !items.length) return null;
+  const cleaned = items.map((item) => item.trim()).filter((item) => item);
+  if (!cleaned.length) return null;
   const section = document.createElement("div");
   section.className = "section";
   const heading = document.createElement("h3");
   heading.textContent = title;
   const list = document.createElement("ul");
-  items.forEach((item) => {
+  cleaned.forEach((item) => {
     const li = document.createElement("li");
     li.textContent = item;
     list.appendChild(li);
@@ -90,7 +92,21 @@ const renderSection = (title, items) => {
 
 const renderPanel = (place) => {
   panelTitle.textContent = place.title || "Untitled";
-  panelLocation.textContent = place.location || "";
+  panelLocation.innerHTML = "";
+  if (place.location) {
+    const locationText = document.createElement("span");
+    locationText.textContent = place.location;
+    panelLocation.appendChild(locationText);
+  }
+  if (place.coordinates) {
+    const mapsLink = document.createElement("a");
+    mapsLink.href = `https://maps.google.com/?q=${place.coordinates.lat},${place.coordinates.lng}`;
+    mapsLink.target = "_blank";
+    mapsLink.rel = "noopener noreferrer";
+    mapsLink.textContent = "Open in Google Maps";
+    mapsLink.className = "maps-link";
+    panelLocation.appendChild(mapsLink);
+  }
 
   panelMeta.innerHTML = "";
   if (place.accessibility) {
