@@ -3957,5 +3957,38 @@
       "Check current exhibition dates before visiting"
     ],
     "image": "images/249_bubble_planet_berlin.jpg"
+  },
+  {
+    "title": "Graffiti-Pfad (approximate)",
+    "location": "Natur-Park Schöneberger Südgelände, near Tälchenweg tunnel, 12157 Berlin",
+    "coordinates": {
+      "lat": 52.4617512,
+      "lng": 13.3577159
+    },
+    "accessibility": "medium",
+    "hours": [
+      "Unknown"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Unknown"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Unknown"
+    ],
+    "tripod": [
+      "Unknown"
+    ],
+    "tips": [
+      "Approximate coordinates only: this point is the best match near the likely graffiti tunnel/path in Natur-Park Schöneberger Südgelände",
+      "Verify exact shooting spot on foot before relying on the map pin",
+      "Best with soft light and dry ground"
+    ],
+    "image": "images/250_graffiti_pfad_approximate.jpg"
   }
 ]
