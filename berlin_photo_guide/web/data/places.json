@@ -3828,5 +3828,39 @@
       "There is a restaurant/café if you need a break with a beautiful view"
     ],
     "image": "images/244_rooftop_humboldt_forum.jpg"
+  },
+  {
+    "title": "Gat Point Charlie Hotel",
+    "location": "Mauerstraße 81-82, 10117 Berlin",
+    "coordinates": {
+      "lat": 52.5088382,
+      "lng": 13.3879578
+    },
+    "accessibility": "easy",
+    "hours": [
+      "Unknown"
+    ],
+    "best_time_to_visit": [
+      "Cloudy days",
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4 to f/5.6"
+    ],
+    "tripod": [
+      "Unknown"
+    ],
+    "tips": [
+      "Courtyard is freely accessible",
+      "Keep a low profile and respect hotel guests",
+      "Best with soft light because of strong contrast"
+    ],
+    "image": "images/246_gat_point_charlie_hotel.jpg"
   }
 ]
