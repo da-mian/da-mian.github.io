@@ -3893,5 +3893,69 @@
       "Unknown"
     ],
     "image": "images/247_meininger_hotel_berlin_airport.jpg"
+  },
+  {
+    "title": "Neurotitan / Haus Schwarzenberg",
+    "location": "Rosenthaler Straße 39, 10178 Berlin",
+    "coordinates": {
+      "lat": 52.524502,
+      "lng": 13.4018194
+    },
+    "accessibility": "easy",
+    "hours": [
+      "Unknown"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Aperture around f/4"
+    ],
+    "tripod": [
+      "Unknown"
+    ],
+    "tips": [
+      "Keep a low profile and respect the space",
+      "Best for gritty interior details and symmetry"
+    ],
+    "image": "images/248_neurotitan_haus_schwarzenberg.jpg"
+  },
+  {
+    "title": "Bubble Planet Berlin",
+    "location": "Arena Berlin, Eichenstraße 4, 12435 Berlin",
+    "coordinates": {
+      "lat": 52.4964,
+      "lng": 13.4543
+    },
+    "accessibility": "easy",
+    "hours": [
+      "Unknown"
+    ],
+    "best_time_to_visit": [
+      "During opening hours"
+    ],
+    "entry_fee": [
+      "Unknown"
+    ],
+    "gear": [
+      "Wide-angle lens"
+    ],
+    "settings": [
+      "Unknown"
+    ],
+    "tripod": [
+      "Unknown"
+    ],
+    "tips": [
+      "Immersive exhibition inside Arena Berlin",
+      "Check current exhibition dates before visiting"
+    ],
+    "image": "images/249_bubble_planet_berlin.jpg"
   }
 ]
