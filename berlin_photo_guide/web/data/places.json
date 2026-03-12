@@ -461,7 +461,11 @@
       "and merging them later in Lightroom or Photoshop (HDR)",
       "Sunny days work best here because of the shadows and reflection of light"
     ],
-    "image": "images/046_energie_forum.jpg"
+    "image": "images/046_energie_forum.jpg",
+    "images": [
+      "images/046_energie_forum.jpg",
+      "images/251_energie_forum_extra.jpg"
+    ]
   },
   {
     "title": "Flughafen Tegel Tegel Airport",
@@ -2670,7 +2674,11 @@
       "This is a library please keep that in mind and act accordingly",
       "Keep a low profile and respect any instructions given"
     ],
-    "image": "images/175_staatsbibliothek_unter_den_linden_state_library_berlin_unter_den_linden.jpg"
+    "image": "images/175_staatsbibliothek_unter_den_linden_state_library_berlin_unter_den_linden.jpg",
+    "images": [
+      "images/175_staatsbibliothek_unter_den_linden_state_library_berlin_unter_den_linden.jpg",
+      "images/252_staatsbibliothek_extra.jpg"
+    ]
   },
   {
     "title": "Stadtbad Charlottenburg Charlottenburg City Pool",

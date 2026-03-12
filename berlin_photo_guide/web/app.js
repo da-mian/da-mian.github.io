@@ -90,6 +90,12 @@ const renderSection = (title, items) => {
   return section;
 };
 
+const getPlaceImages = (place) => {
+  if (Array.isArray(place.images) && place.images.length) return place.images;
+  if (place.image) return [place.image];
+  return [];
+};
+
 const renderPanel = (place) => {
   panelTitle.textContent = place.title || "Untitled";
   panelLocation.innerHTML = "";
@@ -140,11 +146,24 @@ const renderPanel = (place) => {
   });
 
   panelHero.innerHTML = "";
-  if (place.image) {
-    const img = document.createElement("img");
-    img.src = place.image;
-    img.alt = place.title || "";
-    panelHero.appendChild(img);
+  const images = getPlaceImages(place);
+  if (images.length) {
+    if (images.length === 1) {
+      const img = document.createElement("img");
+      img.src = images[0];
+      img.alt = place.title || "";
+      panelHero.appendChild(img);
+    } else {
+      const gallery = document.createElement("div");
+      gallery.className = "panel-hero-gallery";
+      images.forEach((src, index) => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = `${place.title || ""} (${index + 1})`;
+        gallery.appendChild(img);
+      });
+      panelHero.appendChild(gallery);
+    }
   } else {
     const placeholder = document.createElement("div");
     placeholder.className = "panel-hero-placeholder";
