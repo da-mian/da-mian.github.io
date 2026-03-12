@@ -3862,5 +3862,36 @@
       "Best with soft light because of strong contrast"
     ],
     "image": "images/246_gat_point_charlie_hotel.jpg"
+  },
+  {
+    "title": "MEININGER Hotel Berlin Airport",
+    "location": "Alexander-Meißner-Straße 1, 12526 Berlin",
+    "coordinates": {
+      "lat": 52.3965982,
+      "lng": 13.5405094
+    },
+    "accessibility": "easy",
+    "hours": [
+      "Always (outside)"
+    ],
+    "best_time_to_visit": [
+      "During daytime"
+    ],
+    "entry_fee": [
+      "Free"
+    ],
+    "gear": [
+      "Unknown"
+    ],
+    "settings": [
+      "Unknown"
+    ],
+    "tripod": [
+      "Unknown"
+    ],
+    "tips": [
+      "Unknown"
+    ],
+    "image": "images/247_meininger_hotel_berlin_airport.jpg"
   }
 ]
