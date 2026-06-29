@@ -44,7 +44,8 @@ function normalizeDose(doseMl) {
 }
 
 function formatDose(doseMl) {
-    return `${normalizeDose(doseMl).toFixed(1)} ml`;
+    const dose = normalizeDose(doseMl);
+    return `${Number.isInteger(dose) ? String(dose) : dose.toFixed(1)} ml`;
 }
 
 function takeDose(take) {
