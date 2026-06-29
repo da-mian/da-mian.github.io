@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>G O'Clock</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css?v=4">
+    <meta name="theme-color" content="#14213d">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="G O'Clock">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icons/icon-180.png">
+</head>
+<body>
+    <main class="app-shell">
+        <section class="hero" aria-labelledby="app-title">
+            <div>
+                <p class="eyebrow">Hourly tracker</p>
+                <h1 id="app-title">G O'Clock</h1>
+            </div>
+            <div class="offline-pill" id="connectionStatus">Online</div>
+        </section>
+
+        <section class="status-panel" aria-live="polite">
+            <div class="last-take">
+                <span class="label">Last G</span>
+                <strong id="lastTakenText">No takes yet</strong>
+                <span id="lastTakenDetail">Tap the button when you take G.</span>
+            </div>
+            <div class="take-controls" aria-label="Dose amount">
+                <button class="step-action" id="doseDownButton" type="button" aria-label="Decrease dose by 0.1 ml">-</button>
+                <button class="primary-action" id="takeButton" type="button">Take 1.0 ml G</button>
+                <button class="step-action" id="doseUpButton" type="button" aria-label="Increase dose by 0.1 ml">+</button>
+            </div>
+        </section>
+
+        <section class="metrics-grid">
+            <div class="metric">
+                <span>Current level</span>
+                <strong id="levelText">0%</strong>
+            </div>
+            <div class="metric">
+                <span>Total takes</span>
+                <strong id="totalTakesText">0</strong>
+            </div>
+            <div class="metric">
+                <span>Total amount</span>
+                <strong id="totalDoseText">0.0 ml</strong>
+            </div>
+        </section>
+
+        <section class="level-card" aria-labelledby="level-title">
+            <div class="section-heading">
+                <div>
+                    <h2 id="level-title">Blood concentration model</h2>
+                    <p>Relative level from all recorded G takes.</p>
+                </div>
+                <span id="peakText">Peak: 100%</span>
+            </div>
+            <div class="gauge" aria-hidden="true">
+                <div class="gauge-fill" id="gaugeFill"></div>
+                <div class="gauge-center">
+                    <strong id="gaugeValue">0%</strong>
+                    <span>now</span>
+                </div>
+            </div>
+            <canvas id="levelChart" width="640" height="260" aria-label="Blood concentration chart for the next four hours"></canvas>
+        </section>
+
+        <section class="history-card" aria-labelledby="history-title">
+            <div class="section-heading">
+                <div>
+                    <h2 id="history-title">All takes</h2>
+                    <p id="historySummary">Stored on this device for offline use.</p>
+                </div>
+                <button class="secondary-action" id="resetButton" type="button">Reset</button>
+            </div>
+            <ol class="history-list" id="historyList"></ol>
+        </section>
+    </main>
+
+    <dialog id="resetDialog">
+        <form method="dialog">
+            <h2>Reset G O'Clock?</h2>
+            <p>This clears all recorded takes on this device and starts from zero.</p>
+            <div class="dialog-actions">
+                <button value="cancel" class="secondary-action">Cancel</button>
+                <button value="confirm" class="danger-action">Reset</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="app.js?v=4"></script>
+</body>
+</html>
