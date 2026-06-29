@@ -7,7 +7,6 @@ const DEFAULT_DOSE_ML = 1.0;
 const DOSE_STEP_ML = 0.1;
 const MIN_DOSE_ML = 0.1;
 const MAX_DOSE_ML = 5.0;
-const DOSE_STORAGE_KEY = "g-oclock-selected-dose-ml";
 
 const elements = {
     connectionStatus: document.getElementById("connectionStatus"),
@@ -31,12 +30,7 @@ const elements = {
 
 let takes = [];
 let dbPromise;
-let selectedDoseMl = loadSelectedDose();
-
-function loadSelectedDose() {
-    const saved = Number(localStorage.getItem(DOSE_STORAGE_KEY));
-    return normalizeDose(Number.isFinite(saved) ? saved : DEFAULT_DOSE_ML);
-}
+let selectedDoseMl = DEFAULT_DOSE_ML;
 
 function normalizeDose(doseMl) {
     const stepped = Math.round(doseMl / DOSE_STEP_ML) * DOSE_STEP_ML;
@@ -54,7 +48,6 @@ function takeDose(take) {
 
 function setSelectedDose(doseMl) {
     selectedDoseMl = normalizeDose(doseMl);
-    localStorage.setItem(DOSE_STORAGE_KEY, String(selectedDoseMl));
     renderDoseControls();
 }
 
@@ -283,7 +276,7 @@ function render() {
     elements.gauge.style.background = `conic-gradient(var(--gold) ${gaugeDegrees}deg, #edf0f4 ${gaugeDegrees}deg)`;
     elements.totalTakesText.textContent = String(takes.length);
     elements.totalDoseText.textContent = formatDose(totalDose);
-    elements.peakText.textContent = level > 100 ? "Dose-adjusted active level" : "1.0 ml peak: 100%";
+    elements.peakText.textContent = level > 100 ? "Dose-adjusted active level" : "1 ml peak: 100%";
     renderDoseControls();
 
     renderHistory();
