@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
     <title>G O'Clock</title>
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="stylesheet" href="styles.css?v=8">
     <meta name="theme-color" content="#14213d">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="G O'Clock">
@@ -14,6 +14,11 @@
 </head>
 <body>
     <main class="app-shell">
+        <div class="update-banner" id="updateBanner" hidden>
+            <span>Update available</span>
+            <button class="update-action" id="updateButton" type="button">Reload</button>
+        </div>
+
         <section class="hero" aria-labelledby="app-title">
             <div>
                 <p class="eyebrow">Hourly tracker</p>
@@ -91,6 +96,6 @@
         </form>
     </dialog>
 
-    <script src="app.js?v=7"></script>
+    <script src="app.js?v=8"></script>
 </body>
 </html>

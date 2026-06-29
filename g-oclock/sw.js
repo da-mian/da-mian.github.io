@@ -1,9 +1,9 @@
-const CACHE_NAME = "g-oclock-v7";
+const CACHE_NAME = "g-oclock-v8";
 const APP_SHELL = [
     "./",
     "./index.html",
-    "./styles.css?v=7",
-    "./app.js?v=7",
+    "./styles.css?v=8",
+    "./app.js?v=8",
     "./manifest.json",
     "./icons/icon-180.png",
     "./icons/icon-192.png",
@@ -45,4 +45,10 @@ self.addEventListener("fetch", event => {
             return cached || network;
         })
     );
+});
+
+self.addEventListener("message", event => {
+    if (event.data?.type === "SKIP_WAITING") {
+        self.skipWaiting();
+    }
 });

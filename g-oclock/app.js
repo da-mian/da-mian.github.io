@@ -25,12 +25,16 @@ const elements = {
     historyList: document.getElementById("historyList"),
     historySummary: document.getElementById("historySummary"),
     resetButton: document.getElementById("resetButton"),
-    resetDialog: document.getElementById("resetDialog")
+    resetDialog: document.getElementById("resetDialog"),
+    updateBanner: document.getElementById("updateBanner"),
+    updateButton: document.getElementById("updateButton")
 };
 
 let takes = [];
 let dbPromise;
 let selectedDoseMl = DEFAULT_DOSE_ML;
+let pendingServiceWorker = null;
+let updateReloadRequested = false;
 
 function normalizeDose(doseMl) {
     const stepped = Math.round(doseMl / DOSE_STEP_ML) * DOSE_STEP_ML;
@@ -328,6 +332,38 @@ async function handleReset() {
     render();
 }
 
+function showUpdateBanner(worker) {
+    pendingServiceWorker = worker;
+    elements.updateBanner.hidden = false;
+}
+
+async function setupServiceWorkerUpdates() {
+    if (!("serviceWorker" in navigator)) return;
+
+    const registration = await navigator.serviceWorker.register("sw.js");
+    registration.update();
+
+    if (registration.waiting) {
+        showUpdateBanner(registration.waiting);
+    }
+
+    registration.addEventListener("updatefound", () => {
+        const newWorker = registration.installing;
+        if (!newWorker) return;
+
+        newWorker.addEventListener("statechange", () => {
+            if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+                showUpdateBanner(newWorker);
+            }
+        });
+    });
+
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+        if (!updateReloadRequested) return;
+        window.location.reload();
+    });
+}
+
 async function init() {
     updateConnectionStatus();
     window.addEventListener("online", updateConnectionStatus);
@@ -337,15 +373,22 @@ async function init() {
     elements.doseDownButton.addEventListener("click", () => setSelectedDose(selectedDoseMl - DOSE_STEP_ML));
     elements.doseUpButton.addEventListener("click", () => setSelectedDose(selectedDoseMl + DOSE_STEP_ML));
     elements.resetButton.addEventListener("click", () => elements.resetDialog.showModal());
+    elements.updateButton.addEventListener("click", () => {
+        if (!pendingServiceWorker) {
+            window.location.reload();
+            return;
+        }
+
+        updateReloadRequested = true;
+        pendingServiceWorker.postMessage({ type: "SKIP_WAITING" });
+    });
     elements.resetDialog.addEventListener("close", () => {
         if (elements.resetDialog.returnValue === "confirm") {
             handleReset();
         }
     });
 
-    if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("sw.js");
-    }
+    setupServiceWorkerUpdates();
 
     takes = await readTakes();
     render();

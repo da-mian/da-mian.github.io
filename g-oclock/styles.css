@@ -102,6 +102,35 @@ h2 {
     color: var(--red);
 }
 
+.update-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.update-banner[hidden] {
+    display: none;
+}
+
+.update-action {
+    min-height: 38px;
+    padding: 0 12px;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--blue);
+    cursor: pointer;
+    font-weight: 800;
+}
+
 .status-panel,
 .level-card,
 .history-card {
