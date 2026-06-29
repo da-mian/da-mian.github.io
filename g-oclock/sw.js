@@ -1,9 +1,9 @@
-const CACHE_NAME = "g-oclock-v6";
+const CACHE_NAME = "g-oclock-v7";
 const APP_SHELL = [
     "./",
     "./index.html",
-    "./styles.css?v=6",
-    "./app.js?v=6",
+    "./styles.css?v=7",
+    "./app.js?v=7",
     "./manifest.json",
     "./icons/icon-180.png",
     "./icons/icon-192.png",

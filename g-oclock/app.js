@@ -1,7 +1,7 @@
 const DB_NAME = "g-oclock-db";
 const DB_VERSION = 1;
 const STORE_NAME = "takes";
-const CHART_HOURS = 4;
+const CHART_FUTURE_HOURS = 2;
 const MAX_VISIBLE_HISTORY = 200;
 const DEFAULT_DOSE_ML = 1.0;
 const DOSE_STEP_ML = 0.1;
@@ -207,15 +207,23 @@ function drawChart(now) {
     const pad = 34;
     const plotWidth = width - pad * 2;
     const plotHeight = height - pad * 2;
-    const samples = 96;
+    const futureMs = CHART_FUTURE_HOURS * 60 * 60 * 1000;
+    const firstTake = takes.length > 0 ? takes[takes.length - 1].takenAt : now;
+    const startTime = Math.min(firstTake, now);
+    const endTime = now + futureMs;
+    const duration = Math.max(1, endTime - startTime);
+    const samples = Math.max(96, Math.min(240, Math.ceil(duration / 120000)));
     const points = [];
 
     for (let index = 0; index <= samples; index += 1) {
-        const timestamp = now + (index / samples) * CHART_HOURS * 60 * 60 * 1000;
+        const timestamp = startTime + (index / samples) * duration;
         points.push(combinedLevelAt(timestamp));
     }
 
     const maxLevel = Math.max(100, ...points);
+    const currentLevel = combinedLevelAt(now);
+    const nowX = pad + ((now - startTime) / duration) * plotWidth;
+    const nowY = pad + plotHeight - (Math.min(currentLevel, maxLevel) / maxLevel) * plotHeight;
 
     context.clearRect(0, 0, width, height);
     context.fillStyle = "#ffffff";
@@ -245,11 +253,30 @@ function drawChart(now) {
     });
     context.stroke();
 
+    context.strokeStyle = "#14213d";
+    context.lineWidth = 2;
+    context.beginPath();
+    context.moveTo(nowX, pad);
+    context.lineTo(nowX, pad + plotHeight);
+    context.stroke();
+
+    context.fillStyle = "#14213d";
+    context.beginPath();
+    context.arc(nowX, nowY, 7, 0, Math.PI * 2);
+    context.fill();
+
+    context.fillStyle = "#ffffff";
+    context.beginPath();
+    context.arc(nowX, nowY, 3, 0, Math.PI * 2);
+    context.fill();
+
     context.fillStyle = "#647084";
     context.font = "24px system-ui, sans-serif";
-    context.fillText("now", pad, height - 8);
+    context.fillText(takes.length > 0 ? "first" : "now", pad, height - 8);
+    context.textAlign = "center";
+    context.fillText("now", nowX, height - 8);
     context.textAlign = "right";
-    context.fillText(`+${CHART_HOURS}h`, width - pad, height - 8);
+    context.fillText(`+${CHART_FUTURE_HOURS}h`, width - pad, height - 8);
     context.textAlign = "left";
     context.fillText(`${Math.round(maxLevel)}%`, pad, 24);
 }
