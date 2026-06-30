@@ -335,9 +335,7 @@ function renderHistory() {
 
         label.dateTime = new Date(take.takenAt).toISOString();
         label.textContent = formatHistoryTime(take.takenAt);
-        detail.textContent = index === 0
-            ? `${formatDose(takeDose(take))} latest`
-            : `${formatDose(takeDose(take))} - ${formatDuration(Date.now() - take.takenAt)} ago`;
+        detail.textContent = `${formatDose(takeDose(take))} - ${formatDuration(Date.now() - take.takenAt)} ago`;
 
         item.append(label, detail);
         elements.historyList.append(item);
