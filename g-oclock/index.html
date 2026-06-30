@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
     <title>G O'Clock</title>
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="styles.css?v=8">
+    <link rel="stylesheet" href="styles.css?v=9">
     <meta name="theme-color" content="#14213d">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="G O'Clock">
@@ -33,10 +33,25 @@
                 <strong id="lastTakenText">No takes yet</strong>
                 <span id="lastTakenDetail">Tap the button when you take G.</span>
             </div>
-            <div class="take-controls" aria-label="Dose amount">
-                <button class="step-action" id="doseDownButton" type="button" aria-label="Decrease dose by 0.1 ml">-</button>
-                <button class="primary-action" id="takeButton" type="button">Take 1 ml G</button>
-                <button class="step-action" id="doseUpButton" type="button" aria-label="Increase dose by 0.1 ml">+</button>
+            <div class="action-stack">
+                <div class="take-controls" aria-label="Dose amount">
+                    <button class="step-action" id="doseDownButton" type="button" aria-label="Decrease dose by 0.1 ml">-</button>
+                    <button class="primary-action" id="takeButton" type="button">Take 1 ml G</button>
+                    <button class="step-action" id="doseUpButton" type="button" aria-label="Increase dose by 0.1 ml">+</button>
+                </div>
+                <div class="recommendation">
+                    <span>Max recommended now</span>
+                    <strong id="maxRecommendedText">Calculating</strong>
+                    <small id="maxRecommendedDetail">Based on the allowed max.</small>
+                </div>
+                <div class="limit-controls" aria-label="Allowed max level">
+                    <button class="mini-step-action" id="maxAllowedDownButton" type="button" aria-label="Decrease allowed max by 10 percent">-</button>
+                    <div class="limit-readout">
+                        <span>Allowed max</span>
+                        <strong id="maxAllowedText">170%</strong>
+                    </div>
+                    <button class="mini-step-action" id="maxAllowedUpButton" type="button" aria-label="Increase allowed max by 10 percent">+</button>
+                </div>
             </div>
         </section>
 
@@ -96,6 +111,6 @@
         </form>
     </dialog>
 
-    <script src="app.js?v=8"></script>
+    <script src="app.js?v=9"></script>
 </body>
 </html>

@@ -7,6 +7,12 @@ const DEFAULT_DOSE_ML = 1.0;
 const DOSE_STEP_ML = 0.1;
 const MIN_DOSE_ML = 0.1;
 const MAX_DOSE_ML = 5.0;
+const DEFAULT_MAX_ALLOWED_LEVEL = 170;
+const MAX_ALLOWED_STEP = 10;
+const MIN_MAX_ALLOWED_LEVEL = 50;
+const MAX_MAX_ALLOWED_LEVEL = 500;
+const MAX_ALLOWED_STORAGE_KEY = "g-oclock-max-allowed-level";
+const RECOMMENDATION_HORIZON_HOURS = 8;
 
 const elements = {
     connectionStatus: document.getElementById("connectionStatus"),
@@ -15,6 +21,11 @@ const elements = {
     takeButton: document.getElementById("takeButton"),
     doseDownButton: document.getElementById("doseDownButton"),
     doseUpButton: document.getElementById("doseUpButton"),
+    maxAllowedDownButton: document.getElementById("maxAllowedDownButton"),
+    maxAllowedUpButton: document.getElementById("maxAllowedUpButton"),
+    maxAllowedText: document.getElementById("maxAllowedText"),
+    maxRecommendedText: document.getElementById("maxRecommendedText"),
+    maxRecommendedDetail: document.getElementById("maxRecommendedDetail"),
     levelText: document.getElementById("levelText"),
     totalTakesText: document.getElementById("totalTakesText"),
     totalDoseText: document.getElementById("totalDoseText"),
@@ -33,17 +44,32 @@ const elements = {
 let takes = [];
 let dbPromise;
 let selectedDoseMl = DEFAULT_DOSE_ML;
+let maxAllowedLevel = loadMaxAllowedLevel();
 let pendingServiceWorker = null;
 let updateReloadRequested = false;
+
+function loadMaxAllowedLevel() {
+    const saved = Number(localStorage.getItem(MAX_ALLOWED_STORAGE_KEY));
+    return normalizeMaxAllowedLevel(Number.isFinite(saved) ? saved : DEFAULT_MAX_ALLOWED_LEVEL);
+}
 
 function normalizeDose(doseMl) {
     const stepped = Math.round(doseMl / DOSE_STEP_ML) * DOSE_STEP_ML;
     return Math.min(MAX_DOSE_ML, Math.max(MIN_DOSE_ML, Number(stepped.toFixed(1))));
 }
 
+function normalizeMaxAllowedLevel(level) {
+    const stepped = Math.round(level / MAX_ALLOWED_STEP) * MAX_ALLOWED_STEP;
+    return Math.min(MAX_MAX_ALLOWED_LEVEL, Math.max(MIN_MAX_ALLOWED_LEVEL, stepped));
+}
+
+function formatMl(doseMl) {
+    const rounded = Math.round(Math.max(0, doseMl) * 10) / 10;
+    return `${Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1)} ml`;
+}
+
 function formatDose(doseMl) {
-    const dose = normalizeDose(doseMl);
-    return `${Number.isInteger(dose) ? String(dose) : dose.toFixed(1)} ml`;
+    return formatMl(normalizeDose(doseMl));
 }
 
 function takeDose(take) {
@@ -55,11 +81,20 @@ function setSelectedDose(doseMl) {
     renderDoseControls();
 }
 
+function setMaxAllowedLevel(level) {
+    maxAllowedLevel = normalizeMaxAllowedLevel(level);
+    localStorage.setItem(MAX_ALLOWED_STORAGE_KEY, String(maxAllowedLevel));
+    render();
+}
+
 function renderDoseControls() {
     const dose = formatDose(selectedDoseMl);
     elements.takeButton.textContent = `Take ${dose} G`;
     elements.doseDownButton.disabled = selectedDoseMl <= MIN_DOSE_ML;
     elements.doseUpButton.disabled = selectedDoseMl >= MAX_DOSE_ML;
+    elements.maxAllowedText.textContent = `${maxAllowedLevel}%`;
+    elements.maxAllowedDownButton.disabled = maxAllowedLevel <= MIN_MAX_ALLOWED_LEVEL;
+    elements.maxAllowedUpButton.disabled = maxAllowedLevel >= MAX_MAX_ALLOWED_LEVEL;
 }
 
 function openDatabase() {
@@ -137,6 +172,40 @@ function combinedLevelAt(timestamp) {
         const minutes = (timestamp - take.takenAt) / 60000;
         return minutes >= 0 ? sum + relativeLevel(minutes) * takeDose(take) : sum;
     }, 0);
+}
+
+function projectedMaxLevelWithDose(now, doseMl) {
+    const endTime = now + RECOMMENDATION_HORIZON_HOURS * 60 * 60 * 1000;
+    const sampleEveryMs = 60 * 1000;
+    let maxLevel = 0;
+
+    for (let timestamp = now; timestamp <= endTime; timestamp += sampleEveryMs) {
+        const minutesAfterNewTake = (timestamp - now) / 60000;
+        const projectedLevel = combinedLevelAt(timestamp) + relativeLevel(minutesAfterNewTake) * doseMl;
+        maxLevel = Math.max(maxLevel, projectedLevel);
+    }
+
+    return maxLevel;
+}
+
+function maxRecommendedDose(now) {
+    if (projectedMaxLevelWithDose(now, 0) > maxAllowedLevel) {
+        return 0;
+    }
+
+    let low = 0;
+    let high = MAX_DOSE_ML;
+
+    for (let i = 0; i < 20; i += 1) {
+        const mid = (low + high) / 2;
+        if (projectedMaxLevelWithDose(now, mid) <= maxAllowedLevel) {
+            low = mid;
+        } else {
+            high = mid;
+        }
+    }
+
+    return Math.floor(low / DOSE_STEP_ML) * DOSE_STEP_ML;
 }
 
 function formatTime(timestamp) {
@@ -224,10 +293,11 @@ function drawChart(now) {
         points.push(combinedLevelAt(timestamp));
     }
 
-    const maxLevel = Math.max(100, ...points);
+    const maxLevel = Math.max(100, maxAllowedLevel, ...points);
     const currentLevel = combinedLevelAt(now);
     const nowX = pad + ((now - startTime) / duration) * plotWidth;
     const nowY = pad + plotHeight - (Math.min(currentLevel, maxLevel) / maxLevel) * plotHeight;
+    const allowedMaxY = pad + plotHeight - (maxAllowedLevel / maxLevel) * plotHeight;
 
     context.clearRect(0, 0, width, height);
     context.fillStyle = "#ffffff";
@@ -242,6 +312,15 @@ function drawChart(now) {
         context.lineTo(width - pad, y);
     }
     context.stroke();
+
+    context.strokeStyle = "#c84630";
+    context.lineWidth = 2;
+    context.setLineDash([8, 8]);
+    context.beginPath();
+    context.moveTo(pad, allowedMaxY);
+    context.lineTo(width - pad, allowedMaxY);
+    context.stroke();
+    context.setLineDash([]);
 
     context.strokeStyle = "#1f8a70";
     context.lineWidth = 5;
@@ -283,6 +362,8 @@ function drawChart(now) {
     context.fillText(`+${CHART_FUTURE_HOURS}h`, width - pad, height - 8);
     context.textAlign = "left";
     context.fillText(`${Math.round(maxLevel)}%`, pad, 24);
+    context.fillStyle = "#c84630";
+    context.fillText("max", pad, Math.max(22, allowedMaxY - 8));
 }
 
 function render() {
@@ -290,6 +371,8 @@ function render() {
     const latest = takes[0];
     const level = combinedLevelAt(now);
     const totalDose = takes.reduce((sum, take) => sum + takeDose(take), 0);
+    const recommendedDose = maxRecommendedDose(now);
+    const selectedProjectedMax = projectedMaxLevelWithDose(now, selectedDoseMl);
     const gaugeLevel = Math.min(level, 160);
     const gaugeDegrees = Math.min(360, (gaugeLevel / 160) * 360);
 
@@ -306,8 +389,12 @@ function render() {
     elements.gaugeValue.textContent = `${Math.round(level)}%`;
     elements.gauge.style.background = `conic-gradient(var(--gold) ${gaugeDegrees}deg, #edf0f4 ${gaugeDegrees}deg)`;
     elements.totalTakesText.textContent = String(takes.length);
-    elements.totalDoseText.textContent = formatDose(totalDose);
+    elements.totalDoseText.textContent = formatMl(totalDose);
     elements.peakText.textContent = level > 100 ? "Dose-adjusted active level" : "1 ml peak: 100%";
+    elements.maxRecommendedText.textContent = formatMl(recommendedDose);
+    elements.maxRecommendedDetail.textContent = selectedProjectedMax > maxAllowedLevel
+        ? `Selected dose may peak at ${Math.round(selectedProjectedMax)}%.`
+        : `Selected dose stays under ${maxAllowedLevel}%.`;
     renderDoseControls();
 
     renderHistory();
@@ -372,6 +459,8 @@ async function init() {
     elements.takeButton.addEventListener("click", handleTake);
     elements.doseDownButton.addEventListener("click", () => setSelectedDose(selectedDoseMl - DOSE_STEP_ML));
     elements.doseUpButton.addEventListener("click", () => setSelectedDose(selectedDoseMl + DOSE_STEP_ML));
+    elements.maxAllowedDownButton.addEventListener("click", () => setMaxAllowedLevel(maxAllowedLevel - MAX_ALLOWED_STEP));
+    elements.maxAllowedUpButton.addEventListener("click", () => setMaxAllowedLevel(maxAllowedLevel + MAX_ALLOWED_STEP));
     elements.resetButton.addEventListener("click", () => elements.resetDialog.showModal());
     elements.updateButton.addEventListener("click", () => {
         if (!pendingServiceWorker) {
