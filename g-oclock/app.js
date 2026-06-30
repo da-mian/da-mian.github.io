@@ -14,7 +14,7 @@ const DEFAULT_MAX_ALLOWED_LEVEL = 150;
 const MAX_ALLOWED_STEP = 10;
 const MIN_MAX_ALLOWED_LEVEL = 50;
 const MAX_MAX_ALLOWED_LEVEL = 500;
-const MAX_ALLOWED_STORAGE_KEY = "g-oclock-max-allowed-level-v2";
+const MAX_ALLOWED_STORAGE_KEY = "g-oclock-max-allowed-level-v3";
 const RECOMMENDATION_HORIZON_HOURS = 8;
 
 const elements = {
@@ -255,19 +255,16 @@ function maxRecommendedDose(now) {
         return 0;
     }
 
-    let low = 0;
-    let high = MAX_DOSE_ML;
+    for (let cents = MAX_DOSE_CENTS; cents >= 0; cents -= 1) {
+        if (!isAllowedDoseCents(cents)) continue;
 
-    for (let i = 0; i < 20; i += 1) {
-        const mid = (low + high) / 2;
-        if (projectedMaxLevelWithDose(now, mid) <= maxAllowedLevel) {
-            low = mid;
-        } else {
-            high = mid;
+        const doseMl = centsToMl(cents);
+        if (projectedMaxLevelWithDose(now, doseMl) <= maxAllowedLevel) {
+            return doseMl;
         }
     }
 
-    return floorAllowedDose(low);
+    return 0;
 }
 
 function formatTime(timestamp) {
