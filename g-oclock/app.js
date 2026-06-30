@@ -19,7 +19,6 @@ const RECOMMENDATION_HORIZON_HOURS = 8;
 const LEVEL_EPSILON = 0.000001;
 
 const elements = {
-    connectionStatus: document.getElementById("connectionStatus"),
     lastTakenText: document.getElementById("lastTakenText"),
     lastTakenDetail: document.getElementById("lastTakenDetail"),
     takeButton: document.getElementById("takeButton"),
@@ -312,12 +311,6 @@ function formatDuration(ms) {
     return `${hours}h ${minutes}m`;
 }
 
-function updateConnectionStatus() {
-    const isOnline = navigator.onLine;
-    elements.connectionStatus.textContent = isOnline ? "Online" : "Offline";
-    elements.connectionStatus.classList.toggle("offline", !isOnline);
-}
-
 function renderHistory() {
     elements.historyList.textContent = "";
 
@@ -531,10 +524,6 @@ async function setupServiceWorkerUpdates() {
 }
 
 async function init() {
-    updateConnectionStatus();
-    window.addEventListener("online", updateConnectionStatus);
-    window.addEventListener("offline", updateConnectionStatus);
-
     elements.takeButton.addEventListener("click", handleTake);
     elements.doseDownButton.addEventListener("click", () => setSelectedDose(previousDose(selectedDoseMl)));
     elements.doseUpButton.addEventListener("click", () => setSelectedDose(nextDose(selectedDoseMl)));

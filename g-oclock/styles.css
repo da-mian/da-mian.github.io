@@ -89,23 +89,6 @@ h2 {
     line-height: 1.2;
 }
 
-.offline-pill {
-    flex: 0 0 auto;
-    min-width: 72px;
-    padding: 8px 10px;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    background: var(--panel);
-    color: var(--green);
-    font-size: 0.82rem;
-    font-weight: 750;
-    text-align: center;
-}
-
-.offline-pill.offline {
-    color: var(--red);
-}
-
 .update-banner {
     display: flex;
     align-items: center;
