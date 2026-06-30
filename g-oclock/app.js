@@ -85,7 +85,7 @@ function takeDose(take) {
 
 function setSelectedDose(doseMl) {
     selectedDoseMl = normalizeDose(doseMl);
-    renderDoseControls();
+    render();
 }
 
 function setMaxAllowedLevel(level) {
