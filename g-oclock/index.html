@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
     <title>G O'Clock</title>
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="styles.css?v=14">
+    <link rel="stylesheet" href="styles.css?v=15">
     <meta name="theme-color" content="#14213d">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -41,36 +41,9 @@
                     <button class="step-action" id="doseUpButton" type="button" aria-label="Increase dose by 0.1 ml">+</button>
                 </div>
                 <div class="recommendation">
-                    <span>Max recommended now</span>
+                    <span>Max dose now</span>
                     <strong id="maxRecommendedText">Calculating</strong>
-                    <small id="maxRecommendedDetail">Based on the allowed max.</small>
-                </div>
-            </div>
-        </section>
-
-        <section class="metrics-grid">
-            <div class="metric level-metric">
-                <div class="metric-main">
-                    <span>Current level</span>
-                    <strong id="levelText">0%</strong>
-                </div>
-                <div class="limit-controls compact-limit" aria-label="Allowed max level">
-                    <button class="mini-step-action" id="maxAllowedDownButton" type="button" aria-label="Decrease allowed max by 10 percent">-</button>
-                    <div class="limit-readout">
-                        <span>Allowed max</span>
-                        <strong id="maxAllowedText">150%</strong>
-                    </div>
-                    <button class="mini-step-action" id="maxAllowedUpButton" type="button" aria-label="Increase allowed max by 10 percent">+</button>
-                </div>
-            </div>
-            <div class="metric totals-metric">
-                <div>
-                    <span>Total takes</span>
-                    <strong id="totalTakesText">0</strong>
-                </div>
-                <div>
-                    <span>Total amount</span>
-                    <strong id="totalDoseText">0 ml</strong>
+                    <small id="maxRecommendedDetail">Based on max blood level.</small>
                 </div>
             </div>
         </section>
@@ -78,19 +51,42 @@
         <section class="level-card" aria-labelledby="level-title">
             <div class="section-heading">
                 <div>
-                    <h2 id="level-title">Blood concentration model</h2>
-                    <p>Relative level from all recorded G takes.</p>
+                    <h2 id="level-title">Blood level</h2>
                 </div>
                 <span id="peakText">Peak: 100%</span>
             </div>
-            <div class="gauge" aria-hidden="true">
-                <div class="gauge-fill" id="gaugeFill"></div>
-                <div class="gauge-center">
-                    <strong id="gaugeValue">0%</strong>
+            <div class="level-summary" aria-hidden="true">
+                <div class="level-value">
+                    <strong id="levelValue">0%</strong>
                     <span>now</span>
+                </div>
+                <div class="level-bar">
+                    <div class="level-bar-fill" id="levelBarFill"></div>
                 </div>
             </div>
             <canvas id="levelChart" width="640" height="260" aria-label="Blood concentration chart from the first take through the next two hours"></canvas>
+            <div class="limit-controls level-limit" aria-label="Max blood level">
+                <button class="mini-step-action" id="maxAllowedDownButton" type="button" aria-label="Decrease max blood level by 10 percent">-</button>
+                <div class="limit-readout">
+                    <span>Max blood level</span>
+                    <strong id="maxAllowedText">150%</strong>
+                </div>
+                <button class="mini-step-action" id="maxAllowedUpButton" type="button" aria-label="Increase max blood level by 10 percent">+</button>
+            </div>
+        </section>
+
+        <section class="metric totals-metric" aria-label="Totals">
+            <span>Totals</span>
+            <div class="totals-values">
+                <div>
+                    <strong id="totalTakesText">0</strong>
+                    <small>takes</small>
+                </div>
+                <div>
+                    <strong id="totalDoseText">0 ml</strong>
+                    <small>total</small>
+                </div>
+            </div>
         </section>
 
         <section class="history-card" aria-labelledby="history-title">
@@ -116,6 +112,6 @@
         </form>
     </dialog>
 
-    <script src="app.js?v=14"></script>
+    <script src="app.js?v=15"></script>
 </body>
 </html>

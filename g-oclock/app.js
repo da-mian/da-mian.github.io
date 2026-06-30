@@ -26,11 +26,10 @@ const elements = {
     maxAllowedText: document.getElementById("maxAllowedText"),
     maxRecommendedText: document.getElementById("maxRecommendedText"),
     maxRecommendedDetail: document.getElementById("maxRecommendedDetail"),
-    levelText: document.getElementById("levelText"),
     totalTakesText: document.getElementById("totalTakesText"),
     totalDoseText: document.getElementById("totalDoseText"),
-    gauge: document.querySelector(".gauge"),
-    gaugeValue: document.getElementById("gaugeValue"),
+    levelValue: document.getElementById("levelValue"),
+    levelBarFill: document.getElementById("levelBarFill"),
     peakText: document.getElementById("peakText"),
     chart: document.getElementById("levelChart"),
     historyList: document.getElementById("historyList"),
@@ -380,8 +379,7 @@ function render() {
     const totalDose = takes.reduce((sum, take) => sum + takeDose(take), 0);
     const recommendedDose = maxRecommendedDose(now);
     const selectedProjectedMax = projectedMaxLevelWithDose(now, selectedDoseMl);
-    const gaugeLevel = Math.min(level, 160);
-    const gaugeDegrees = Math.min(360, (gaugeLevel / 160) * 360);
+    const barLevel = Math.min(100, Math.max(0, (level / maxAllowedLevel) * 100));
 
     if (latest) {
         const elapsed = now - latest.takenAt;
@@ -392,16 +390,15 @@ function render() {
         elements.lastTakenDetail.textContent = "Tap the button when you take G.";
     }
 
-    elements.levelText.textContent = `${Math.round(level)}%`;
-    elements.gaugeValue.textContent = `${Math.round(level)}%`;
-    elements.gauge.style.background = `conic-gradient(var(--gold) ${gaugeDegrees}deg, #edf0f4 ${gaugeDegrees}deg)`;
+    elements.levelValue.textContent = `${Math.round(level)}%`;
+    elements.levelBarFill.style.width = `${barLevel}%`;
     elements.totalTakesText.textContent = String(takes.length);
     elements.totalDoseText.textContent = formatMl(totalDose);
     elements.peakText.textContent = level > 100 ? "Dose-adjusted active level" : "1 ml peak: 100%";
     elements.maxRecommendedText.textContent = formatMl(recommendedDose);
     elements.maxRecommendedDetail.textContent = selectedProjectedMax > maxAllowedLevel
-        ? `Selected dose may peak at ${Math.round(selectedProjectedMax)}%.`
-        : `Selected dose stays under ${maxAllowedLevel}%.`;
+        ? `Selected dose may peak blood level at ${Math.round(selectedProjectedMax)}%.`
+        : `Selected dose stays under ${maxAllowedLevel}% blood level.`;
     elements.takeButton.classList.toggle("safe-dose", selectedProjectedMax <= maxAllowedLevel);
     elements.takeButton.classList.toggle("unsafe-dose", selectedProjectedMax > maxAllowedLevel);
     renderDoseControls();

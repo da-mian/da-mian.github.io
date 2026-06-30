@@ -53,7 +53,8 @@ button {
 .eyebrow,
 .label,
 .metric span,
-.gauge-center span,
+.metric small,
+.level-value span,
 .section-heading p,
 #lastTakenDetail,
 #peakText,
@@ -266,13 +267,6 @@ h2 {
     color: #fff;
 }
 
-.metrics-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
-    gap: 10px;
-    margin: 12px 0;
-}
-
 .metric {
     min-width: 0;
     display: grid;
@@ -284,35 +278,29 @@ h2 {
     background: var(--panel);
 }
 
-.level-metric {
-    gap: 12px;
-}
-
-.metric-main {
-    display: grid;
-    gap: 6px;
-}
-
 .totals-metric {
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-}
-
-.totals-metric > div {
-    min-width: 0;
-    display: grid;
-    align-content: center;
-    gap: 6px;
-}
-
-.compact-limit {
-    grid-template-columns: 40px minmax(0, 1fr) 40px;
+    margin-top: 12px;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 14px;
 }
 
 .metric strong {
     font-size: clamp(1.1rem, 5vw, 1.65rem);
     line-height: 1;
     overflow-wrap: anywhere;
+}
+
+.totals-values {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.totals-values > div {
+    min-width: 0;
+    display: grid;
+    gap: 3px;
 }
 
 .level-card,
@@ -329,42 +317,46 @@ h2 {
     margin-bottom: 16px;
 }
 
-.gauge {
-    position: relative;
-    width: 72vw;
-    max-width: 260px;
-    aspect-ratio: 1;
-    margin: 4px auto 16px;
-    border-radius: 50%;
-    background: conic-gradient(var(--gold) 0deg, #edf0f4 0deg);
-}
-
-.gauge::after {
-    content: "";
-    position: absolute;
-    inset: 18px;
-    border-radius: 50%;
-    background: var(--panel);
-}
-
-.gauge-center {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
+.level-summary {
     display: grid;
-    place-content: center;
-    text-align: center;
+    gap: 10px;
+    margin: 0 0 16px;
 }
 
-.gauge-center strong {
+.level-value {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+}
+
+.level-value strong {
     font-size: 3rem;
     line-height: 1;
+}
+
+.level-bar {
+    height: 12px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #edf0f4;
+}
+
+.level-bar-fill {
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--gold);
+    transition: width 160ms ease;
 }
 
 canvas {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.level-limit {
+    margin-top: 12px;
 }
 
 .history-list {
@@ -426,7 +418,7 @@ dialog form {
 }
 
 @media (max-width: 560px) {
-    .metrics-grid {
+    .totals-metric {
         grid-template-columns: 1fr;
     }
 }
