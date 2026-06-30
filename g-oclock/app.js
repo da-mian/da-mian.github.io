@@ -47,6 +47,7 @@ let selectedDoseMl = DEFAULT_DOSE_ML;
 let maxAllowedLevel = loadMaxAllowedLevel();
 let pendingServiceWorker = null;
 let updateReloadRequested = false;
+let updateReloadTimer = null;
 
 function loadMaxAllowedLevel() {
     const saved = Number(localStorage.getItem(MAX_ALLOWED_STORAGE_KEY));
@@ -447,6 +448,9 @@ async function setupServiceWorkerUpdates() {
 
     navigator.serviceWorker.addEventListener("controllerchange", () => {
         if (!updateReloadRequested) return;
+        if (updateReloadTimer) {
+            window.clearTimeout(updateReloadTimer);
+        }
         window.location.reload();
     });
 }
@@ -469,7 +473,10 @@ async function init() {
         }
 
         updateReloadRequested = true;
+        elements.updateButton.disabled = true;
+        elements.updateButton.textContent = "Reloading";
         pendingServiceWorker.postMessage({ type: "SKIP_WAITING" });
+        updateReloadTimer = window.setTimeout(() => window.location.reload(), 1200);
     });
     elements.resetDialog.addEventListener("close", () => {
         if (elements.resetDialog.returnValue === "confirm") {
