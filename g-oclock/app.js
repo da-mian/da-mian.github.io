@@ -16,6 +16,7 @@ const MIN_MAX_ALLOWED_LEVEL = 50;
 const MAX_MAX_ALLOWED_LEVEL = 500;
 const MAX_ALLOWED_STORAGE_KEY = "g-oclock-max-allowed-level-v3";
 const RECOMMENDATION_HORIZON_HOURS = 8;
+const LEVEL_EPSILON = 0.000001;
 
 const elements = {
     connectionStatus: document.getElementById("connectionStatus"),
@@ -253,6 +254,10 @@ function projectedMaxLevelWithDose(now, doseMl) {
     return maxLevel;
 }
 
+function staysUnderMaxLevel(level) {
+    return level <= maxAllowedLevel + LEVEL_EPSILON;
+}
+
 function maxRecommendedDose(now) {
     if (projectedMaxLevelWithDose(now, 0) > maxAllowedLevel) {
         return 0;
@@ -262,7 +267,7 @@ function maxRecommendedDose(now) {
         if (!isAllowedDoseCents(cents)) continue;
 
         const doseMl = centsToMl(cents);
-        if (projectedMaxLevelWithDose(now, doseMl) <= maxAllowedLevel) {
+        if (staysUnderMaxLevel(projectedMaxLevelWithDose(now, doseMl))) {
             return doseMl;
         }
     }
@@ -460,11 +465,12 @@ function render() {
     elements.totalDoseText.textContent = formatMl(totalDose);
     elements.peakText.textContent = level > 100 ? "Dose-adjusted active level" : "1 ml peak: 100%";
     elements.maxRecommendedText.textContent = formatMl(recommendedDose);
-    elements.maxRecommendedDetail.textContent = selectedProjectedMax > maxAllowedLevel
+    const selectedDoseIsSafe = staysUnderMaxLevel(selectedProjectedMax);
+    elements.maxRecommendedDetail.textContent = !selectedDoseIsSafe
         ? `Selected dose may peak blood level at ${Math.round(selectedProjectedMax)}%.`
         : `Selected dose stays under ${maxAllowedLevel}% blood level.`;
-    elements.takeButton.classList.toggle("safe-dose", selectedProjectedMax <= maxAllowedLevel);
-    elements.takeButton.classList.toggle("unsafe-dose", selectedProjectedMax > maxAllowedLevel);
+    elements.takeButton.classList.toggle("safe-dose", selectedDoseIsSafe);
+    elements.takeButton.classList.toggle("unsafe-dose", !selectedDoseIsSafe);
     renderDoseControls();
 
     renderHistory();
