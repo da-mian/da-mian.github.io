@@ -58,8 +58,11 @@ function reloadWithCacheBust() {
 }
 
 function loadMaxAllowedLevel() {
-    const saved = Number(localStorage.getItem(MAX_ALLOWED_STORAGE_KEY));
-    return normalizeMaxAllowedLevel(Number.isFinite(saved) ? saved : DEFAULT_MAX_ALLOWED_LEVEL);
+    const saved = localStorage.getItem(MAX_ALLOWED_STORAGE_KEY);
+    if (saved === null) return DEFAULT_MAX_ALLOWED_LEVEL;
+
+    const savedLevel = Number(saved);
+    return normalizeMaxAllowedLevel(Number.isFinite(savedLevel) ? savedLevel : DEFAULT_MAX_ALLOWED_LEVEL);
 }
 
 function normalizeDose(doseMl) {
