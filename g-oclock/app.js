@@ -4,9 +4,12 @@ const STORE_NAME = "takes";
 const CHART_FUTURE_HOURS = 2;
 const MAX_VISIBLE_HISTORY = 200;
 const DEFAULT_DOSE_ML = 1.0;
-const DOSE_STEP_ML = 0.1;
 const MIN_DOSE_ML = 0.1;
 const MAX_DOSE_ML = 5.0;
+const DOSE_STEP_CENTS = 10;
+const DOSE_QUARTER_CENTS = 25;
+const MIN_DOSE_CENTS = Math.round(MIN_DOSE_ML * 100);
+const MAX_DOSE_CENTS = Math.round(MAX_DOSE_ML * 100);
 const DEFAULT_MAX_ALLOWED_LEVEL = 150;
 const MAX_ALLOWED_STEP = 10;
 const MIN_MAX_ALLOWED_LEVEL = 50;
@@ -60,8 +63,61 @@ function loadMaxAllowedLevel() {
 }
 
 function normalizeDose(doseMl) {
-    const stepped = Math.round(doseMl / DOSE_STEP_ML) * DOSE_STEP_ML;
-    return Math.min(MAX_DOSE_ML, Math.max(MIN_DOSE_ML, Number(stepped.toFixed(1))));
+    const cents = Math.round(doseMl * 100);
+    return centsToMl(nearestAllowedDoseCents(cents));
+}
+
+function centsToMl(cents) {
+    return Number((cents / 100).toFixed(2));
+}
+
+function isAllowedDoseCents(cents) {
+    return cents % DOSE_STEP_CENTS === 0 || cents % DOSE_QUARTER_CENTS === 0;
+}
+
+function nearestAllowedDoseCents(cents) {
+    const clamped = Math.min(MAX_DOSE_CENTS, Math.max(MIN_DOSE_CENTS, cents));
+
+    for (let offset = 0; offset <= DOSE_QUARTER_CENTS; offset += 1) {
+        const down = clamped - offset;
+        if (down >= MIN_DOSE_CENTS && isAllowedDoseCents(down)) return down;
+
+        const up = clamped + offset;
+        if (up <= MAX_DOSE_CENTS && isAllowedDoseCents(up)) return up;
+    }
+
+    return clamped;
+}
+
+function adjacentDose(doseMl, direction) {
+    const current = Math.round(normalizeDose(doseMl) * 100);
+    for (
+        let cents = current + direction;
+        cents >= MIN_DOSE_CENTS && cents <= MAX_DOSE_CENTS;
+        cents += direction
+    ) {
+        if (isAllowedDoseCents(cents)) return centsToMl(cents);
+    }
+
+    return centsToMl(current);
+}
+
+function previousDose(doseMl) {
+    return adjacentDose(doseMl, -1);
+}
+
+function nextDose(doseMl) {
+    return adjacentDose(doseMl, 1);
+}
+
+function floorAllowedDose(doseMl) {
+    const clamped = Math.min(MAX_DOSE_CENTS, Math.max(0, Math.floor(doseMl * 100)));
+
+    for (let cents = clamped; cents >= 0; cents -= 1) {
+        if (cents === 0 || isAllowedDoseCents(cents)) return centsToMl(cents);
+    }
+
+    return 0;
 }
 
 function normalizeMaxAllowedLevel(level) {
@@ -70,8 +126,8 @@ function normalizeMaxAllowedLevel(level) {
 }
 
 function formatMl(doseMl) {
-    const rounded = Math.round(Math.max(0, doseMl) * 10) / 10;
-    return `${Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1)} ml`;
+    const rounded = Math.round(Math.max(0, doseMl) * 100) / 100;
+    return `${Number.isInteger(rounded) ? String(rounded) : String(rounded).replace(/0$/, "")} ml`;
 }
 
 function formatDose(doseMl) {
@@ -211,7 +267,7 @@ function maxRecommendedDose(now) {
         }
     }
 
-    return Math.floor(low / DOSE_STEP_ML) * DOSE_STEP_ML;
+    return floorAllowedDose(low);
 }
 
 function formatTime(timestamp) {
@@ -221,14 +277,24 @@ function formatTime(timestamp) {
     }).format(new Date(timestamp));
 }
 
-function formatDateTime(timestamp) {
-    return new Intl.DateTimeFormat(undefined, {
-        weekday: "short",
-        hour: "2-digit",
-        minute: "2-digit",
+function startOfDay(timestamp) {
+    const date = new Date(timestamp);
+    date.setHours(0, 0, 0, 0);
+    return date.getTime();
+}
+
+function formatHistoryTime(timestamp, now = Date.now()) {
+    const time = formatTime(timestamp);
+    const dayDiff = Math.round((startOfDay(now) - startOfDay(timestamp)) / 86400000);
+
+    if (dayDiff === 0) return time;
+    if (dayDiff === 1) return `Yesterday, ${time}`;
+
+    const date = new Intl.DateTimeFormat(undefined, {
         day: "numeric",
         month: "short"
     }).format(new Date(timestamp));
+    return `${date}, ${time}`;
 }
 
 function formatDuration(ms) {
@@ -268,7 +334,7 @@ function renderHistory() {
         const detail = document.createElement("span");
 
         label.dateTime = new Date(take.takenAt).toISOString();
-        label.textContent = formatDateTime(take.takenAt);
+        label.textContent = formatHistoryTime(take.takenAt);
         detail.textContent = index === 0
             ? `${formatDose(takeDose(take))} latest`
             : `${formatDose(takeDose(take))} - ${formatDuration(Date.now() - take.takenAt)} ago`;
@@ -466,8 +532,8 @@ async function init() {
     window.addEventListener("offline", updateConnectionStatus);
 
     elements.takeButton.addEventListener("click", handleTake);
-    elements.doseDownButton.addEventListener("click", () => setSelectedDose(selectedDoseMl - DOSE_STEP_ML));
-    elements.doseUpButton.addEventListener("click", () => setSelectedDose(selectedDoseMl + DOSE_STEP_ML));
+    elements.doseDownButton.addEventListener("click", () => setSelectedDose(previousDose(selectedDoseMl)));
+    elements.doseUpButton.addEventListener("click", () => setSelectedDose(nextDose(selectedDoseMl)));
     elements.maxAllowedDownButton.addEventListener("click", () => setMaxAllowedLevel(maxAllowedLevel - MAX_ALLOWED_STEP));
     elements.maxAllowedUpButton.addEventListener("click", () => setMaxAllowedLevel(maxAllowedLevel + MAX_ALLOWED_STEP));
     elements.resetButton.addEventListener("click", () => elements.resetDialog.showModal());
