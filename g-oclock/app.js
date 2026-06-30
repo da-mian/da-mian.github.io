@@ -396,6 +396,8 @@ function render() {
     elements.maxRecommendedDetail.textContent = selectedProjectedMax > maxAllowedLevel
         ? `Selected dose may peak at ${Math.round(selectedProjectedMax)}%.`
         : `Selected dose stays under ${maxAllowedLevel}%.`;
+    elements.takeButton.classList.toggle("safe-dose", selectedProjectedMax <= maxAllowedLevel);
+    elements.takeButton.classList.toggle("unsafe-dose", selectedProjectedMax > maxAllowedLevel);
     renderDoseControls();
 
     renderHistory();

@@ -179,6 +179,14 @@ h2 {
     font-size: 1.15rem;
 }
 
+.primary-action.safe-dose {
+    background: var(--green);
+}
+
+.primary-action.unsafe-dose {
+    background: var(--red);
+}
+
 .action-stack {
     display: grid;
     gap: 10px;
