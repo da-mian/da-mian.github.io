@@ -136,6 +136,7 @@ h2 {
 
 .status-panel,
 .level-card,
+.settings-card,
 .history-card {
     border: 1px solid var(--line);
     border-radius: 8px;
@@ -284,6 +285,7 @@ h2 {
 }
 
 .level-card,
+.settings-card,
 .history-card {
     margin-top: 12px;
     padding: 18px;

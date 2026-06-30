@@ -7,11 +7,11 @@ const DEFAULT_DOSE_ML = 1.0;
 const DOSE_STEP_ML = 0.1;
 const MIN_DOSE_ML = 0.1;
 const MAX_DOSE_ML = 5.0;
-const DEFAULT_MAX_ALLOWED_LEVEL = 170;
+const DEFAULT_MAX_ALLOWED_LEVEL = 150;
 const MAX_ALLOWED_STEP = 10;
 const MIN_MAX_ALLOWED_LEVEL = 50;
 const MAX_MAX_ALLOWED_LEVEL = 500;
-const MAX_ALLOWED_STORAGE_KEY = "g-oclock-max-allowed-level";
+const MAX_ALLOWED_STORAGE_KEY = "g-oclock-max-allowed-level-v2";
 const RECOMMENDATION_HORIZON_HOURS = 8;
 
 const elements = {
