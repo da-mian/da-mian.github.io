@@ -49,6 +49,12 @@ let pendingServiceWorker = null;
 let updateReloadRequested = false;
 let updateReloadTimer = null;
 
+function reloadWithCacheBust() {
+    const url = new URL(window.location.href);
+    url.searchParams.set("app-refresh", String(Date.now()));
+    window.location.replace(url.toString());
+}
+
 function loadMaxAllowedLevel() {
     const saved = Number(localStorage.getItem(MAX_ALLOWED_STORAGE_KEY));
     return normalizeMaxAllowedLevel(Number.isFinite(saved) ? saved : DEFAULT_MAX_ALLOWED_LEVEL);
@@ -453,7 +459,7 @@ async function setupServiceWorkerUpdates() {
         if (updateReloadTimer) {
             window.clearTimeout(updateReloadTimer);
         }
-        window.location.reload();
+        reloadWithCacheBust();
     });
 }
 
@@ -470,7 +476,7 @@ async function init() {
     elements.resetButton.addEventListener("click", () => elements.resetDialog.showModal());
     elements.updateButton.addEventListener("click", () => {
         if (!pendingServiceWorker) {
-            window.location.reload();
+            reloadWithCacheBust();
             return;
         }
 
@@ -478,7 +484,7 @@ async function init() {
         elements.updateButton.disabled = true;
         elements.updateButton.textContent = "Reloading";
         pendingServiceWorker.postMessage({ type: "SKIP_WAITING" });
-        updateReloadTimer = window.setTimeout(() => window.location.reload(), 1200);
+        updateReloadTimer = window.setTimeout(reloadWithCacheBust, 800);
     });
     elements.resetDialog.addEventListener("close", () => {
         if (elements.resetDialog.returnValue === "confirm") {
