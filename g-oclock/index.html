@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
     <title>G O'Clock</title>
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="styles.css?v=12">
+    <link rel="stylesheet" href="styles.css?v=13">
     <meta name="theme-color" content="#14213d">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -49,17 +49,29 @@
         </section>
 
         <section class="metrics-grid">
-            <div class="metric">
-                <span>Current level</span>
-                <strong id="levelText">0%</strong>
+            <div class="metric level-metric">
+                <div class="metric-main">
+                    <span>Current level</span>
+                    <strong id="levelText">0%</strong>
+                </div>
+                <div class="limit-controls compact-limit" aria-label="Allowed max level">
+                    <button class="mini-step-action" id="maxAllowedDownButton" type="button" aria-label="Decrease allowed max by 10 percent">-</button>
+                    <div class="limit-readout">
+                        <span>Allowed max</span>
+                        <strong id="maxAllowedText">150%</strong>
+                    </div>
+                    <button class="mini-step-action" id="maxAllowedUpButton" type="button" aria-label="Increase allowed max by 10 percent">+</button>
+                </div>
             </div>
-            <div class="metric">
-                <span>Total takes</span>
-                <strong id="totalTakesText">0</strong>
-            </div>
-            <div class="metric">
-                <span>Total amount</span>
-                <strong id="totalDoseText">0.0 ml</strong>
+            <div class="metric totals-metric">
+                <div>
+                    <span>Total takes</span>
+                    <strong id="totalTakesText">0</strong>
+                </div>
+                <div>
+                    <span>Total amount</span>
+                    <strong id="totalDoseText">0 ml</strong>
+                </div>
             </div>
         </section>
 
@@ -79,23 +91,6 @@
                 </div>
             </div>
             <canvas id="levelChart" width="640" height="260" aria-label="Blood concentration chart from the first take through the next two hours"></canvas>
-        </section>
-
-        <section class="settings-card" aria-labelledby="settings-title">
-            <div class="section-heading">
-                <div>
-                    <h2 id="settings-title">Settings</h2>
-                    <p>Set the concentration ceiling used for recommendations.</p>
-                </div>
-            </div>
-            <div class="limit-controls" aria-label="Allowed max level">
-                <button class="mini-step-action" id="maxAllowedDownButton" type="button" aria-label="Decrease allowed max by 10 percent">-</button>
-                <div class="limit-readout">
-                    <span>Allowed max</span>
-                    <strong id="maxAllowedText">150%</strong>
-                </div>
-                <button class="mini-step-action" id="maxAllowedUpButton" type="button" aria-label="Increase allowed max by 10 percent">+</button>
-            </div>
         </section>
 
         <section class="history-card" aria-labelledby="history-title">
@@ -121,6 +116,6 @@
         </form>
     </dialog>
 
-    <script src="app.js?v=12"></script>
+    <script src="app.js?v=13"></script>
 </body>
 </html>

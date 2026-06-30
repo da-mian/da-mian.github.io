@@ -136,7 +136,6 @@ h2 {
 
 .status-panel,
 .level-card,
-.settings-card,
 .history-card {
     border: 1px solid var(--line);
     border-radius: 8px;
@@ -269,14 +268,13 @@ h2 {
 
 .metrics-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
     gap: 10px;
     margin: 12px 0;
 }
 
 .metric {
     min-width: 0;
-    min-height: 88px;
     display: grid;
     align-content: center;
     gap: 6px;
@@ -286,6 +284,31 @@ h2 {
     background: var(--panel);
 }
 
+.level-metric {
+    gap: 12px;
+}
+
+.metric-main {
+    display: grid;
+    gap: 6px;
+}
+
+.totals-metric {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.totals-metric > div {
+    min-width: 0;
+    display: grid;
+    align-content: center;
+    gap: 6px;
+}
+
+.compact-limit {
+    grid-template-columns: 40px minmax(0, 1fr) 40px;
+}
+
 .metric strong {
     font-size: clamp(1.1rem, 5vw, 1.65rem);
     line-height: 1;
@@ -293,7 +316,6 @@ h2 {
 }
 
 .level-card,
-.settings-card,
 .history-card {
     margin-top: 12px;
     padding: 18px;
