@@ -19,6 +19,10 @@ const RECOMMENDATION_HORIZON_HOURS = 8;
 const LEVEL_EPSILON = 0.000001;
 
 const elements = {
+    appShell: document.getElementById("appShell"),
+    installScreen: document.getElementById("installScreen"),
+    installButton: document.getElementById("installButton"),
+    installSteps: document.getElementById("installSteps"),
     lastTakenText: document.getElementById("lastTakenText"),
     lastTakenDetail: document.getElementById("lastTakenDetail"),
     takeButton: document.getElementById("takeButton"),
@@ -50,6 +54,92 @@ let maxAllowedLevel = loadMaxAllowedLevel();
 let pendingServiceWorker = null;
 let updateReloadRequested = false;
 let updateReloadTimer = null;
+let deferredInstallPrompt = null;
+
+window.addEventListener("beforeinstallprompt", event => {
+    event.preventDefault();
+    deferredInstallPrompt = event;
+    renderInstallScreen();
+});
+
+function isStandalonePWA() {
+    return (
+        window.matchMedia("(display-mode: standalone)").matches ||
+        window.matchMedia("(display-mode: fullscreen)").matches ||
+        window.navigator.standalone === true
+    );
+}
+
+function isIOS() {
+    return (
+        /iphone|ipad|ipod/i.test(navigator.userAgent) ||
+        (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
+    );
+}
+
+function isAndroid() {
+    return /android/i.test(navigator.userAgent);
+}
+
+function setInstallSteps(steps) {
+    elements.installSteps.textContent = "";
+    steps.forEach(step => {
+        const item = document.createElement("li");
+        item.textContent = step;
+        elements.installSteps.append(item);
+    });
+}
+
+function renderInstallScreen() {
+    const android = isAndroid();
+    const ios = isIOS();
+
+    elements.installButton.hidden = !(android && deferredInstallPrompt);
+
+    if (android && deferredInstallPrompt) {
+        setInstallSteps([
+            "Tap Install app.",
+            "Confirm the browser prompt.",
+            "Open G O'Clock from your Home Screen."
+        ]);
+        return;
+    }
+
+    if (android) {
+        setInstallSteps([
+            "Tap the browser menu.",
+            "Tap Install app or Add to Home screen.",
+            "Open G O'Clock from your Home Screen."
+        ]);
+        return;
+    }
+
+    if (ios) {
+        setInstallSteps([
+            "Tap the Share button.",
+            "Choose Add to Home Screen.",
+            "Open G O'Clock from the new icon."
+        ]);
+        return;
+    }
+
+    setInstallSteps([
+        "Open your browser menu.",
+        "Choose Install app or Add to Home screen.",
+        "Open G O'Clock from the installed icon."
+    ]);
+}
+
+async function handleInstallClick() {
+    if (!deferredInstallPrompt) return;
+
+    elements.installButton.disabled = true;
+    deferredInstallPrompt.prompt();
+    await deferredInstallPrompt.userChoice;
+    deferredInstallPrompt = null;
+    elements.installButton.disabled = false;
+    renderInstallScreen();
+}
 
 function reloadWithCacheBust() {
     const url = new URL(window.location.href);
@@ -524,6 +614,18 @@ async function setupServiceWorkerUpdates() {
 }
 
 async function init() {
+    setupServiceWorkerUpdates().catch(error => console.error(error));
+
+    if (!isStandalonePWA()) {
+        elements.installScreen.hidden = false;
+        elements.appShell.hidden = true;
+        elements.installButton.addEventListener("click", handleInstallClick);
+        renderInstallScreen();
+        return;
+    }
+
+    elements.installScreen.hidden = true;
+    elements.appShell.hidden = false;
     elements.takeButton.addEventListener("click", handleTake);
     elements.doseDownButton.addEventListener("click", () => setSelectedDose(previousDose(selectedDoseMl)));
     elements.doseUpButton.addEventListener("click", () => setSelectedDose(nextDose(selectedDoseMl)));
@@ -547,8 +649,6 @@ async function init() {
             handleReset();
         }
     });
-
-    setupServiceWorkerUpdates();
 
     takes = await readTakes();
     render();

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
     <title>G O'Clock</title>
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="styles.css?v=21">
+    <link rel="stylesheet" href="styles.css?v=22">
     <meta name="theme-color" content="#14213d">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -14,7 +14,18 @@
     <link rel="apple-touch-icon" href="icons/icon-180.png">
 </head>
 <body>
-    <main class="app-shell">
+    <main class="install-screen" id="installScreen" hidden>
+        <section class="install-card" aria-labelledby="install-title">
+            <img class="install-icon" src="icons/icon-192.png" alt="">
+            <p class="eyebrow">Home Screen app</p>
+            <h1 id="install-title">Install G O'Clock</h1>
+            <p class="install-copy">Add it to your Home Screen and open it from the app icon.</p>
+            <button class="install-action" id="installButton" type="button" hidden>Install app</button>
+            <ol class="install-steps" id="installSteps"></ol>
+        </section>
+    </main>
+
+    <main class="app-shell" id="appShell" hidden>
         <div class="update-banner" id="updateBanner" hidden>
             <span>Update available</span>
             <button class="update-action" id="updateButton" type="button">Reload</button>
@@ -111,6 +122,6 @@
         </form>
     </dialog>
 
-    <script src="app.js?v=21"></script>
+    <script src="app.js?v=22"></script>
 </body>
 </html>
