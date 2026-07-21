@@ -223,6 +223,20 @@ h2 {
     background: var(--blue);
     color: #fff;
     font-size: 1.15rem;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    transition: transform 140ms cubic-bezier(0.2, 0.8, 0.2, 1), filter 140ms ease;
+}
+
+.primary-action:active,
+.primary-action.is-saving {
+    transform: scale(0.96);
+    filter: brightness(1.12);
+}
+
+.primary-action:disabled {
+    cursor: wait;
 }
 
 .primary-action.safe-dose {
@@ -448,6 +462,204 @@ dialog form {
     display: grid;
     gap: 14px;
     padding: 20px;
+}
+
+.take-celebration {
+    --celebration-accent: #25dca2;
+    --celebration-pop: #f9c74f;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    overflow: hidden;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.take-celebration.is-warning {
+    --celebration-accent: #ff5c46;
+    --celebration-pop: #ffb13b;
+}
+
+.take-celebration.is-active {
+    visibility: visible;
+}
+
+.take-celebration-flash {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--burst-x) var(--burst-y), rgba(255, 255, 255, 0.98) 0 5%, color-mix(in srgb, var(--celebration-accent) 72%, transparent) 17%, transparent 48%);
+    opacity: 0;
+}
+
+.take-celebration.is-active .take-celebration-flash {
+    animation: take-flash 780ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.take-rings {
+    position: absolute;
+    left: var(--burst-x);
+    top: var(--burst-y);
+}
+
+.take-rings span {
+    position: absolute;
+    width: 44px;
+    aspect-ratio: 1;
+    border: 5px solid var(--celebration-accent);
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.35);
+}
+
+.take-rings span:nth-child(2) {
+    border-color: var(--celebration-pop);
+    animation-delay: 65ms !important;
+}
+
+.take-rings span:nth-child(3) {
+    border-width: 2px;
+    animation-delay: 130ms !important;
+}
+
+.take-celebration.is-active .take-rings span {
+    animation: take-ring 720ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.take-particles {
+    position: absolute;
+    left: var(--burst-x);
+    top: var(--burst-y);
+}
+
+.take-particles i {
+    position: absolute;
+    width: 7px;
+    height: 22px;
+    border-radius: 999px;
+    background: var(--celebration-accent);
+    box-shadow: 0 0 16px color-mix(in srgb, var(--celebration-accent) 80%, transparent);
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(var(--angle));
+}
+
+.take-particles i:nth-child(3n + 2) {
+    width: 10px;
+    height: 10px;
+    background: var(--celebration-pop);
+}
+
+.take-particles i:nth-child(3n) {
+    width: 4px;
+    height: 15px;
+    background: #fff;
+}
+
+.take-celebration.is-active .take-particles i {
+    animation: take-particle 720ms var(--delay) cubic-bezier(0.12, 0.72, 0.22, 1) both;
+}
+
+.take-stamp {
+    position: absolute;
+    left: 50%;
+    top: clamp(26%, calc(var(--burst-y) - 150px), 42%);
+    width: min(86vw, 360px);
+    display: grid;
+    justify-items: center;
+    gap: 2px;
+    color: var(--ink);
+    text-align: center;
+    opacity: 0;
+    transform: translate(-50%, 22px) scale(0.82) rotate(-3deg);
+}
+
+.take-stamp::before {
+    content: "";
+    position: absolute;
+    inset: -22px -28px;
+    z-index: -1;
+    border: 2px solid color-mix(in srgb, var(--celebration-accent) 55%, white);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 20px 60px rgba(19, 32, 51, 0.2);
+}
+
+.take-stamp-kicker {
+    color: var(--celebration-accent);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.take-stamp strong {
+    font-size: clamp(3.1rem, 16vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+}
+
+.take-stamp > span:last-child {
+    color: var(--muted);
+    font-weight: 800;
+}
+
+.take-celebration.is-active .take-stamp {
+    animation: take-stamp 900ms 110ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.take-celebrating .status-panel {
+    animation: take-panel 680ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes take-flash {
+    0% { opacity: 0; transform: scale(0.5); }
+    12% { opacity: 0.86; }
+    100% { opacity: 0; transform: scale(1.2); }
+}
+
+@keyframes take-ring {
+    0% { opacity: 0.95; transform: translate(-50%, -50%) scale(0.35); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(8); }
+}
+
+@keyframes take-particle {
+    0% { opacity: 0; transform: translate(-50%, -50%) rotate(var(--angle)) translateX(8px) rotate(0); }
+    16% { opacity: 1; }
+    100% { opacity: 0; transform: translate(-50%, -50%) rotate(var(--angle)) translateX(var(--distance)) rotate(var(--spin)); }
+}
+
+@keyframes take-stamp {
+    0% { opacity: 0; transform: translate(-50%, 22px) scale(0.82) rotate(-3deg); }
+    22% { opacity: 1; transform: translate(-50%, 0) scale(1.04) rotate(1deg); }
+    64% { opacity: 1; transform: translate(-50%, 0) scale(1) rotate(0); }
+    100% { opacity: 0; transform: translate(-50%, -10px) scale(0.98) rotate(0); }
+}
+
+@keyframes take-panel {
+    0% { transform: scale(1); }
+    18% { transform: scale(0.985); }
+    48% { transform: scale(1.012); }
+    100% { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .take-celebration-flash,
+    .take-rings,
+    .take-particles {
+        display: none;
+    }
+
+    .take-celebration.is-active .take-stamp {
+        animation: take-stamp-reduced 700ms ease both;
+    }
+
+    .take-celebrating .status-panel {
+        animation: none;
+    }
+
+    @keyframes take-stamp-reduced {
+        0%, 100% { opacity: 0; transform: translate(-50%, 0); }
+        20%, 75% { opacity: 1; transform: translate(-50%, 0); }
+    }
 }
 
 .dialog-actions {

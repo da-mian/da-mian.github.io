@@ -44,7 +44,11 @@ const elements = {
     resetButton: document.getElementById("resetButton"),
     resetDialog: document.getElementById("resetDialog"),
     updateBanner: document.getElementById("updateBanner"),
-    updateButton: document.getElementById("updateButton")
+    updateButton: document.getElementById("updateButton"),
+    takeCelebration: document.getElementById("takeCelebration"),
+    takeParticles: document.getElementById("takeParticles"),
+    takeStampDose: document.getElementById("takeStampDose"),
+    takeStampTime: document.getElementById("takeStampTime")
 };
 
 let takes = [];
@@ -55,6 +59,7 @@ let pendingServiceWorker = null;
 let updateReloadRequested = false;
 let updateReloadTimer = null;
 let deferredInstallPrompt = null;
+let celebrationTimer = null;
 
 window.addEventListener("beforeinstallprompt", event => {
     event.preventDefault();
@@ -79,6 +84,10 @@ function isIOS() {
 
 function isAndroid() {
     return /android/i.test(navigator.userAgent);
+}
+
+function shouldRequireInstallation() {
+    return (isIOS() || isAndroid()) && !isStandalonePWA();
 }
 
 function setInstallSteps(steps) {
@@ -561,15 +570,64 @@ function render() {
 }
 
 async function handleTake() {
+    if (elements.takeButton.disabled) return;
+
+    const selectedProjectedMax = projectedMaxLevelWithDose(Date.now(), selectedDoseMl);
+    const selectedDoseIsSafe = staysUnderMaxLevel(selectedProjectedMax);
     const take = {
         id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()),
         takenAt: Date.now(),
         doseMl: selectedDoseMl
     };
 
-    await writeTake(take);
-    takes = await readTakes();
-    render();
+    elements.takeButton.disabled = true;
+    elements.takeButton.classList.add("is-saving");
+
+    try {
+        await writeTake(take);
+        takes = await readTakes();
+        render();
+        showTakeCelebration(take, selectedDoseIsSafe);
+    } finally {
+        elements.takeButton.disabled = false;
+        elements.takeButton.classList.remove("is-saving");
+    }
+}
+
+function showTakeCelebration(take, isSafe) {
+    const buttonRect = elements.takeButton.getBoundingClientRect();
+    const originX = buttonRect.left + buttonRect.width / 2;
+    const originY = buttonRect.top + buttonRect.height / 2;
+
+    elements.takeStampDose.textContent = formatDose(takeDose(take));
+    elements.takeStampTime.textContent = formatTime(take.takenAt);
+    elements.takeCelebration.classList.toggle("is-warning", !isSafe);
+    elements.takeCelebration.style.setProperty("--burst-x", `${originX}px`);
+    elements.takeCelebration.style.setProperty("--burst-y", `${originY}px`);
+    elements.takeParticles.replaceChildren();
+
+    for (let index = 0; index < 20; index += 1) {
+        const particle = document.createElement("i");
+        const angle = (360 / 20) * index + (index % 2 ? 7 : -3);
+        particle.style.setProperty("--angle", `${angle}deg`);
+        particle.style.setProperty("--distance", `${90 + (index % 5) * 26}px`);
+        particle.style.setProperty("--delay", `${(index % 4) * 18}ms`);
+        particle.style.setProperty("--spin", `${index % 2 ? 210 : -210}deg`);
+        elements.takeParticles.append(particle);
+    }
+
+    window.clearTimeout(celebrationTimer);
+    elements.takeCelebration.classList.remove("is-active");
+    void elements.takeCelebration.offsetWidth;
+    elements.takeCelebration.classList.add("is-active");
+    document.body.classList.add("take-celebrating");
+
+    if (navigator.vibrate) navigator.vibrate([18, 35, 28]);
+
+    celebrationTimer = window.setTimeout(() => {
+        elements.takeCelebration.classList.remove("is-active");
+        document.body.classList.remove("take-celebrating");
+    }, 1150);
 }
 
 async function handleReset() {
@@ -616,7 +674,7 @@ async function setupServiceWorkerUpdates() {
 async function init() {
     setupServiceWorkerUpdates().catch(error => console.error(error));
 
-    if (!isStandalonePWA()) {
+    if (shouldRequireInstallation()) {
         elements.installScreen.hidden = false;
         elements.appShell.hidden = true;
         elements.installButton.addEventListener("click", handleInstallClick);
