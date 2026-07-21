@@ -627,7 +627,7 @@ function showTakeCelebration(take, isSafe) {
     celebrationTimer = window.setTimeout(() => {
         elements.takeCelebration.classList.remove("is-active");
         document.body.classList.remove("take-celebrating");
-    }, 1150);
+    }, 2200);
 }
 
 async function handleReset() {

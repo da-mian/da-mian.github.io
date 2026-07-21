@@ -492,7 +492,7 @@ dialog form {
 }
 
 .take-celebration.is-active .take-celebration-flash {
-    animation: take-flash 780ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation: take-flash 1050ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .take-rings {
@@ -522,7 +522,7 @@ dialog form {
 }
 
 .take-celebration.is-active .take-rings span {
-    animation: take-ring 720ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    animation: take-ring 1100ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
 .take-particles {
@@ -555,7 +555,7 @@ dialog form {
 }
 
 .take-celebration.is-active .take-particles i {
-    animation: take-particle 720ms var(--delay) cubic-bezier(0.12, 0.72, 0.22, 1) both;
+    animation: take-particle 1200ms var(--delay) cubic-bezier(0.12, 0.72, 0.22, 1) both;
 }
 
 .take-stamp {
@@ -603,11 +603,11 @@ dialog form {
 }
 
 .take-celebration.is-active .take-stamp {
-    animation: take-stamp 900ms 110ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation: take-stamp 1900ms 160ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .take-celebrating .status-panel {
-    animation: take-panel 680ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation: take-panel 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 @keyframes take-flash {
@@ -629,8 +629,8 @@ dialog form {
 
 @keyframes take-stamp {
     0% { opacity: 0; transform: translate(-50%, 22px) scale(0.82) rotate(-3deg); }
-    22% { opacity: 1; transform: translate(-50%, 0) scale(1.04) rotate(1deg); }
-    64% { opacity: 1; transform: translate(-50%, 0) scale(1) rotate(0); }
+    16% { opacity: 1; transform: translate(-50%, 0) scale(1.04) rotate(1deg); }
+    78% { opacity: 1; transform: translate(-50%, 0) scale(1) rotate(0); }
     100% { opacity: 0; transform: translate(-50%, -10px) scale(0.98) rotate(0); }
 }
 
@@ -649,7 +649,7 @@ dialog form {
     }
 
     .take-celebration.is-active .take-stamp {
-        animation: take-stamp-reduced 700ms ease both;
+        animation: take-stamp-reduced 1800ms ease both;
     }
 
     .take-celebrating .status-panel {
@@ -658,7 +658,7 @@ dialog form {
 
     @keyframes take-stamp-reduced {
         0%, 100% { opacity: 0; transform: translate(-50%, 0); }
-        20%, 75% { opacity: 1; transform: translate(-50%, 0); }
+        15%, 85% { opacity: 1; transform: translate(-50%, 0); }
     }
 }
 
