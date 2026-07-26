@@ -429,10 +429,8 @@ canvas {
 }
 
 .history-list li {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 12px 0;
+    position: relative;
+    overflow: hidden;
     border-top: 1px solid var(--line);
 }
 
@@ -440,8 +438,47 @@ canvas {
     font-weight: 750;
 }
 
+.history-item-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 56px;
+    align-items: center;
+    padding: 12px 0;
+    background: var(--panel);
+    touch-action: pan-y;
+    transition: transform 180ms ease;
+}
+
+.history-item-content:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: -2px;
+}
+
+.history-list li.is-delete-visible .history-item-content {
+    transform: translateX(-88px);
+}
+
+.history-delete {
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: 80px;
+    background: var(--red);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 850;
+}
+
+.history-delete:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
 .empty-state {
     color: var(--muted);
+    padding: 12px 0;
 }
 
 dialog {

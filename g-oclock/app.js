@@ -308,6 +308,17 @@ async function writeTake(take) {
     });
 }
 
+async function deleteTake(id) {
+    const db = await openDatabase();
+
+    return new Promise((resolve, reject) => {
+        const transaction = db.transaction(STORE_NAME, "readwrite");
+        transaction.objectStore(STORE_NAME).delete(id);
+        transaction.oncomplete = resolve;
+        transaction.onerror = () => reject(transaction.error);
+    });
+}
+
 async function clearTakes() {
     const db = await openDatabase();
 
@@ -423,18 +434,79 @@ function renderHistory() {
     }
 
     const totalDose = takes.reduce((sum, take) => sum + takeDose(take), 0);
-    elements.historySummary.textContent = `${takes.length} take${takes.length === 1 ? "" : "s"}, ${formatDose(totalDose)} stored on this device.`;
+    elements.historySummary.textContent = `${takes.length} take${takes.length === 1 ? "" : "s"}, ${formatDose(totalDose)} stored. Swipe left to delete one.`;
 
-    takes.slice(0, MAX_VISIBLE_HISTORY).forEach((take, index) => {
+    takes.slice(0, MAX_VISIBLE_HISTORY).forEach(take => {
         const item = document.createElement("li");
+        const content = document.createElement("div");
         const label = document.createElement("time");
         const detail = document.createElement("span");
+        const deleteButton = document.createElement("button");
 
         label.dateTime = new Date(take.takenAt).toISOString();
         label.textContent = formatHistoryTime(take.takenAt);
         detail.textContent = `${formatDose(takeDose(take))} - ${formatDuration(Date.now() - take.takenAt)} ago`;
+        content.className = "history-item-content";
+        content.tabIndex = 0;
+        content.setAttribute("role", "group");
+        content.setAttribute("aria-label", `${label.textContent}, ${detail.textContent}. Swipe left to reveal delete.`);
+        deleteButton.className = "history-delete";
+        deleteButton.type = "button";
+        deleteButton.textContent = "Delete";
+        deleteButton.setAttribute("aria-label", `Delete take from ${label.textContent}`);
 
-        item.append(label, detail);
+        let startX = 0;
+        let startY = 0;
+        let pointerId = null;
+        let dragging = false;
+
+        content.addEventListener("pointerdown", event => {
+            if (event.pointerType === "mouse" && event.button !== 0) return;
+            startX = event.clientX;
+            startY = event.clientY;
+            pointerId = event.pointerId;
+            dragging = false;
+            content.setPointerCapture(pointerId);
+        });
+
+        content.addEventListener("pointermove", event => {
+            if (event.pointerId !== pointerId) return;
+            const deltaX = event.clientX - startX;
+            const deltaY = event.clientY - startY;
+
+            if (!dragging && Math.abs(deltaY) > Math.abs(deltaX)) return;
+            if (Math.abs(deltaX) > 8) dragging = true;
+            if (!dragging) return;
+
+            const offset = Math.max(-88, Math.min(0, deltaX));
+            content.style.transform = `translateX(${offset}px)`;
+        });
+
+        const finishSwipe = event => {
+            if (event.pointerId !== pointerId) return;
+            const deltaX = event.clientX - startX;
+            item.classList.toggle("is-delete-visible", deltaX < -42);
+            content.style.transform = "";
+            if (content.hasPointerCapture(pointerId)) content.releasePointerCapture(pointerId);
+            pointerId = null;
+            dragging = false;
+        };
+
+        content.addEventListener("pointerup", finishSwipe);
+        content.addEventListener("pointercancel", finishSwipe);
+        content.addEventListener("keydown", event => {
+            if (event.key === "ArrowLeft") item.classList.add("is-delete-visible");
+            if (event.key === "ArrowRight" || event.key === "Escape") item.classList.remove("is-delete-visible");
+        });
+        deleteButton.addEventListener("click", async () => {
+            deleteButton.disabled = true;
+            await deleteTake(take.id);
+            takes = await readTakes();
+            render();
+        });
+
+        content.append(label, detail);
+        item.append(deleteButton, content);
         elements.historyList.append(item);
     });
 }
