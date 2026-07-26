@@ -43,6 +43,8 @@ const elements = {
     historySummary: document.getElementById("historySummary"),
     resetButton: document.getElementById("resetButton"),
     resetDialog: document.getElementById("resetDialog"),
+    editTimeDialog: document.getElementById("editTimeDialog"),
+    editTimeInput: document.getElementById("editTimeInput"),
     updateBanner: document.getElementById("updateBanner"),
     updateButton: document.getElementById("updateButton"),
     takeCelebration: document.getElementById("takeCelebration"),
@@ -60,6 +62,7 @@ let updateReloadRequested = false;
 let updateReloadTimer = null;
 let deferredInstallPrompt = null;
 let celebrationTimer = null;
+let editingTakeId = null;
 
 window.addEventListener("beforeinstallprompt", event => {
     event.preventDefault();
@@ -319,6 +322,12 @@ async function deleteTake(id) {
     });
 }
 
+async function updateTakeTime(id, takenAt) {
+    const take = takes.find(item => item.id === id);
+    if (!take) return;
+    await writeTake({ ...take, takenAt });
+}
+
 async function clearTakes() {
     const db = await openDatabase();
 
@@ -421,6 +430,18 @@ function formatDuration(ms) {
     return `${hours}h ${minutes}m`;
 }
 
+function formatDateTimeInput(timestamp) {
+    const date = new Date(timestamp);
+    const offsetMs = date.getTimezoneOffset() * 60000;
+    return new Date(timestamp - offsetMs).toISOString().slice(0, 16);
+}
+
+function openTimeEditor(take) {
+    editingTakeId = take.id;
+    elements.editTimeInput.value = formatDateTimeInput(take.takenAt);
+    elements.editTimeDialog.showModal();
+}
+
 function renderHistory() {
     elements.historyList.textContent = "";
 
@@ -434,7 +455,7 @@ function renderHistory() {
     }
 
     const totalDose = takes.reduce((sum, take) => sum + takeDose(take), 0);
-    elements.historySummary.textContent = `${takes.length} take${takes.length === 1 ? "" : "s"}, ${formatDose(totalDose)} stored. Swipe left to delete one.`;
+    elements.historySummary.textContent = `${takes.length} take${takes.length === 1 ? "" : "s"}, ${formatDose(totalDose)} stored. Tap to change time; swipe left to delete.`;
 
     takes.slice(0, MAX_VISIBLE_HISTORY).forEach(take => {
         const item = document.createElement("li");
@@ -459,6 +480,7 @@ function renderHistory() {
         let startY = 0;
         let pointerId = null;
         let dragging = false;
+        let suppressClick = false;
 
         content.addEventListener("pointerdown", event => {
             if (event.pointerType === "mouse" && event.button !== 0) return;
@@ -478,6 +500,7 @@ function renderHistory() {
             if (Math.abs(deltaX) > 8) dragging = true;
             if (!dragging) return;
 
+            suppressClick = true;
             const offset = Math.max(-88, Math.min(0, deltaX));
             content.style.transform = `translateX(${offset}px)`;
         });
@@ -494,9 +517,20 @@ function renderHistory() {
 
         content.addEventListener("pointerup", finishSwipe);
         content.addEventListener("pointercancel", finishSwipe);
+        content.addEventListener("click", () => {
+            if (suppressClick) {
+                suppressClick = false;
+                return;
+            }
+            openTimeEditor(take);
+        });
         content.addEventListener("keydown", event => {
             if (event.key === "ArrowLeft") item.classList.add("is-delete-visible");
             if (event.key === "ArrowRight" || event.key === "Escape") item.classList.remove("is-delete-visible");
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                openTimeEditor(take);
+            }
         });
         deleteButton.addEventListener("click", async () => {
             deleteButton.disabled = true;
@@ -778,6 +812,20 @@ async function init() {
         if (elements.resetDialog.returnValue === "confirm") {
             handleReset();
         }
+    });
+    elements.editTimeDialog.addEventListener("close", async () => {
+        if (elements.editTimeDialog.returnValue !== "confirm" || !editingTakeId) {
+            editingTakeId = null;
+            return;
+        }
+
+        const takenAt = new Date(elements.editTimeInput.value).getTime();
+        if (Number.isFinite(takenAt)) {
+            await updateTakeTime(editingTakeId, takenAt);
+            takes = await readTakes();
+            render();
+        }
+        editingTakeId = null;
     });
 
     takes = await readTakes();
