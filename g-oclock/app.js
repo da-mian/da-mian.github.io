@@ -487,6 +487,7 @@ function renderHistory() {
         let startY = 0;
         let pointerId = null;
         let dragging = false;
+        let verticalScroll = false;
         let suppressClick = false;
 
         content.addEventListener("pointerdown", event => {
@@ -495,16 +496,29 @@ function renderHistory() {
             startY = event.clientY;
             pointerId = event.pointerId;
             dragging = false;
-            content.setPointerCapture(pointerId);
+            verticalScroll = false;
         });
 
         content.addEventListener("pointermove", event => {
             if (event.pointerId !== pointerId) return;
             const deltaX = event.clientX - startX;
             const deltaY = event.clientY - startY;
+            const horizontalDistance = Math.abs(deltaX);
+            const verticalDistance = Math.abs(deltaY);
 
-            if (!dragging && Math.abs(deltaY) > Math.abs(deltaX)) return;
-            if (Math.abs(deltaX) > 8) dragging = true;
+            if (!dragging && !verticalScroll && verticalDistance > 8 && verticalDistance > horizontalDistance) {
+                verticalScroll = true;
+            }
+            if (verticalScroll) return;
+
+            if (
+                !dragging &&
+                deltaX < -14 &&
+                horizontalDistance > verticalDistance * 1.5
+            ) {
+                dragging = true;
+                content.setPointerCapture(pointerId);
+            }
             if (!dragging) return;
 
             suppressClick = true;
@@ -515,11 +529,14 @@ function renderHistory() {
         const finishSwipe = event => {
             if (event.pointerId !== pointerId) return;
             const deltaX = event.clientX - startX;
-            item.classList.toggle("is-actions-visible", deltaX < -54);
+            if (dragging) {
+                item.classList.toggle("is-actions-visible", deltaX < -64);
+            }
             content.style.transform = "";
             if (content.hasPointerCapture(pointerId)) content.releasePointerCapture(pointerId);
             pointerId = null;
             dragging = false;
+            verticalScroll = false;
         };
 
         content.addEventListener("pointerup", finishSwipe);
