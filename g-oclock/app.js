@@ -489,6 +489,7 @@ function renderHistory() {
         let dragging = false;
         let verticalScroll = false;
         let suppressClick = false;
+        let actionsWereVisible = false;
 
         content.addEventListener("pointerdown", event => {
             if (event.pointerType === "mouse" && event.button !== 0) return;
@@ -497,6 +498,7 @@ function renderHistory() {
             pointerId = event.pointerId;
             dragging = false;
             verticalScroll = false;
+            actionsWereVisible = item.classList.contains("is-actions-visible");
         });
 
         content.addEventListener("pointermove", event => {
@@ -513,7 +515,8 @@ function renderHistory() {
 
             if (
                 !dragging &&
-                deltaX < -14 &&
+                horizontalDistance > 14 &&
+                (actionsWereVisible || deltaX < 0) &&
                 horizontalDistance > verticalDistance * 1.5
             ) {
                 dragging = true;
@@ -522,7 +525,8 @@ function renderHistory() {
             if (!dragging) return;
 
             suppressClick = true;
-            const offset = Math.max(-168, Math.min(0, deltaX));
+            const startingOffset = actionsWereVisible ? -168 : 0;
+            const offset = Math.max(-168, Math.min(0, startingOffset + deltaX));
             content.style.transform = `translateX(${offset}px)`;
         });
 
@@ -530,7 +534,8 @@ function renderHistory() {
             if (event.pointerId !== pointerId) return;
             const deltaX = event.clientX - startX;
             if (dragging) {
-                item.classList.toggle("is-actions-visible", deltaX < -64);
+                const startingOffset = actionsWereVisible ? -168 : 0;
+                item.classList.toggle("is-actions-visible", startingOffset + deltaX < -84);
             }
             content.style.transform = "";
             if (content.hasPointerCapture(pointerId)) content.releasePointerCapture(pointerId);
