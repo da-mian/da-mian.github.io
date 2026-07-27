@@ -457,20 +457,34 @@ canvas {
     outline-offset: -2px;
 }
 
-.history-list li.is-delete-visible .history-item-content {
-    transform: translateX(-88px);
+.history-list li.is-actions-visible .history-item-content {
+    transform: translateX(-168px);
 }
 
-.history-delete {
+.history-actions {
     position: absolute;
     inset: 0 0 0 auto;
-    width: 80px;
-    background: var(--red);
+    display: grid;
+    grid-template-columns: 84px 84px;
+    width: 168px;
+}
+
+.history-edit,
+.history-delete {
     color: #fff;
     cursor: pointer;
     font-weight: 850;
 }
 
+.history-edit {
+    background: var(--blue);
+}
+
+.history-delete {
+    background: var(--red);
+}
+
+.history-edit:disabled,
 .history-delete:disabled {
     cursor: wait;
     opacity: 0.7;

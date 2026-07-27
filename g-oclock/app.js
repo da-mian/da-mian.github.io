@@ -455,13 +455,15 @@ function renderHistory() {
     }
 
     const totalDose = takes.reduce((sum, take) => sum + takeDose(take), 0);
-    elements.historySummary.textContent = `${takes.length} take${takes.length === 1 ? "" : "s"}, ${formatDose(totalDose)} stored. Tap to change time; swipe left to delete.`;
+    elements.historySummary.textContent = `${takes.length} take${takes.length === 1 ? "" : "s"}, ${formatDose(totalDose)} stored. Swipe left to edit or delete.`;
 
     takes.slice(0, MAX_VISIBLE_HISTORY).forEach(take => {
         const item = document.createElement("li");
         const content = document.createElement("div");
         const label = document.createElement("time");
         const detail = document.createElement("span");
+        const actions = document.createElement("div");
+        const editButton = document.createElement("button");
         const deleteButton = document.createElement("button");
 
         label.dateTime = new Date(take.takenAt).toISOString();
@@ -470,7 +472,12 @@ function renderHistory() {
         content.className = "history-item-content";
         content.tabIndex = 0;
         content.setAttribute("role", "group");
-        content.setAttribute("aria-label", `${label.textContent}, ${detail.textContent}. Swipe left to reveal delete.`);
+        content.setAttribute("aria-label", `${label.textContent}, ${detail.textContent}. Swipe left to reveal edit and delete.`);
+        actions.className = "history-actions";
+        editButton.className = "history-edit";
+        editButton.type = "button";
+        editButton.textContent = "Edit";
+        editButton.setAttribute("aria-label", `Edit take from ${label.textContent}`);
         deleteButton.className = "history-delete";
         deleteButton.type = "button";
         deleteButton.textContent = "Delete";
@@ -501,14 +508,14 @@ function renderHistory() {
             if (!dragging) return;
 
             suppressClick = true;
-            const offset = Math.max(-88, Math.min(0, deltaX));
+            const offset = Math.max(-168, Math.min(0, deltaX));
             content.style.transform = `translateX(${offset}px)`;
         });
 
         const finishSwipe = event => {
             if (event.pointerId !== pointerId) return;
             const deltaX = event.clientX - startX;
-            item.classList.toggle("is-delete-visible", deltaX < -42);
+            item.classList.toggle("is-actions-visible", deltaX < -54);
             content.style.transform = "";
             if (content.hasPointerCapture(pointerId)) content.releasePointerCapture(pointerId);
             pointerId = null;
@@ -518,20 +525,13 @@ function renderHistory() {
         content.addEventListener("pointerup", finishSwipe);
         content.addEventListener("pointercancel", finishSwipe);
         content.addEventListener("click", () => {
-            if (suppressClick) {
-                suppressClick = false;
-                return;
-            }
-            openTimeEditor(take);
+            suppressClick = false;
         });
         content.addEventListener("keydown", event => {
-            if (event.key === "ArrowLeft") item.classList.add("is-delete-visible");
-            if (event.key === "ArrowRight" || event.key === "Escape") item.classList.remove("is-delete-visible");
-            if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                openTimeEditor(take);
-            }
+            if (event.key === "ArrowLeft") item.classList.add("is-actions-visible");
+            if (event.key === "ArrowRight" || event.key === "Escape") item.classList.remove("is-actions-visible");
         });
+        editButton.addEventListener("click", () => openTimeEditor(take));
         deleteButton.addEventListener("click", async () => {
             deleteButton.disabled = true;
             await deleteTake(take.id);
@@ -540,7 +540,8 @@ function renderHistory() {
         });
 
         content.append(label, detail);
-        item.append(deleteButton, content);
+        actions.append(editButton, deleteButton);
+        item.append(actions, content);
         elements.historyList.append(item);
     });
 }
