@@ -10,13 +10,32 @@ const DOSE_STEP_CENTS = 10;
 const DOSE_QUARTER_CENTS = 25;
 const MIN_DOSE_CENTS = Math.round(MIN_DOSE_ML * 100);
 const MAX_DOSE_CENTS = Math.round(MAX_DOSE_ML * 100);
-const DEFAULT_MAX_ALLOWED_LEVEL = 150;
+const DEFAULT_MAX_ALLOWED_LEVEL = 100;
 const MAX_ALLOWED_STEP = 10;
 const MIN_MAX_ALLOWED_LEVEL = 50;
 const MAX_MAX_ALLOWED_LEVEL = 500;
-const MAX_ALLOWED_STORAGE_KEY = "g-oclock-max-allowed-level-v3";
+const MAX_ALLOWED_STORAGE_KEY = "g-oclock-max-allowed-level-v4";
 const RECOMMENDATION_HORIZON_HOURS = 8;
 const LEVEL_EPSILON = 0.000001;
+const DOSE_INTERVAL_MINUTES = 60;
+const ELIMINATION_RATE = Math.log(2) / 40;
+const ABSORPTION_RATE = 0.0769716504832833;
+
+function steadyStateHourlyPeak() {
+    const eliminationAccumulation = 1 / (1 - Math.exp(-ELIMINATION_RATE * DOSE_INTERVAL_MINUTES));
+    const absorptionAccumulation = 1 / (1 - Math.exp(-ABSORPTION_RATE * DOSE_INTERVAL_MINUTES));
+    const peakMinutes = Math.log(
+        (ABSORPTION_RATE * absorptionAccumulation) /
+        (ELIMINATION_RATE * eliminationAccumulation)
+    ) / (ABSORPTION_RATE - ELIMINATION_RATE);
+
+    return (
+        eliminationAccumulation * Math.exp(-ELIMINATION_RATE * peakMinutes) -
+        absorptionAccumulation * Math.exp(-ABSORPTION_RATE * peakMinutes)
+    );
+}
+
+const HOURLY_STEADY_STATE_PEAK = steadyStateHourlyPeak();
 
 const elements = {
     appShell: document.getElementById("appShell"),
@@ -342,13 +361,11 @@ async function clearTakes() {
 function relativeLevel(minutes) {
     if (minutes <= 0) return 0;
 
-    const ke = Math.log(2) / 40;
-    const ka = 0.0769716504832833;
-    const tMax = Math.log(ka / ke) / (ka - ke);
-    const concentration = Math.exp(-ke * minutes) - Math.exp(-ka * minutes);
-    const peak = Math.exp(-ke * tMax) - Math.exp(-ka * tMax);
+    const concentration =
+        Math.exp(-ELIMINATION_RATE * minutes) -
+        Math.exp(-ABSORPTION_RATE * minutes);
 
-    return 100 * concentration / peak;
+    return 100 * concentration / HOURLY_STEADY_STATE_PEAK;
 }
 
 function combinedLevelAt(timestamp) {
@@ -684,7 +701,7 @@ function render() {
     elements.levelBarFill.style.width = `${barLevel}%`;
     elements.totalTakesText.textContent = String(takes.length);
     elements.totalDoseText.textContent = formatMl(totalDose);
-    elements.peakText.textContent = level > 100 ? "Dose-adjusted active level" : "1 ml peak: 100%";
+    elements.peakText.textContent = "1 ml hourly max: 100%";
     elements.maxRecommendedText.textContent = formatMl(recommendedDose);
     const selectedDoseIsSafe = staysUnderMaxLevel(selectedProjectedMax);
     elements.maxRecommendedDetail.textContent = !selectedDoseIsSafe
