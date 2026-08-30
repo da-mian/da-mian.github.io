@@ -15,6 +15,7 @@ const MAX_ALLOWED_STEP = 10;
 const MIN_MAX_ALLOWED_LEVEL = 50;
 const MAX_MAX_ALLOWED_LEVEL = 500;
 const MAX_ALLOWED_STORAGE_KEY = "g-oclock-max-allowed-level-v4";
+const LEVEL_EXPLANATION_STORAGE_KEY = "g-oclock-level-explanation-v1";
 const RECOMMENDATION_HORIZON_HOURS = 8;
 const LEVEL_EPSILON = 0.000001;
 const DOSE_INTERVAL_MINUTES = 60;
@@ -57,6 +58,8 @@ const elements = {
     levelValue: document.getElementById("levelValue"),
     levelBarFill: document.getElementById("levelBarFill"),
     peakText: document.getElementById("peakText"),
+    levelExplanationButton: document.getElementById("levelExplanationButton"),
+    levelExplanationDialog: document.getElementById("levelExplanationDialog"),
     chart: document.getElementById("levelChart"),
     historyList: document.getElementById("historyList"),
     historySummary: document.getElementById("historySummary"),
@@ -271,6 +274,12 @@ function setMaxAllowedLevel(level) {
     maxAllowedLevel = normalizeMaxAllowedLevel(level);
     localStorage.setItem(MAX_ALLOWED_STORAGE_KEY, String(maxAllowedLevel));
     render();
+}
+
+function openLevelExplanation() {
+    if (!elements.levelExplanationDialog.open) {
+        elements.levelExplanationDialog.showModal();
+    }
 }
 
 function renderDoseControls() {
@@ -701,12 +710,12 @@ function render() {
     elements.levelBarFill.style.width = `${barLevel}%`;
     elements.totalTakesText.textContent = String(takes.length);
     elements.totalDoseText.textContent = formatMl(totalDose);
-    elements.peakText.textContent = "1 ml hourly max: 100%";
+    elements.peakText.textContent = "100% = 1 ml every hour";
     elements.maxRecommendedText.textContent = formatMl(recommendedDose);
     const selectedDoseIsSafe = staysUnderMaxLevel(selectedProjectedMax);
     elements.maxRecommendedDetail.textContent = !selectedDoseIsSafe
-        ? `Selected dose may peak blood level at ${Math.round(selectedProjectedMax)}%.`
-        : `Selected dose stays under ${maxAllowedLevel}% blood level.`;
+        ? `Selected dose may raise your level to ${Math.round(selectedProjectedMax)}%.`
+        : `Selected dose stays under your ${maxAllowedLevel}% limit.`;
     elements.takeButton.classList.toggle("safe-dose", selectedDoseIsSafe);
     elements.takeButton.classList.toggle("unsafe-dose", !selectedDoseIsSafe);
     renderDoseControls();
@@ -835,6 +844,7 @@ async function init() {
     elements.doseUpButton.addEventListener("click", () => setSelectedDose(nextDose(selectedDoseMl)));
     elements.maxAllowedDownButton.addEventListener("click", () => setMaxAllowedLevel(maxAllowedLevel - MAX_ALLOWED_STEP));
     elements.maxAllowedUpButton.addEventListener("click", () => setMaxAllowedLevel(maxAllowedLevel + MAX_ALLOWED_STEP));
+    elements.levelExplanationButton.addEventListener("click", openLevelExplanation);
     elements.resetButton.addEventListener("click", () => elements.resetDialog.showModal());
     elements.updateButton.addEventListener("click", () => {
         if (!pendingServiceWorker) {
@@ -867,9 +877,15 @@ async function init() {
         }
         editingTakeId = null;
     });
+    elements.levelExplanationDialog.addEventListener("close", () => {
+        localStorage.setItem(LEVEL_EXPLANATION_STORAGE_KEY, "seen");
+    });
 
     takes = await readTakes();
     render();
+    if (localStorage.getItem(LEVEL_EXPLANATION_STORAGE_KEY) === null) {
+        window.setTimeout(openLevelExplanation, 500);
+    }
     setInterval(render, 15000);
 }
 

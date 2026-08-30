@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
     <title>G O'Clock</title>
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="styles.css?v=31">
+    <link rel="stylesheet" href="styles.css?v=32">
     <meta name="theme-color" content="#14213d">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -53,7 +53,7 @@
                 <div class="recommendation">
                     <span>Max dose now</span>
                     <strong id="maxRecommendedText">Calculating</strong>
-                    <small id="maxRecommendedDetail">Based on max blood level.</small>
+                    <small id="maxRecommendedDetail">Based on your limit.</small>
                 </div>
             </div>
         </section>
@@ -61,9 +61,9 @@
         <section class="level-card" aria-labelledby="level-title">
             <div class="section-heading">
                 <div>
-                    <h2 id="level-title">Blood level</h2>
+                    <h2 id="level-title">Estimated level</h2>
                 </div>
-                <span id="peakText">1 ml hourly max: 100%</span>
+                <span id="peakText">100% = 1 ml every hour</span>
             </div>
             <div class="level-summary" aria-hidden="true">
                 <div class="level-value">
@@ -74,15 +74,16 @@
                     <div class="level-bar-fill" id="levelBarFill"></div>
                 </div>
             </div>
-            <canvas id="levelChart" width="640" height="260" aria-label="Blood concentration chart from the first take through the next two hours"></canvas>
-            <div class="limit-controls level-limit" aria-label="Max blood level">
-                <button class="mini-step-action" id="maxAllowedDownButton" type="button" aria-label="Decrease max blood level by 10 percent">-</button>
+            <canvas id="levelChart" width="640" height="260" aria-label="Estimated level chart from the first take through the next two hours"></canvas>
+            <div class="limit-controls level-limit" aria-label="Your level limit">
+                <button class="mini-step-action" id="maxAllowedDownButton" type="button" aria-label="Decrease your limit by 10 percent">-</button>
                 <div class="limit-readout">
-                    <span>Max blood level</span>
+                    <span>Your limit</span>
                     <strong id="maxAllowedText">100%</strong>
                 </div>
-                <button class="mini-step-action" id="maxAllowedUpButton" type="button" aria-label="Increase max blood level by 10 percent">+</button>
+                <button class="mini-step-action" id="maxAllowedUpButton" type="button" aria-label="Increase your limit by 10 percent">+</button>
             </div>
+            <button class="explanation-link" id="levelExplanationButton" type="button">What does this mean?</button>
         </section>
 
         <section class="metric totals-metric" aria-label="Totals">
@@ -151,6 +152,17 @@
         </form>
     </dialog>
 
-    <script src="app.js?v=31"></script>
+    <dialog class="level-explanation-dialog" id="levelExplanationDialog">
+        <form method="dialog">
+            <h2>About your level</h2>
+            <p>Each dose raises your level for a while. If you take another dose before the last one has worn off, the levels add up.</p>
+            <p><strong>100% represents taking 1 ml every hour, repeatedly.</strong></p>
+            <p>Your limit is the level you want to stay under. G O'Clock uses it to suggest how much you can take now.</p>
+            <p class="explanation-note">These numbers are estimates, not medical measurements.</p>
+            <button value="confirm" class="primary-action">Got it</button>
+        </form>
+    </dialog>
+
+    <script src="app.js?v=32"></script>
 </body>
 </html>
