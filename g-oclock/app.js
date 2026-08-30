@@ -43,6 +43,8 @@ const elements = {
     installScreen: document.getElementById("installScreen"),
     installButton: document.getElementById("installButton"),
     installSteps: document.getElementById("installSteps"),
+    shareButton: document.getElementById("shareButton"),
+    shareButtonText: document.getElementById("shareButtonText"),
     lastTakenText: document.getElementById("lastTakenText"),
     lastTakenDetail: document.getElementById("lastTakenDetail"),
     takeButton: document.getElementById("takeButton"),
@@ -84,6 +86,7 @@ let updateReloadRequested = false;
 let updateReloadTimer = null;
 let deferredInstallPrompt = null;
 let celebrationTimer = null;
+let shareFeedbackTimer = null;
 let editingTakeId = null;
 
 window.addEventListener("beforeinstallprompt", event => {
@@ -179,6 +182,64 @@ function reloadWithCacheBust() {
     const url = new URL(window.location.href);
     url.searchParams.set("app-refresh", String(Date.now()));
     window.location.replace(url.toString());
+}
+
+function shareUrl() {
+    const url = new URL(window.location.href);
+    url.search = "";
+    url.hash = "";
+    return url.toString();
+}
+
+function showShareFeedback(message) {
+    window.clearTimeout(shareFeedbackTimer);
+    elements.shareButtonText.textContent = message;
+    shareFeedbackTimer = window.setTimeout(() => {
+        elements.shareButtonText.textContent = "Share";
+    }, 1800);
+}
+
+async function copyShareUrl(url) {
+    if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(url);
+        return;
+    }
+
+    const input = document.createElement("textarea");
+    input.value = url;
+    input.setAttribute("readonly", "");
+    input.style.position = "fixed";
+    input.style.opacity = "0";
+    document.body.append(input);
+    input.select();
+    const copied = document.execCommand("copy");
+    input.remove();
+    if (!copied) throw new Error("Copy failed");
+}
+
+async function handleShare() {
+    const url = shareUrl();
+
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: "G O'Clock",
+                text: "Try G O'Clock.",
+                url
+            });
+            return;
+        } catch (error) {
+            if (error.name === "AbortError") return;
+        }
+    }
+
+    try {
+        await copyShareUrl(url);
+        showShareFeedback("Link copied");
+    } catch (error) {
+        console.error(error);
+        showShareFeedback("Could not copy");
+    }
 }
 
 function loadMaxAllowedLevel() {
@@ -839,6 +900,7 @@ async function init() {
 
     elements.installScreen.hidden = true;
     elements.appShell.hidden = false;
+    elements.shareButton.addEventListener("click", handleShare);
     elements.takeButton.addEventListener("click", handleTake);
     elements.doseDownButton.addEventListener("click", () => setSelectedDose(previousDose(selectedDoseMl)));
     elements.doseUpButton.addEventListener("click", () => setSelectedDose(nextDose(selectedDoseMl)));

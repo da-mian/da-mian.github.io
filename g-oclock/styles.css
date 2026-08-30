@@ -113,6 +113,36 @@ button {
     padding: 8px 2px 18px;
 }
 
+.share-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 44px;
+    padding: 0 13px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--panel);
+    color: var(--blue);
+    cursor: pointer;
+    font-weight: 800;
+    box-shadow: 0 6px 18px rgba(20, 33, 61, 0.08);
+}
+
+.share-action svg {
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.share-action:active {
+    transform: scale(0.97);
+}
+
 .eyebrow,
 .label,
 .metric span,

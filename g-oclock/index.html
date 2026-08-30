@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
     <title>G O'Clock</title>
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="styles.css?v=32">
+    <link rel="stylesheet" href="styles.css?v=33">
     <meta name="theme-color" content="#14213d">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,6 +36,12 @@
                 <p class="eyebrow">Hourly tracker</p>
                 <h1 id="app-title">G O'Clock</h1>
             </div>
+            <button class="share-action" id="shareButton" type="button" aria-label="Share G O'Clock">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 16V3m0 0L7.5 7.5M12 3l4.5 4.5M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" />
+                </svg>
+                <span id="shareButtonText" aria-live="polite">Share</span>
+            </button>
         </section>
 
         <section class="status-panel" aria-live="polite">
@@ -163,6 +169,6 @@
         </form>
     </dialog>
 
-    <script src="app.js?v=32"></script>
+    <script src="app.js?v=33"></script>
 </body>
 </html>
