@@ -11,6 +11,8 @@ const DOSE_QUARTER_CENTS = 25;
 const MIN_DOSE_CENTS = Math.round(MIN_DOSE_ML * 100);
 const MAX_DOSE_CENTS = Math.round(MAX_DOSE_ML * 100);
 const DEFAULT_MAX_ALLOWED_LEVEL = 100;
+const REFERENCE_HOURLY_DOSE_ML = 1.0;
+const MAX_RECOMMENDED_DOSE_MULTIPLIER = 1.3;
 const MAX_ALLOWED_STEP = 10;
 const MIN_MAX_ALLOWED_LEVEL = 50;
 const MAX_MAX_ALLOWED_LEVEL = 500;
@@ -313,6 +315,13 @@ function normalizeMaxAllowedLevel(level) {
     return Math.min(MAX_MAX_ALLOWED_LEVEL, Math.max(MIN_MAX_ALLOWED_LEVEL, stepped));
 }
 
+function recommendationDoseCapMl() {
+    return Math.min(
+        MAX_DOSE_ML,
+        REFERENCE_HOURLY_DOSE_ML * (maxAllowedLevel / 100) * MAX_RECOMMENDED_DOSE_MULTIPLIER
+    );
+}
+
 function formatMl(doseMl) {
     const rounded = Math.round(Math.max(0, doseMl) * 100) / 100;
     return `${Number.isInteger(rounded) ? String(rounded) : String(rounded).replace(/0$/, "")} ml`;
@@ -468,7 +477,8 @@ function maxRecommendedDose(now) {
         return 0;
     }
 
-    for (let cents = MAX_DOSE_CENTS; cents >= 0; cents -= 1) {
+    const recommendationCapCents = Math.floor(recommendationDoseCapMl() * 100);
+    for (let cents = recommendationCapCents; cents >= 0; cents -= 1) {
         if (!isAllowedDoseCents(cents)) continue;
 
         const doseMl = centsToMl(cents);
